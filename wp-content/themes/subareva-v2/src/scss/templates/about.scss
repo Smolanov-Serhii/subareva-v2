@@ -43,7 +43,7 @@
     }
     p{
       color: #15223D;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 400;
       line-height: 170.8%;
       letter-spacing: 0.32px;
@@ -55,6 +55,8 @@
   }
   &__content{
     padding-top: 69px;
+    display: flex;
+    flex-direction: column;
   }
   &__list{
     width: calc(50% - 15px);

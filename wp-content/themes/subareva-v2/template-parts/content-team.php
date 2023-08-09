@@ -16,16 +16,16 @@ $post_id = get_the_ID();
                         $image = get_sub_field('fotografiya_sotrudnika');
                         $name = get_sub_field('fio_sotrudnika');
                         $work = get_sub_field('dolzhnost_sotrudnika');
-                        if ($counter == 1){
-                            echo '<div class="first-row">';
-                        } else if ($counter == 5){
-                            echo '<div class="second-row">';
-                        } else if ($counter == 7){
-                            echo '<div class="third-row">';
-                        } else if ($counter == 8){
-                            echo '<div class="four-row">';
-                        }
-                        ?>
+//                        if ($counter == 1){
+//                            echo '<div class="first-row">';
+//                        } else if ($counter == 5){
+//                            echo '<div class="second-row">';
+//                        } else if ($counter == 7){
+//                            echo '<div class="third-row">';
+//                        } else if ($counter == 8){
+//                            echo '<div class="four-row">';
+//                        }
+//                        ?>
                         <div class="team__item">
                             <div class="team__photo">
                                 <img src="<?php echo $image?>" alt="<?php echo $name?>">
@@ -36,17 +36,17 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                     <?php
-                        if ($counter == 4){
-                            echo '</div>';
-                        } else if($counter == 6){
-                            echo '</div>';
-                        } else if($counter == 7){
-                            echo '</div>';
-                        } else if($counter == 11){
-                            echo '</div>';
-                        }
-
-                        $counter ++;
+//                        if ($counter == 4){
+//                            echo '</div>';
+//                        } else if($counter == 6){
+//                            echo '</div>';
+//                        } else if($counter == 7){
+//                            echo '</div>';
+//                        } else if($counter == 11){
+//                            echo '</div>';
+//                        }
+//
+//                        $counter ++;
                     endwhile;
                     ?>
             <?php
