@@ -1,0 +1,46 @@
+.params{
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__left{
+    width: 45%;
+  }
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+  }
+  &__row{
+    margin-bottom: 7px;
+    padding-left: 102px;
+    .big{
+      color: #AD889F;
+      font-size: 105px;
+      font-weight: 800;
+      line-height: 123.8%;
+      letter-spacing: 2.1px;
+      margin-bottom: -11px;
+      span{
+        font-size: 57px;
+      }
+    }
+    .small{
+      color: #15223D;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 141.8%;
+      letter-spacing: 0.4px;
+    }
+  }
+  &__right{
+    width: 55%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.appointment{
+  background-color: #F6F6F6;
+  padding: 69px 0 70px 0;
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 47%;
+    padding-right: 80px;
+  }
+  .button{
+    max-width: 435px;
+    width: 100%;
+  }
+  .wpcf7{
+    width: 53%;
+    .wpcf7-spinner, .wpcf7-response-output{
+      display: none!important;
+    }
+    input.button{
+      width: 234px;
+      border: none;
+    }
+    .wpcf7mf-mask{
+      width: 100%;
+      background: #FFF;
+      padding: 19px 24px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.4px;
+      color: #15223D;
+      border: none;
+      &::placeholder{
+        color: #CCC;
+      }
+    }
+    form{
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__title{
+    color: #845472;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 117.8%;
+    letter-spacing: 0.8px;
+    margin-bottom: 0;
+  }
+  &__desc{
+    color: #15223D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141.3%;
+    letter-spacing: 0.32px;
+    margin-bottom: 0;
+  }
+}

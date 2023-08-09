@@ -1,0 +1,33 @@
+.team{
+  &__container{
+
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .first-row, .second-row, .third-row, .four-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .first-row{
+    margin-right: -20px;
+  }
+  .second-row{
+    flex-direction: column;
+  }
+  .four-row{
+    width: 620px;
+    margin-right: -20px;
+  }
+  &__item{
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  &__person{
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+  }
+}

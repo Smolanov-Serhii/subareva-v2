@@ -1,0 +1,48 @@
+.digits{
+  margin: 32px 0 60px 0;
+  &__contaier{
+
+  }
+  &__list{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item{
+    position: relative;
+    padding-left: 40px;
+    padding-top: 74px;
+    padding-right: 0;
+    width: 20%;
+    &-iteration{
+      color: #F4F4F4;
+      font-size: 128px;
+      font-weight: 800;
+      line-height: 117.8%;
+      letter-spacing: 2.56px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-title{
+      color: #15223D;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 123.8%;
+      letter-spacing: 0.4px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    &-desc{
+      position: relative;
+      color: #15223D;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 141.8%;
+      letter-spacing: 0.28px;
+      margin-bottom: 0;
+    }
+  }
+}

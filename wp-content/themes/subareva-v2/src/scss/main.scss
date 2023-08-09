@@ -1,0 +1,151 @@
+@import "normalize";
+@import "aos";
+@import "preloader";
+@import "default";
+$transition: 0.2s;
+$px: 0.0520833333333333;
+$rem: 16;
+
+// GENERAL DOCUMENT STYLES
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+html{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  @media all and (max-width: 1400px){
+    font-size: 90%;
+  }
+  @media all and (max-width: 1024px){
+
+  }
+  @media all and (max-width: 768px){
+
+  }
+  @media all and (max-width: 500px){
+
+  }
+}
+body{
+  background-color: #FFFFFF;
+  padding-top: 60px;
+}
+.locked{
+  overflow: hidden;
+}
+img{
+  max-width: 100%;
+}
+main{
+  overflow: hidden;
+}
+.padding-right{
+  padding-right: 100px;
+  @media all and (max-width: 1400px){
+    padding-right: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-right: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-right: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-right: 20px;
+  }
+}
+.padding-left{
+  padding-left: 100px;
+  @media all and (max-width: 1400px){
+    padding-left: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-left: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+  }
+}
+.padding-left-part{
+  padding-left: calc(((100vw - 1920px) / 2) + 322px);
+}
+.main-container{
+  max-width: 1476px;
+  margin: auto;
+  width: 100%;
+  @extend .padding-left;
+  @extend .padding-right;
+}
+
+.button{
+  background-color: #845472;
+  padding: 20px 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 141.3%;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  span{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 141.3%;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+  &:hover{
+    background-color: #AD889F;
+  }
+}
+.section-title{
+  color: #15223D;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 123.8%;
+  letter-spacing: 0.96px;
+  display: flex;
+  align-items: center;
+  &:before{
+    content: "";
+    display: block;
+    width: 68px;
+    height: 4px;
+    margin-right: 34px;
+    background-color: #845472;
+  }
+}
+.wpcf7-spinner, .wpcf7-response-output{
+  display: none!important;
+}
+
+
+
+@import "templates/header";
+@import "templates/banner";
+@import "templates/digits";
+@import "templates/about";
+@import "templates/services";
+@import "templates/appointment";
+@import "templates/success-send";
+@import "templates/messengers";
+@import "templates/maps";
+@import "templates/popup-zapis";
+@import "templates/reviews";
+@import "templates/waranty";
+@import "templates/vstavka";
+@import "templates/params";
+@import "templates/team";
+@import "templates/footer";
+

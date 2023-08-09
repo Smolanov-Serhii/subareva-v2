@@ -1,0 +1,96 @@
+.popup-zapis, .popup-write{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(11, 20, 31, 0.60) 0%, rgba(11, 20, 31, 0.60) 100%);
+  z-index: 99;
+  &__container{
+    position: relative;
+    background-color: #845472;
+    padding: 42px 96px;
+    text-align: center;
+  }
+  &__title{
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 123.8%;
+    letter-spacing: 0.8px;
+    margin-bottom: 21px;
+  }
+  &__wrapper{
+    margin: auto;
+    max-width: 555px;
+    br{
+      display: none;
+    }
+    .wpcf7-submit{
+      margin: auto;
+      border: none;
+      background-color: #15223D;
+    }
+    .agry{
+      text-align: left;
+    }
+    .wpcf7-acceptance{
+      width: 100%;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.28px;
+    }
+    .wpcf7-list-item{
+      margin-left: 0;
+      input{
+        background-color: #AD889F;
+        margin-right: 18px;
+      }
+    }
+    .wpcf7-form-control-wrap{
+      width: 100%;
+      margin-bottom: 20px;
+      display: block;
+      .wpcf7-text, .wpcf7mf-mask, .wpcf7-textarea{
+        background-color: #AD889F;
+        padding: 18px 36px;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        border: none;
+        width: 100%;
+        &::placeholder{
+          color: #CEB6C5;
+        }
+      }
+      .wpcf7-textarea{
+        height: 147px;
+      }
+    }
+
+  }
+  &__subtitle{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    margin-bottom: 21px;
+    strong{
+      font-weight: 600;
+    }
+  }
+  &__close{
+    position: absolute;
+    top: -26px;
+    right: -26px;
+    cursor: pointer;
+  }
+}

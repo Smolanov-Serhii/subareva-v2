@@ -1,0 +1,100 @@
+.footer{
+  background-color: #FFFFFF;
+  padding: 53px 0 32px 0;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__text{
+    margin-top: 33px;
+    *{
+      color: #15223D;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 141.8%;
+      letter-spacing: 0.28px;
+    }
+    p{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title{
+    color: #15223D;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 123.8%;
+    letter-spacing: 0.48px;
+  }
+  &__socials{
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+    a{
+      text-decoration: none;
+      display: inline-flex;
+      margin-right: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &__button{
+    display: inline-flex;
+    margin-top: 34px;
+  }
+  &__brend{
+    width: calc(40% - 40px);
+  }
+  &__nav{
+    width: calc(60% - 40px);
+    display: flex;
+    &-list{
+      width: 33.3333%;
+      display: flex;
+      flex-direction: column;
+    }
+    &-name{
+      color: #15223D;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 98.3%;
+      letter-spacing: 0.4px;
+      margin-bottom: 33px;
+    }
+    &-item{
+      text-decoration: none;
+      color: #15223D;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 141.8%;
+      letter-spacing: 0.28px;
+      display: inline-block;
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__copyright{
+    margin-top: 53px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .left, a, span{
+      color: #A9B3C0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 98.3%;
+      letter-spacing: 0.28px;
+      text-decoration: none;
+    }
+    span{
+      margin: 0 10px;
+    }
+  }
+}
