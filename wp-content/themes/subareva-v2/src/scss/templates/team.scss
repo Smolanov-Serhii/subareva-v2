@@ -11,6 +11,9 @@
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  &__title{
+    margin-bottom: 40px;
+  }
   &__item{
     position: relative;
     overflow: hidden;

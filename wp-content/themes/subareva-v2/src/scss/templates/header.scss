@@ -1,13 +1,15 @@
 .header{
   background-color: #FFFFFF;
   position: fixed;
-  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 50;
   &__container{
     display: flex;
     justify-content: center;
+    min-height: 60px;
+    z-index: 3;
   }
   &__left{
     width: 50%;
@@ -21,6 +23,93 @@
   }
   &__nav{
     padding: 0 5px;
+    .frized{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      &.frized-active{
+        &:after{
+          transform: rotate(-135deg);
+          margin-top: 8px;
+        }
+      }
+      &:after{
+        margin-left: 8px;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #A9B3C0;
+        border-bottom: 1px solid #A9B3C0;
+        transform: rotate(45deg);
+      }
+    }
+    &-absolute{
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(169, 190, 202, 0.3);
+      transition: 0.3s ease-in-out;
+      z-index: 49;
+      &.active{
+        top: 60px;
+      }
+      .main-container{
+        max-width: 660px;
+        padding: 0;
+      }
+      .nav-content{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .row{
+          margin-bottom: 19px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        a{
+          display: inline-block;
+          text-decoration: none;
+          color: #15223D;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 141.8%;
+          letter-spacing: 0.28px;
+        }
+        .left{
+          width: 70%;
+          column-count: 2;
+        }
+        .right{
+          width: 30%;
+        }
+      }
+      .nav-header{
+        background-color: #E0E0EF;
+        .main-container{
+          display: flex;
+          justify-content: space-between;
+        }
+        &-item{
+          padding: 19px 0;
+          color: #15223D;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 98.3%;
+          letter-spacing: 0.32px;
+          &:first-child{
+            width: 70%;
+          }
+          &:nth-child(2){
+            width: 30%;
+          }
+        }
+      }
+    }
     ul{
       display: flex;
       align-items: center;

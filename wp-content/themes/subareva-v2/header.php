@@ -15,6 +15,13 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5JZXV5NJ');</script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -24,6 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
+
 <script>
     window.onload = function () {
         document.body.classList.add('loaded_hiding');
@@ -54,6 +62,10 @@
     }
 </script>
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JZXV5NJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="preloader">
     <div class="preloader__row">
         <div class="preloader__item"></div>
@@ -103,12 +115,65 @@
             <div class="header__phone">
                 <a href="tel:<?php the_field('nomer_telefona', 'option')?>"><?php the_field('nomer_telefona', 'option')?></a>
             </div>
-            <div class="header__language">
-                <?php
-                qtranxf_generateLanguageSelectCode('short');
+            <?php
+            /** Переключалка языков **/
+            if ( current_user_can( 'administrator' ) ) {
                 ?>
-            </div>
+                <div class="header__language">
+                    <?php
+                    qtranxf_generateLanguageSelectCode('short');
+                    ?>
+                </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </header>
+<div class="header__nav-absolute">
+    <div class="nav-header">
+        <div class="main-container">
+            <div class="nav-header-item">
+                <?php the_field('tekst_stomatologiya', 'option')?>
+            </div>
+            <div class="nav-header-item">
+                <?php the_field('tekst_kosmetologiya', 'option')?>
+            </div>
+        </div>
+    </div>
+    <div class="nav-content main-container">
+        <div class="left">
+            <?php
+            $args = array(
+                'post_type' 	 => 'dentistry'
+            );
+            $MY_QUERY = new WP_Query( $args );
+            if ( $MY_QUERY->have_posts() ) :
+                while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+                    <div class="row">
+                        <a href="<?php the_permalink();?>"><?php the_title();?></a>
+                    </div>
+                <?php endwhile;
+            endif;
+            wp_reset_postdata();
+            ?>
+        </div>
+        <div class="right">
+            <?php
+            $args = array(
+                'post_type' 	 => 'cosmetology'
+            );
+            $MY_QUERY = new WP_Query( $args );
+            if ( $MY_QUERY->have_posts() ) :
+                while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+                    <div class="row">
+                        <a href="<?php the_permalink();?>"><?php the_title();?></a>
+                    </div>
+                <?php endwhile;
+            endif;
+            wp_reset_postdata();
+            ?>
+        </div>
+    </div>
+</div>
 

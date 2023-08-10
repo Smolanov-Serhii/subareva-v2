@@ -19,7 +19,7 @@ $post_id = get_the_ID();
                         ?>
                         <div class="reviews__slide swiper-slide">
                             <div class="reviews__slide-img">
-                                <img src="<?php echo $image?>" alt="<?php echo $coment?>">
+                                <img src="<?php echo $image?>" alt="<?php echo $name?>">
                             </div>
                             <div class="reviews__slide-desc">
                                 <div class="name">

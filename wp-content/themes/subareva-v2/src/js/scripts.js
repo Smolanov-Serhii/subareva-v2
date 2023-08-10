@@ -149,6 +149,14 @@ $(document).ready(function () {
             $('body').removeClass('locked');
             $(this).closest('.popup-write').fadeOut(300);
         });
+        $(".frized").click(function () {
+            $(this).toggleClass('frized-active');
+            $('.header__nav-absolute').toggleClass('active');
+        });
+        $(".main").click(function () {
+            $('.frized').removeClass('frized-active');
+            $('.header__nav-absolute').removeClass('active');
+        });
     }
     PopupInit();
 
