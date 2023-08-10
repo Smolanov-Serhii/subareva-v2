@@ -1,5 +1,8 @@
 .digits{
   margin: 32px 0 60px 0;
+  @media all and (max-width: 768px){
+    margin: 30px 0 40px;
+  }
   &__contaier{
 
   }
@@ -8,6 +11,12 @@
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media all and (max-width: 1200px){
+      justify-content: center;
+    }
+    @media all and (max-width: 460px){
+      padding-left: 9vw;
+    }
   }
   &__item{
     position: relative;
@@ -15,6 +24,23 @@
     padding-top: 74px;
     padding-right: 0;
     width: 20%;
+    @media all and (max-width: 1200px){
+      width: calc(33.33333% - 40px);
+      margin: 10px 20px;
+      padding-left: 0;
+    }
+    @media all and (max-width: 768px){
+      width: calc(50% - 40px);
+      margin: 10px 20px;
+    }
+    @media all and (max-width: 500px){
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
+    @media all and (max-width: 460px){
+      width: 100%;
+      margin: 10px 0px;
+    }
     &-iteration{
       color: #F4F4F4;
       font-size: 128px;
@@ -24,6 +50,20 @@
       position: absolute;
       top: 0;
       left: 0;
+      @media all and (max-width: 1200px){
+        top: -30px;
+        width: 100%;
+        text-align: center;
+      }
+      @media all and (max-width: 500px){
+        font-size: 100px;
+        top: 0;
+      }
+      @media all and (max-width: 460px){
+        font-size: 140px;
+        top: -12px;
+        text-align: left;
+      }
     }
     &-title{
       color: #15223D;
@@ -33,6 +73,17 @@
       letter-spacing: 0.4px;
       margin-bottom: 12px;
       position: relative;
+      @media all and (max-width: 1400px){
+        font-size: 17px;
+      }
+      @media all and (max-width: 1200px){
+        text-align: center;
+      }
+      @media all and (max-width: 460px){
+        font-size: 20px;
+        padding-left: 90px;
+        text-align: left;
+      }
     }
     &-desc{
       position: relative;

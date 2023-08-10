@@ -2,6 +2,16 @@
   padding-top: 60px;
   margin: 60px 0;
   position: relative;
+  @media all and (max-width: 1200px){
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  @media all and (max-width: 768px){
+    margin: 40px 0;
+  }
+  @media all and (max-width: 500px){
+    margin: 20px 0;
+  }
   &:before{
     position: absolute;
     top: 0;
@@ -10,16 +20,26 @@
     width: 100%;
     height: calc(100% - 84px);
     background-color: #F6F6F6;
+    @media all and (max-width: 1200px){
+      height: 100%;
+    }
   }
   &__title{
     position: relative;
     margin-bottom: 71px;
+    @media all and (max-width: 768px){
+      margin-bottom: 40px;
+    }
   }
   &__container{
     position: relative;
     .banner__nav{
       bottom: 141px;
       left: calc(50% + 33px);
+      @media all and (max-width: 1200px){
+        bottom: 36px;
+        left: calc(38% + 33px);
+      }
       .swiper-pagination-bullet{
         background-color: #15223D;
         opacity: 0.5;
@@ -29,15 +49,46 @@
       }
     }
   }
+  .banner__nav{
+    @media all and (max-width: 1200px){
+      display: flex;
+      position: static;
+      justify-content: flex-end;
+      .swiper-pagination{
+        width: auto;
+      }
+    }
+    @media all and (max-width: 768px){
+      justify-content: center;
+      margin-top: 40px;
+    }
+  }
   &__slide{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     &-img{
       width: calc(50% - 34px);
+      @media all and (max-width: 1200px){
+        width: calc(30% - 34px);
+      }
+      @media all and (max-width: 768px){
+        width: 55%;
+        margin: auto;
+      }
+      @media all and (max-width: 768px){
+        width: 100%;
+      }
     }
     &-desc{
       width: calc(50% - 34px);
+      @media all and (max-width: 1200px){
+        width: calc(70% - 34px);
+      }
+      @media all and (max-width: 768px){
+        width: 100%;
+        margin-top: 40px;
+      }
       .name{
         color: #15223D;
         font-size: 20px;
@@ -45,14 +96,28 @@
         line-height: 123.8%;
         letter-spacing: 0.4px;
         margin-bottom: 21px;
+        @media all and (max-width: 768px){
+          font-weight: 600;
+          font-size: 26px;
+          text-align: center;
+        }
       }
       .content{
         position: relative;
         padding-left: 79px;
+        @media all and (max-width: 1024px){
+          padding-bottom: 24px;
+        }
+        @media all and (max-width: 500px){
+          padding-left: 60px;
+        }
         svg{
           position: absolute;
           left: 0;
           top: 0;
+          @media all and (max-width: 500px){
+            width: 40px;
+          }
         }
         p{
           color: #15223D;
@@ -61,6 +126,9 @@
           font-weight: 400;
           line-height: 170.8%;
           letter-spacing: 0.32px;
+          @media all and (max-width: 500px){
+            font-size: 16px;
+          }
           &:last-child{
             margin-bottom: 0;
           }

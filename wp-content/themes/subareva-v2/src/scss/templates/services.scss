@@ -1,5 +1,8 @@
 .services{
   margin: 60px 0;
+  @media all and (max-width: 768px){
+    margin: 40px 0;
+  }
   &__container{
 
   }
@@ -7,6 +10,7 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__kosm{
     background-color: #AD889F;
@@ -25,9 +29,27 @@
     position: relative;
     height: 783px;
     padding: 106px 50px 50px 148px;
+    @media all and (max-width: 1440px){
+      padding: 80px 50px 50px 50px;
+    }
+    @media all and (max-width: 1024px){
+      width: 100%;
+      margin-bottom: 20px;
+      height: auto;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    @media all and (max-width: 500px){
+      padding: 40px 20px;
+    }
     &-list{
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
+      @media all and (max-width: 1024px){
+        text-align: center;
+      }
     }
     &-title{
       color: #FFF;
@@ -37,6 +59,18 @@
       letter-spacing: 0.6px;
       text-transform: uppercase;
       margin-bottom: 50px;
+      @media all and (max-width: 1400px){
+        font-size: 28px;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 26px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 24px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 22px;
+      }
     }
     &.services__kosm{
       .services__group-name{
@@ -50,6 +84,10 @@
         left: 0;
         bottom: 59px;
         background-color: #15223D;
+        @media all and (max-width: 1024px){
+          top: 43px;
+          bottom: auto;
+        }
       }
     }
     &-name{
@@ -79,6 +117,12 @@
       text-decoration: none;
       margin-bottom: 30px;
       display: inline-block;
+      @media all and (max-width: 768px){
+        margin-bottom: 20px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 22px;
+      }
       &:hover{
         color: #FFFFFF;
       }
@@ -91,6 +135,9 @@
       height: 100%;
       transition: 0.3s ease-in-out;
       pointer-events: none;
+      @media all and (max-width: 1024px){
+        display: none;
+      }
       img{
         object-fit: cover;
         width: 100%;

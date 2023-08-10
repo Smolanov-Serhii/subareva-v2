@@ -33,6 +33,9 @@
     display: flex;
     align-items: center;
     margin-top: 19px;
+    @media all and (max-width: 500px){
+      justify-content: center;
+    }
     a{
       text-decoration: none;
       display: inline-flex;
@@ -45,17 +48,57 @@
   &__button{
     display: inline-flex;
     margin-top: 34px;
+    @media all and (max-width: 500px){
+      width: 100%;
+      .button{
+        width: 100%;
+      }
+    }
   }
   &__brend{
     width: calc(40% - 40px);
+    @media all and (max-width: 1200px){
+      width: 100%;
+      order: 2;
+      margin-top: 40px;
+    }
+    @media all and (max-width: 500px){
+      text-align: center;
+    }
   }
   &__nav{
     width: calc(60% - 40px);
     display: flex;
+    @media all and (max-width: 1200px){
+      width: 100%;
+      order: 1;
+    }
+    @media all and (max-width: 768px){
+      flex-wrap: wrap;
+    }
     &-list{
       width: 33.3333%;
       display: flex;
       flex-direction: column;
+      @media all and (max-width: 768px){
+        &:first-child, &:nth-child(2){
+          width: 50%;
+        }
+        &:nth-child(3){
+          width: 100%;
+          margin-top: 40px;
+        }
+      }
+      @media all and (max-width: 500px){
+        text-align: center;
+        &:first-child, &:nth-child(2){
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        &:nth-child(3){
+          margin-top: 0;
+        }
+      }
     }
     &-name{
       color: #15223D;
@@ -64,6 +107,9 @@
       line-height: 98.3%;
       letter-spacing: 0.4px;
       margin-bottom: 33px;
+      @media all and (max-width: 768px){
+        margin-bottom: 20px;
+      }
     }
     &-item{
       text-decoration: none;
@@ -75,6 +121,9 @@
       letter-spacing: 0.28px;
       display: inline-block;
       margin-bottom: 20px;
+      @media all and (max-width: 768px){
+        margin-bottom: 10px;
+      }
       &:last-child{
         margin-bottom: 0;
       }
@@ -85,6 +134,19 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: 1200px){
+      order: 3;
+    }
+    @media all and (max-width: 768px){
+      flex-direction: column;
+      align-items: center;
+      .left{
+        margin-bottom: 20px;
+      }
+    }
+    @media all and (max-width: 500px){
+      text-align: center;
+    }
     .left, a, span{
       color: #A9B3C0;
       font-size: 14px;
@@ -92,9 +154,15 @@
       line-height: 98.3%;
       letter-spacing: 0.28px;
       text-decoration: none;
+      @media all and (max-width: 420px){
+        font-size: 12px;
+      }
     }
     span{
       margin: 0 10px;
+      @media all and (max-width: 500px){
+        margin: 0 5px;
+      }
     }
   }
 }

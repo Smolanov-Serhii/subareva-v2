@@ -8,12 +8,20 @@ $post_id = get_the_ID();
         </h2>
         <div class="services__list">
             <div class="services__kosm services__group">
-                <div class="services__group-image">
-                    <img src="<?php the_field('kartinka_dlya_uslug_kosmetologii' , $post_id)?>" alt="<?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>">
-                    <div class="services__group-name">
-                        <?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>
+                <?php
+                if ( wp_is_mobile() ) {
+
+                } else {
+                    ?>
+                    <div class="services__group-image">
+                        <img src="<?php the_field('kartinka_dlya_uslug_kosmetologii' , $post_id)?>" alt="<?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>">
+                        <div class="services__group-name">
+                            <?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>
+                        </div>
                     </div>
-                </div>
+                    <?php
+                }
+                ?>
                 <div class="services__group-list">
                     <h3 class="services__group-title">
                         <?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>
@@ -33,12 +41,20 @@ $post_id = get_the_ID();
                 </div>
             </div>
             <div class="services__stom services__group">
-                <div class="services__group-image">
-                    <img src="<?php the_field('kartinka_dlya_bloka_uslug_stomatologii' , $post_id)?>" alt="<?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>">
-                    <div class="services__group-name">
-                        <?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>
+                <?php
+                if ( wp_is_mobile() ) {
+
+                } else {
+                    ?>
+                    <div class="services__group-image">
+                        <img src="<?php the_field('kartinka_dlya_bloka_uslug_stomatologii' , $post_id)?>" alt="<?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>">
+                        <div class="services__group-name">
+                            <?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>
+                        </div>
                     </div>
-                </div>
+                    <?php
+                }
+                ?>
                 <div class="services__group-list">
                     <h3 class="services__group-title">
                         <?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>

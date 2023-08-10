@@ -75,6 +75,52 @@
 <?php wp_body_open(); ?>
 <header class="header">
     <div class="header__container">
+        <div class="header__mobile">
+            <nav class="header__nav">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main-menu',
+                        'menu_id'        => 'primary-menu',
+                    )
+                );
+                ?>
+            </nav>
+            <div class="services__group-list">
+                <h3 class="services__group-title">
+                    <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
+                </h3>
+                <?php
+                $args = array(
+                    'post_type' 	 => 'dentistry'
+                );
+                $MY_QUERY = new WP_Query( $args );
+                if ( $MY_QUERY->have_posts() ) :
+                    while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+                        <a href="<?php the_permalink();?>" class="services__group-item"><?php the_title();?></a>
+                    <?php endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
+            </div>
+            <div class="services__group-list">
+                <h3 class="services__group-title">
+                    <?php the_field('tekst_bloka_uslug_kosmetologii' , 2)?>
+                </h3>
+                <?php
+                $args = array(
+                    'post_type' 	 => 'cosmetology'
+                );
+                $MY_QUERY = new WP_Query( $args );
+                if ( $MY_QUERY->have_posts() ) :
+                    while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+                        <a href="<?php the_permalink();?>" class="services__group-item"><?php the_title();?></a>
+                    <?php endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
+            </div>
+        </div>
         <div class="header__left padding-left-part">
             <div class="header__logo">
                 <?php
@@ -127,6 +173,11 @@
                 <?php
             }
             ?>
+            <div class="header__burger js-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
 </header>

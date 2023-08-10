@@ -75,6 +75,21 @@ main{
 }
 .padding-left-part{
   padding-left: calc(((100vw - 1920px) / 2) + 322px);
+  @media all and (max-width: 1476px){
+    padding-left: 100px;
+  }
+  @media all and (max-width: 1400px){
+    padding-left: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-left: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-left: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+  }
 }
 .main-container{
   max-width: 1476px;
@@ -118,6 +133,21 @@ main{
   letter-spacing: 0.96px;
   display: flex;
   align-items: center;
+  @media all and (max-width: 1600px){
+    font-size: 44px;
+  }
+  @media all and (max-width: 1400px){
+    font-size: 42px;
+  }
+  @media all and (max-width: 1024px){
+    font-size: 40px;
+  }
+  @media all and (max-width: 768px){
+    font-size: 38px;
+  }
+  @media all and (max-width: 500px){
+    font-size: 36px;
+  }
   &:before{
     content: "";
     display: block;
@@ -125,6 +155,9 @@ main{
     height: 4px;
     margin-right: 34px;
     background-color: #845472;
+    @media all and (max-width: 768px){
+      display: none;
+    }
   }
 }
 .wpcf7-spinner, .wpcf7-response-output{

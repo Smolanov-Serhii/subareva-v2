@@ -16,8 +16,8 @@ if(is_home()){
                 <?php the_field('opisanie_bloka_zayavka' , $post_id)?>
             </p>
         </div>
-        <div class="button js-write">
+        <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
             <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
-        </div>
+        </a>
     </div>
 </section>
