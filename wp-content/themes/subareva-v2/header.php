@@ -120,6 +120,9 @@
                 wp_reset_postdata();
                 ?>
             </div>
+            <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="header__button button">
+                <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
+            </a>
         </div>
         <div class="header__left padding-left-part">
             <div class="header__logo">
@@ -161,18 +164,11 @@
             <div class="header__phone">
                 <a href="tel:<?php the_field('nomer_telefona', 'option')?>"><?php the_field('nomer_telefona', 'option')?></a>
             </div>
-            <?php
-            /** Переключалка языков **/
-            if ( current_user_can( 'administrator' ) ) {
-                ?>
-                <div class="header__language">
-                    <?php
-                    qtranxf_generateLanguageSelectCode('short');
-                    ?>
-                </div>
+            <div class="header__language">
                 <?php
-            }
-            ?>
+                qtranxf_generateLanguageSelectCode('short');
+                ?>
+            </div>
             <div class="header__burger js-burger">
                 <span></span>
                 <span></span>
