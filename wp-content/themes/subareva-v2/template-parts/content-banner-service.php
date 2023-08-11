@@ -1,7 +1,7 @@
 <?php
 $post_id = get_the_ID();
 ?>
-<section class="banner">
+<section class="banner banner__service">
     <div class="banner__container">
         <div class="banner__left padding-left-part">
             <svg width="461" height="132" viewBox="0 0 461 132" fill="none" xmlns="http://www.w3.org/2000/svg">
