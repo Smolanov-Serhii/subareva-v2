@@ -60,7 +60,7 @@ $post_id = get_the_ID();
                                         <?php
                                         if ($video){
                                         ?>
-                                        <video width="100%" height="100%" autoplay>
+                                        <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo $image?>">
                                             <source src="<?php echo $video?>" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>

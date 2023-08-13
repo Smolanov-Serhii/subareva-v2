@@ -15,11 +15,11 @@ $(document).ready(function () {
             speed: 500,
             slidesPerView: 1,
             spaceBetween: 0,
-            loop: 'true',
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
+            // loop: 'true',
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
             pagination: {
                 el: ".banner .swiper-pagination",
                 clickable: true,
