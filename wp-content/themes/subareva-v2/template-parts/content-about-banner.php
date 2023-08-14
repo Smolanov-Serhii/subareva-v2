@@ -8,12 +8,22 @@ $post_id = get_the_ID();
             <h1 class="banner__title">
                 <?php the_field('podzagolovok_v_baner', $post_id)?>
             </h1>
+            <div class="banner__button">
+                <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+                    <span><?php the_field('tekst_na_knopke', 2)?></span>
+                </a>
+            </div>
         </div>
         <div class="banner__right">
             <img src="<?php the_field('fotografiya_v_baner', $post_id)?>" alt="">
         </div>
         <div class="banner__logo">
             <img src="<?php the_field('nadpis_po_seridine', $post_id)?>" alt="">
+            <div class="banner__button">
+                <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+                    <span><?php the_field('tekst_na_knopke', 2)?></span>
+                </a>
+            </div>
         </div>
     </div>
 </section>

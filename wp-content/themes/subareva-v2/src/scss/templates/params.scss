@@ -73,6 +73,12 @@
     @media all and (max-width: 1024px){
       width: 100%;
     }
+    &.video{
+      max-height: 800px;
+      @media all and (max-width: 1024px){
+        max-height: none;
+      }
+    }
     video{
       object-fit: cover;
       width: 100%;
