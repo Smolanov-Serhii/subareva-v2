@@ -90,8 +90,12 @@
     padding-top: 69px;
     display: flex;
     flex-direction: column;
+    height: 100%;
     @media all and (max-width: 1024px){
       padding-top: 0;
+    }
+    .about__list{
+      flex: 1;
     }
   }
   &__list{
@@ -99,6 +103,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
     @media all and (max-width: 1024px){
       width: 100%;
       margin-top: 20px;
