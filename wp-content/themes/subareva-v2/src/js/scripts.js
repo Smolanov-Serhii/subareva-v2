@@ -114,13 +114,13 @@ $(document).ready(function () {
             $('.header__mobile').fadeToggle(300);
         });
 
-        const div = document.querySelector( '.header__mobile');
+        const div = document.querySelector( '.header');
 
         document.addEventListener( 'click', (e) => {
             const withinBoundaries = e.composedPath().includes(div);
 
             if ( ! withinBoundaries ) {
-                $('..js-burger').removeClass('active');
+                $('.js-burger').removeClass('active');
                 $('.header__mobile').fadeOut(300);
             }
         })
