@@ -293,14 +293,75 @@
         height: 600px;
       }
       @media all and (max-width: 1024px){
-        height: 80vh;
+        height: calc(100vh - 60px);
       }
       @media all and (max-width: 768px){
-        height: 70vh;
+
       }
     }
     .swiper-slide{
       height: 100%;
+      position: relative;
+      &__about{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 40px 80px 40px;
+        background-color: rgba(132,84,114,.3);
+        @media all and (max-width: 1024px){
+          background-color: transparent;
+          top: 0;
+          right: 0;
+          bottom: auto;
+          left: auto;
+          text-align: right;
+        }
+        @media all and (max-width: 768px){
+
+        }
+        @media all and (max-width: 500px){
+          padding: 20px;
+        }
+      }
+      &__title{
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        @media all and (max-width: 1024px){
+          color: #845472;
+        }
+        @media all and (max-width: 500px){
+          font-size: 32px;
+        }
+      }
+      &__old{
+        text-decoration: line-through;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #FFFFFF;
+        @media all and (max-width: 1024px){
+          color: #845472;
+        }
+      }
+      &__current{
+        color: #FFFFFF;
+        font-size: 32px;
+        display: inline-block;
+        padding: 20px;
+        border: 2px solid #FFFFFF;
+        @media all and (max-width: 1024px){
+          color: #845472;
+          border: 2px solid #845472;
+          background-color: #FFFFFF;
+        }
+        @media all and (max-width: 500px){
+          font-size: 22px;
+          padding: 10px;
+        }
+      }
       img{
         object-fit: cover;
         object-position: center;

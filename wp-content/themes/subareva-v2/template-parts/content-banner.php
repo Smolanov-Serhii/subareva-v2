@@ -12,11 +12,25 @@ $post_id = get_the_ID();
             <h1 class="banner__title">
                 <?php the_field('zagolovok_bloka_banner', $post_id)?>
             </h1>
-            <div class="banner__button">
-                <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
-                    <span><?php the_field('tekst_na_knopke', $post_id)?></span>
-                </a>
-            </div>
+            <?php
+            if ( wp_is_mobile() ) {
+                ?>
+                <div class="banner__button">
+                    <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+                        <span><?php the_field('tekst_na_knopke', $post_id)?></span>
+                    </a>
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="banner__button">
+                    <div class="button js-form">
+                        <span><?php the_field('tekst_na_knopke', $post_id)?></span>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
         </div>
         <div class="banner__right">
             <?php
@@ -28,9 +42,30 @@ $post_id = get_the_ID();
                         while( have_rows('slajder_v_banner') ) : the_row();
                             $image = get_sub_field('slajd_v_banner');
                             $alt = get_sub_field('opisanie_slajda');
+                            $title = get_sub_field('nazvanie_proczedury');
+                            $old = get_sub_field('staraya_czena');
+                            $current = get_sub_field('tekushhaya_czena');
                             ?>
                             <div class="swiper-slide">
                                 <img src="<?php echo $image?>" alt="<?php echo $alt?>">
+                                <?php
+                                    if ($title){
+                                        ?>
+                                           <div class="swiper-slide__about">
+                                               <h3 class="swiper-slide__title">
+                                                   <?php echo $title?>
+                                               </h3>
+                                               <div class="swiper-slide__old">
+                                                   <?php echo $old?>
+                                               </div>
+                                               <div class="swiper-slide__current">
+                                                   <?php echo $current?>
+                                               </div>
+                                           </div>
+
+                                        <?php
+                                    }
+                                ?>
                             </div>
                         <?php
                         endwhile;

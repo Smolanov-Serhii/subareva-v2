@@ -1,5 +1,40 @@
 .vstavka{
   margin: 60px 0;
+  &.service-vstavka{
+    margin: 0;
+    .padding-left-part{
+      padding-left: calc(((100vw - 1920px) / 2) + 322px);
+      @media all and (max-width: 1476px){
+        padding-left: 100px;
+      }
+      @media all and (max-width: 1400px){
+        padding-left: 75px;
+      }
+      @media all and (max-width: 1024px){
+        padding-left: 50px;
+      }
+      @media all and (max-width: 768px){
+        padding-left: 35px;
+      }
+      @media all and (max-width: 500px){
+        padding-left: 20px;
+      }
+    }
+    .vstavka__left{
+      width: calc(50% + 15px);
+      @media all and (max-width: 768px){
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .vstavka__right{
+      width: calc(50% - 15px);
+      @media all and (max-width: 768px){
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
   @media all and (max-width: 768px){
     margin: 40px 0;
   }
@@ -58,11 +93,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     @media all and (max-width: 1200px){
       padding: 20px 20px 20px 40px;
     }
     @media all and (max-width: 768px){
       width: 100%;
+      align-items: stretch;
     }
     @media all and (max-width: 500px){
       padding: 20px;
@@ -77,6 +114,8 @@
     font-weight: 700;
     line-height: 98.3%;
     letter-spacing: 0.96px;
+    padding: 10px;
+    border: 2px solid #845472;
     @media all and (max-width: 1440px){
       font-size: 38px;
     }

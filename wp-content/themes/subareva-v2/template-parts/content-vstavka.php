@@ -1,5 +1,5 @@
 <?php
-$post_id = get_the_ID();
+$post_id = 102;
 ?>
 <section class="vstavka">
     <div class="vstavka__container main-container">

@@ -8,7 +8,34 @@ $post_id = get_the_ID();
 ?>
 <main class="main">
     <?php get_template_part( 'template-parts/content', 'banner-service' ); ?>
-    <?php get_template_part( 'template-parts/content', 'appointment' ); ?>
+    <section class="vstavka service-vstavka">
+        <div class="vstavka__container">
+            <div class="vstavka__left padding-left-part">
+                <h2 class="vstavka__title">
+                    <?php the_field('zagolovok_bloka_vstavka' , 102)?>
+                </h2>
+                <div class="vstavka__subtitle">
+                    <?php the_field('podzagolovok_bloka_vstavka' , 102)?>
+                </div>
+            </div>
+            <div class="vstavka__right">
+                <?php
+                if( have_rows('nomera_telefonov', 102) ):
+                    ?>
+                    <?php
+                    while( have_rows('nomera_telefonov', 102) ) : the_row();
+                        $phone = get_sub_field('nomer_telefona');
+                        ?>
+                        <a href="tel:<?php echo $phone?>" class="vstavka__phone"><?php echo $phone?></a>
+                    <?php
+                    endwhile;
+                    ?>
+                <?php
+                endif;
+                ?>
+            </div>
+        </div>
+    </section>
     <div class="current-team">
         <div class="current-team__container main-container">
             <h2 class="current-team__title section-title">
