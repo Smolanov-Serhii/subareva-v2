@@ -1,5 +1,11 @@
 <?php
-$post_id = get_the_ID();
+if(is_page(102)){
+    $post_id = get_the_ID();
+
+} else {
+    $post_id = 102;
+}
+
 ?>
 <section class="reviews">
     <div class="reviews__container main-container">
