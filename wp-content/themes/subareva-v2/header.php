@@ -30,6 +30,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
+    <?php
+    if ( is_home() ) {
+        ?>
+
+        <?php
+    }
+    ?>
 </head>
 
 <script>
@@ -176,9 +183,21 @@
             </nav>
         </div>
         <div class="header__right">
-            <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="header__button button">
-                <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
-            </a>
+            <?php
+            if ( wp_is_mobile() ) {
+                ?>
+                <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="header__button button">
+                    <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
+                </a>
+                <?php
+            } else {
+                ?>
+                <div class="header__button button js-form">
+                    <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
+                </div>
+                <?php
+            }
+            ?>
             <div class="header__phone">
                 <a href="tel:<?php the_field('nomer_telefona', 'option')?>"><?php the_field('nomer_telefona', 'option')?></a>
             </div>

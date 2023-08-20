@@ -20,9 +20,22 @@ $post_id = get_the_ID();
         <div class="banner__logo">
             <img src="<?php the_field('nadpis_po_seridine', $post_id)?>" alt="">
             <div class="banner__button">
-                <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
-                    <span><?php the_field('tekst_na_knopke', 2)?></span>
-                </a>
+                <?php
+                if ( wp_is_mobile() ) {
+                    ?>
+                    <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+                        <span><?php the_field('tekst_na_knopke', 2)?></span>
+                    </a>
+                    <?php
+                } else {
+                    ?>
+                    <div class="button js-form">
+                        <span><?php the_field('tekst_na_knopke', 2)?></span>
+                    </div>
+                    <?php
+                }
+                ?>
+
             </div>
         </div>
     </div>

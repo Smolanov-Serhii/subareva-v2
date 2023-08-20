@@ -60,6 +60,17 @@
       width: 100%;
       margin-top: 40px;
     }
+    .banner__nav{
+      @media all and (max-width: 1024px){
+        display: flex;
+      }
+    }
+    .swiper-wrapper{
+      height: 100%;
+      .swiper-slide{
+        height: 100%;
+      }
+    }
     img{
       object-fit: cover;
       width: 100%;

@@ -36,7 +36,13 @@ $post_id = get_the_ID();
             <?php
             if( have_rows('slajder_v_banner') ):
                 ?>
-                <div class="banner__container swiper">
+                <?php
+                $classswiper = '';
+                if ( is_page(2) ) {
+                    $classswiper = 'swiper-main';
+                }
+                ?>
+                <div class="banner__container swiper <?php echo $classswiper?>">
                     <div class="swiper-wrapper">
                         <?php
                         while( have_rows('slajder_v_banner') ) : the_row();

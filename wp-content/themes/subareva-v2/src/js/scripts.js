@@ -11,15 +11,21 @@ $(document).ready(function () {
     AosStart()
 
     if ($('.banner').length) {
+        let LoopSwiper = '';
+        if ($('.banner .swiper').hasClass('swiper-main')){
+            LoopSwiper = 'true';
+        } else {
+            LoopSwiper = 'false';
+        }
         var swiper = new Swiper(".banner .swiper", {
             speed: 500,
             slidesPerView: 1,
             spaceBetween: 0,
-            // loop: 'true',
-            // autoplay: {
-            //     delay: 2500,
-            //     disableOnInteraction: false,
-            // },
+            loop: LoopSwiper,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".banner .swiper-pagination",
                 clickable: true,
@@ -49,6 +55,27 @@ $(document).ready(function () {
             navigation: {
                 nextEl: ".reviews .banner__next",
                 prevEl: ".reviews .banner__prev",
+            },
+        });
+    }
+
+    if ($('.waranty').length) {
+        var Waranty = new Swiper(".waranty .swiper", {
+            speed: 500,
+            slidesPerView: 1,
+            spaceBetween: 80,
+            loop: 'true',
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".waranty .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".waranty .banner__next",
+                prevEl: ".waranty .banner__prev",
             },
         });
     }
