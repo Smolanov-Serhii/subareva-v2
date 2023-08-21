@@ -5,7 +5,9 @@
 $transition: 0.2s;
 $px: 0.0520833333333333;
 $rem: 16;
-
+.rngst_phone_button{
+  display: none!important;
+}
 // GENERAL DOCUMENT STYLES
 * {
   box-sizing: border-box;
