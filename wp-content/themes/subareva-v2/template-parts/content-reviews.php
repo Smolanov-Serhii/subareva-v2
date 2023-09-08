@@ -27,8 +27,8 @@ if(is_page(102) || is_page(369)){
                             <?php
                                 if ($video){
                                     ?>
-                                        <div class="reviews__slide-img">
-                                            <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo $image?>">
+                                        <div class="reviews__slide-img reviews__slide-video">
+                                            <video width="100%" height="100%" controls preload="metadata" poster="<?php echo $image?>">
                                                 <source src="<?php echo $video?>" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
