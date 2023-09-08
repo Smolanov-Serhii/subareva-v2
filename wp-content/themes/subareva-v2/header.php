@@ -94,9 +94,11 @@
                 ?>
             </nav>
             <div class="services__group-list">
-                <h3 class="services__group-title">
-                    <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
-                </h3>
+                <a href="<?php get_permalink(369); ?>">
+                    <h3 class="services__group-title">
+                        <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
+                    </h3>
+                </a>
                 <?php
                 $args = array(
                     'post_type' 	 => 'dentistry'
@@ -218,7 +220,9 @@
     <div class="nav-header">
         <div class="main-container">
             <div class="nav-header-item">
-                <?php the_field('tekst_stomatologiya', 'option')?>
+                <a href="<?php get_permalink(369); ?>">
+                    <?php the_field('tekst_stomatologiya', 'option')?>
+                </a>
             </div>
             <div class="nav-header-item">
                 <?php the_field('tekst_kosmetologiya', 'option')?>

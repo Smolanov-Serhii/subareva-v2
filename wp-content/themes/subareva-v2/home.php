@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: Главная v2
+Template Name: Стоматология
  */
 
 

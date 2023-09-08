@@ -20,13 +20,30 @@ if(is_page(102)){
                     <?php
                     while( have_rows('perechen_otzyvov', $post_id) ) : the_row();
                         $image = get_sub_field('izobrazhenie_otzyva');
+                        $video = get_sub_field('video_otzyva');
                         $name = get_sub_field('imya');
                         $coment = get_sub_field('tekst_otzyva');
                         ?>
                         <div class="reviews__slide swiper-slide">
-                            <div class="reviews__slide-img">
-                                <img src="<?php echo $image?>" alt="<?php echo $name?>">
-                            </div>
+                            <?php
+                                if ($video){
+                                    ?>
+                                        <div class="reviews__slide-img">
+                                            <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo $image?>">
+                                                <source src="<?php echo $video?>" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+
+                                    <?php
+                                } else {
+                                    ?>
+                                    <div class="reviews__slide-img">
+                                        <img src="<?php echo $image?>" alt="<?php echo $name?>">
+                                    </div>
+                                    <?php
+                                }
+                            ?>
                             <div class="reviews__slide-desc">
                                 <div class="name">
                                     <?php echo $name?>

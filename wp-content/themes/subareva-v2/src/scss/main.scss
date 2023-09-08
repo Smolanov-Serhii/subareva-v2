@@ -100,6 +100,13 @@ main{
   @extend .padding-left;
   @extend .padding-right;
 }
+.big-container{
+  max-width: 1800px;
+  margin: auto;
+  width: 100%;
+  @extend .padding-left;
+  @extend .padding-right;
+}
 
 .button{
   background-color: #845472;
@@ -176,6 +183,7 @@ main{
 @import "templates/digits";
 @import "templates/about";
 @import "templates/services";
+@import "templates/services-big";
 @import "templates/appointment";
 @import "templates/success-send";
 @import "templates/messengers";
@@ -186,6 +194,7 @@ main{
 @import "templates/vstavka";
 @import "templates/params";
 @import "templates/team";
+@import "templates/services-animate";
 @import "templates/current-team";
 @import "templates/footer";
 
