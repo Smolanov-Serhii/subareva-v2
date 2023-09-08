@@ -220,7 +220,7 @@
     <div class="nav-header">
         <div class="main-container">
             <div class="nav-header-item">
-                <a href="<?php get_permalink(369); ?>">
+                <a href="<?php echo get_permalink(369); ?>">
                     <?php the_field('tekst_stomatologiya', 'option')?>
                 </a>
             </div>

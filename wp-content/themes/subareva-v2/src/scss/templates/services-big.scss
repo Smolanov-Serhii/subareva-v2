@@ -12,6 +12,18 @@
     overflow: hidden;
     padding-top: 57px;
     cursor: pointer;
+    @media all and (min-width: 1680px) {
+      min-width: 340px;
+    }
+    @media all and (max-width: 1200px){
+      margin: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0;
+      margin-top: 40px;
+    }
     &:hover{
       .services-big__desc{
         transform: translateX(0);
@@ -26,6 +38,25 @@
     line-height: 98.3%;
     letter-spacing: 1.28px;
     text-transform: uppercase;
+    @media all and (max-width: 1800px){
+      font-size: 56px;
+    }
+    @media all and (max-width: 1440px){
+      font-size: 48px;
+    }
+    @media all and (max-width: 1200px){
+      font-size: 40px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 32px;
+      margin-right: 20px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 24px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 16px;
+    }
   }
   &__desc{
     background-color: #845472;
@@ -35,6 +66,15 @@
     bottom: 0;
     transform: translateX(120%);
     transition: 0.3s ease-in-out;
+    @media all and (max-width: 1440px) {
+      text-align: right;
+    }
+    @media all and (max-width: 1200px){
+      transform: translateX(0);
+      position: static;
+      background-color: transparent;
+      padding: 0;
+    }
   }
   &__price{
     color: #FFF;
@@ -44,6 +84,23 @@
     line-height: 98.3%;
     text-transform: uppercase;
     margin-bottom: 9px;
+    white-space: nowrap;
+    @media all and (max-width: 1680px) {
+      font-size: 22px;
+    }
+    @media all and (max-width: 1440px) {
+      font-size: 18px;
+    }
+    @media all and (max-width: 1200px){
+      font-size: 32px;
+      color: #845472;
+    }
+    @media all and (max-width: 768px){
+      font-size: 24px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 16px;
+    }
   }
   &__lnk{
     color: #DBDBDB;
@@ -53,9 +110,20 @@
     line-height: 98.3%;
     text-transform: uppercase;
     text-decoration: none;
+    @media all and (max-width: 1200px){
+      color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
     &:hover{
       text-decoration: underline;
       color: #FFFFFF;
+      @media all and (max-width: 1024px){
+        color: transparent;
+      }
     }
   }
 }
