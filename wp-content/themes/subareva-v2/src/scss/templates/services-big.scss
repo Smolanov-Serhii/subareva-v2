@@ -95,6 +95,9 @@
       font-size: 32px;
       color: #845472;
     }
+    @media all and (max-width: 1024px){
+      margin-bottom: 0;
+    }
     @media all and (max-width: 768px){
       font-size: 24px;
     }

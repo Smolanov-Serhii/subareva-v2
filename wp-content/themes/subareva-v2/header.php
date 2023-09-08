@@ -94,7 +94,7 @@
                 ?>
             </nav>
             <div class="services__group-list">
-                <a href="<?php get_permalink(369); ?>">
+                <a href="<?php echo get_permalink(369); ?>">
                     <h3 class="services__group-title">
                         <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
                     </h3>
