@@ -13,6 +13,11 @@ if(is_page(102) || is_page(369) || is_page(447)){
         </h2>
         <div class="reviews__container swiper">
             <?php
+            if (is_singular( 'cosmetology' )){
+                $post_id = 447;
+            } else if (is_singular( 'dentistry' )){
+                $post_id = 369;
+            }
             if( have_rows('perechen_otzyvov', $post_id) ):
                 ?>
                 <div class="reviews__wrapper swiper-wrapper">
