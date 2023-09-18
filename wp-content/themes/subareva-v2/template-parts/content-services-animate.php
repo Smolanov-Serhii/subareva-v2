@@ -10,8 +10,14 @@ $post_id = get_the_ID();
                 </h2>
                 <div class="services-animate__list">
                     <?php
+                    $service = 'dentistry';
+                    if ($post_id == 447){
+                        $service = 'cosmetology';
+                    } else {
+                        $service = 'dentistry';
+                    }
                     $args = array(
-                        'post_type' 	 => 'dentistry'
+                        'post_type' 	 => $service
                     );
                     $MY_QUERY = new WP_Query( $args );
                     if ( $MY_QUERY->have_posts() ) :

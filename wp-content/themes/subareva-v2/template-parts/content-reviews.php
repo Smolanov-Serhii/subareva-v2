@@ -1,5 +1,5 @@
 <?php
-if(is_page(102) || is_page(369)){
+if(is_page(102) || is_page(369) || is_page(447)){
     $post_id = get_the_ID();
 } else {
     $post_id = 102;

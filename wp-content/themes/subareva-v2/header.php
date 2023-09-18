@@ -113,9 +113,11 @@
                 ?>
             </div>
             <div class="services__group-list">
-                <h3 class="services__group-title">
-                    <?php the_field('tekst_bloka_uslug_kosmetologii' , 2)?>
-                </h3>
+                <a href="<?php echo get_permalink(447); ?>">
+                    <h3 class="services__group-title">
+                        <?php the_field('tekst_bloka_uslug_kosmetologii' , 2)?>
+                    </h3>
+                </a>
                 <?php
                 $args = array(
                     'post_type' 	 => 'cosmetology'
@@ -225,7 +227,9 @@
                 </a>
             </div>
             <div class="nav-header-item">
-                <?php the_field('tekst_kosmetologiya', 'option')?>
+                <a href="<?php echo get_permalink(447); ?>">
+                    <?php the_field('tekst_kosmetologiya', 'option')?>
+                </a>
             </div>
         </div>
     </div>

@@ -36,7 +36,7 @@ $post_id = get_the_ID();
             </div>
         </div>
     </section>
-    <div class="current-team">
+    <section class="current-team">
         <div class="current-team__container main-container">
             <h2 class="current-team__title section-title">
                 <?php the_field('stomatologiya_zagolovok' , 'options')?>
@@ -69,7 +69,7 @@ $post_id = get_the_ID();
                 ?>
             </div>
         </div>
-    </div>
+    </section>
     <?php get_template_part( 'template-parts/content', 'reviews' ); ?>
 </main>
 <?php get_footer();?>
