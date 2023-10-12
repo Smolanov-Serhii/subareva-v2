@@ -158,7 +158,8 @@ main{
     font-size: 38px;
   }
   @media all and (max-width: 500px){
-    font-size: 36px;
+    font-size: 24px;
+    transform: translateX(-20px);
   }
   &:before{
     content: "";
@@ -169,6 +170,11 @@ main{
     background-color: #845472;
     @media all and (max-width: 768px){
       display: none;
+    }
+    @media all and (max-width: 500px){
+      display: block;
+      width: 50px;
+
     }
   }
 }

@@ -7,6 +7,11 @@ $post_id = get_the_ID();
             <h2 class="params__title section-title">
                 <?php the_field('zagolovok_bloka_czifry' , $post_id)?>
             </h2>
+            <?php
+                if (get_field('podzagolovok_bloka_cifri', $post_id)){
+                    the_field('podzagolovok_bloka_cifri', $post_id);
+                }
+            ?>
             <div class="params__content">
                 <?php
                 if( have_rows('perechen_czifrovyh_pokazatelej', $post_id) ):

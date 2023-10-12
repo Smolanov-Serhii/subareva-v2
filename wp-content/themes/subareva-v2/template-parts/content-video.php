@@ -1,8 +1,8 @@
 <?php
 $post_id = get_the_ID();
 ?>
-<section class="video">
-    <div class="video__container main-container">
+<section class="video-section">
+    <div class="video-section__container main-container">
         <?php
         if (get_field('fajl_video_block_video', $post_id)){
             ?>

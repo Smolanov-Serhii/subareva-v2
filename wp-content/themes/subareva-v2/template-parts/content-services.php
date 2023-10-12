@@ -27,6 +27,15 @@ $post_id = get_the_ID();
                         <?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>
                     </h3>
                     <?php
+                    if ( wp_is_mobile() ) {
+                        ?>
+                        <div class="services__group-image">
+                            <img src="<?php the_field('kartinka_dlya_bloka_uslug_kosmetologii_mobajl' , $post_id)?>" alt="<?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>">
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <?php
                     $args = array(
                         'post_type' 	 => 'cosmetology'
                     );
@@ -59,6 +68,15 @@ $post_id = get_the_ID();
                     <h3 class="services__group-title">
                         <?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>
                     </h3>
+                    <?php
+                    if ( wp_is_mobile() ) {
+                        ?>
+                        <div class="services__group-image">
+                            <img src="<?php the_field('kartinka_dlya_bloka_uslug_stomatologii_mobajl' , $post_id)?>" alt="<?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>">
+                        </div>
+                        <?php
+                    }
+                    ?>
                     <?php
                     $args = array(
                         'post_type' 	 => 'dentistry'
