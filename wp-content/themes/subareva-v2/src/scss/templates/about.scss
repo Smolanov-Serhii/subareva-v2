@@ -6,6 +6,10 @@
     padding-top: 40px;
     margin: 40px 0;
   }
+  @media all and (max-width: 500px){
+    padding-top: 0;
+    margin: 40px 0;
+  }
   &:before{
     position: absolute;
     content: "";
@@ -15,6 +19,9 @@
     background-color: #F6F6F6;
     top: 0;
     left: 0;
+    @media all and (max-width: 500px){
+      display: none;
+    }
   }
   &__container{
     position: relative;

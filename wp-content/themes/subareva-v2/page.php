@@ -27,6 +27,7 @@ get_header();
     <main id="main" class="main">
         <?php get_template_part( 'template-parts/content', 'banner' ); ?>
         <?php get_template_part( 'template-parts/content', 'digits' ); ?>
+        <?php get_template_part( 'template-parts/content', 'video' ); ?>
         <?php get_template_part( 'template-parts/content', 'about' ); ?>
         <?php get_template_part( 'template-parts/content', 'services' ); ?>
         <?php get_template_part( 'template-parts/content', 'appointment' ); ?>

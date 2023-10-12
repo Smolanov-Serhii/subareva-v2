@@ -1,0 +1,10 @@
+.video{
+  display: none;
+  @media all and (max-width: 500px){
+    margin: 12px 0 20px 0;
+    display: block;
+  }
+  &__container{
+    width: 100%;
+  }
+}

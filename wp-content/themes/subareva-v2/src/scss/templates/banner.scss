@@ -77,6 +77,9 @@
     overflow: hidden;
     .banner__container{
       height: 100%;
+      @media all and (max-width: 500px){
+        height: calc(100vh - 60px);
+      }
     }
     .banner__logo{
       bottom: 20vh;
@@ -167,9 +170,11 @@
       font-size: 26px;
     }
     @media all and (max-width: 1024px){
-      color: #FFFFFF;
+      color: #15223D;
       margin-bottom: 20px;
       text-align: center;
+      font-size: 14px;
+      text-transform: none;
     }
   }
   &__left{
@@ -189,6 +194,11 @@
       padding: 20px 20px 40px 20px;
       background-color: rgba(132,84,114, 0.3);
     }
+    @media all and (max-width: 500px){
+      padding-top: 12px;
+      padding-bottom: 0;
+      background-color: transparent;
+    }
     svg{
       margin-bottom: 25px;
       @media all and (max-width: 1200px){
@@ -203,6 +213,10 @@
       }
       @media all and (max-width: 500px){
         max-width: 60vw;
+        margin-top: 0;
+        path{
+          fill: #15223D;
+        }
       }
     }
   }
@@ -416,6 +430,29 @@
       display: inline-flex;
       @media all and (max-width: 500px){
         width: 100%;
+      }
+    }
+  }
+}
+body{
+  &.home{
+    .banner{
+      &__left{
+        @media all and (max-width: 500px){
+          position: static;
+        }
+      }
+      &__container{
+        @media all and (max-width: 500px){
+          flex-direction: column-reverse;
+        }
+      }
+      &__right{
+        .swiper-wrapper{
+          @media all and (max-width: 500px){
+            height: 340px;
+          }
+        }
       }
     }
   }
