@@ -24,7 +24,7 @@ $post_id = get_the_ID();
                 ?>
                 <div class="services__group-list">
                     <h3 class="services__group-title">
-                        <?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?>
+                        <a href="<?php echo get_home_url() . '/kosmetologiya' ?>"><?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?></a>
                     </h3>
                     <?php
                     if ( wp_is_mobile() ) {
@@ -66,7 +66,7 @@ $post_id = get_the_ID();
                 ?>
                 <div class="services__group-list">
                     <h3 class="services__group-title">
-                        <?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?>
+                        <a href="<?php echo get_home_url() . '/dentistry' ?>"><?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?></a>
                     </h3>
                     <?php
                     if ( wp_is_mobile() ) {
