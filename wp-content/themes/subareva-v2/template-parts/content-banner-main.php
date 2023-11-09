@@ -48,22 +48,35 @@ $post_id = get_the_ID();
                         <div class="swiper-wrapper">
                             <?php
                             while( have_rows('slajder_servisa') ) : the_row();
-                                $image = get_sub_field('kartinka_dlya_slajda');
-                                $video = get_sub_field('video_dlya_slajda');
-                                $alt = get_sub_field('opisanie_kartinki');
+                                $image = get_sub_field('slajd_v_banner');
+                                $alt = get_sub_field('opisanie_slajda');
+                                $title = get_sub_field('nazvanie_proczedury');
+                                $old = get_sub_field('staraya_czena');
+                                $current = get_sub_field('tekushhaya_czena');
                                 ?>
                                 <div class="swiper-slide">
+                                    <img src="<?php echo $image?>" alt="<?php echo $alt?>">
                                     <?php
-                                    if ($video){
+                                    if ($title){
                                         ?>
-                                        <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo $image?>">
-                                            <source src="<?php echo $video?>" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <img src="<?php echo $image?>" alt="<?php echo $alt?>">
+                                        <div class="swiper-slide__about">
+                                            <h3 class="swiper-slide__title">
+                                                <?php echo $title?>
+                                            </h3>
+                                            <?php
+                                                if ($current){
+                                                    ?>
+                                                    <div class="swiper-slide__old">
+                                                        <?php echo $old?>
+                                                    </div>
+                                                    <div class="swiper-slide__current">
+                                                        <?php echo $current?>
+                                                    </div>
+                                                    <?php
+                                                }
+                                            ?>
+                                        </div>
+
                                         <?php
                                     }
                                     ?>

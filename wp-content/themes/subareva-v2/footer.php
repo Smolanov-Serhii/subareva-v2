@@ -123,7 +123,9 @@
                 <rect x="17.2432" y="18.6569" width="14" height="2" transform="rotate(-135 17.2432 18.6569)" fill="white"/>
             </svg>
         </div>
-        <?php echo do_shortcode( '[contact-form-7 id="64bcc87" title="Записаться"]' ); ?>
+<!--        --><?php //echo do_shortcode( '[contact-form-7 id="64bcc87" title="Записаться"]' ); ?>
+        <?php echo do_shortcode( '[contact-form-7 id="52a1437" title="Записаться_copy"]' ); ?>
+
     </div>
 </div>
 <div class="popup-write" style="display: none">
