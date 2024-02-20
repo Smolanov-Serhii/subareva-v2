@@ -1,12 +1,16 @@
 <?php
-if(is_page(102) || is_page(369) || is_page(447)){
+if(is_page(102) || is_page(369) || is_page(447) || is_page(544)){
     $post_id = get_the_ID();
 } else {
     $post_id = 102;
 }
-
+if (is_page(544)){
+    $marker = 'else';
+} else {
+    $marker = '';
+}
 ?>
-<section class="reviews">
+<section class="reviews <?php echo $marker?>">
     <div class="reviews__container main-container">
         <h2 class="reviews__title section-title">
             <?php the_field('zagolovok_bloka_otzyvovy' , $post_id)?>

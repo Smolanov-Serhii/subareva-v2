@@ -22,12 +22,22 @@ $post_id = get_the_ID();
                         while( have_rows('perechen_czen_na_uslugi') ) : the_row();
                             $title = get_sub_field('nazvanie_proczedury');
                             $price = get_sub_field('czena');
+                            $lnk = get_sub_field('ssylka_straniczu');
+                            if($lnk){
+                                ?>
+                                <a href="<?php echo $lnk?>" class="banner__prices-item">
+                                    <p><?php echo $title?></p>
+                                    <span><?php echo $price?></span>
+                                </a>
+                                <?php
+                            } else {
                             ?>
                             <div class="banner__prices-item">
                                 <p><?php echo $title?></p>
                                 <span><?php echo $price?></span>
                             </div>
-                        <?php
+                            <?php
+                            }
                         endwhile;
                         ?>
                     </div>

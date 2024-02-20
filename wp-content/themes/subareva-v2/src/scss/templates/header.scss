@@ -63,7 +63,7 @@
     padding: 0 15px;
     flex-direction: column;
     justify-content: center;
-    background-color: #845472;
+    background-color: #000125;
     height: 100%;
     cursor: pointer;
     &.active{
@@ -228,7 +228,7 @@
           }
           &:nth-child(2){
             width: calc(50% - 15px);
-            background-color: #AD889F;
+            background-color: #000125;
           }
         }
       }
@@ -281,7 +281,7 @@
     }
   }
   &__button{
-    background-color: #845472;
+    background-color: #000125;
     height: 100%;
     display: flex;
     align-items: center;
@@ -295,7 +295,7 @@
       display: none;
     }
     &:hover{
-      background-color: #AD889F;
+      background-color: #000125;
     }
     span{
       color: #FFF;
@@ -330,14 +330,14 @@
       align-items: center;
       width: 60px;
       height: 60px;
-      background-color: #845472;
+      background-color: #000125;
       text-decoration: none;
       transition: 0.3s ease-in-out;
       @media all and (max-width: 1024px){
         background-color: #FFFFFF;
       }
       &:hover{
-        background-color: #AD889F;
+        background-color: #000125;
         @media all and (max-width: 1024px){
           background-color: #FFFFFF;
         }
@@ -349,10 +349,10 @@
         text-transform: uppercase;
         transition: 0.3s ease-in-out;
         @media all and (max-width: 1024px){
-          color: #845472;
+          color: #000125;
           font-size: 22px;
           &:hover{
-            color: #AD889F;
+            color: #000125;
           }
         }
       }

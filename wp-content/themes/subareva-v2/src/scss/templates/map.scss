@@ -1,0 +1,35 @@
+.map{
+  margin: 60px auto;
+  &__container{
+    display: flex;
+    align-items: center;
+    height: 478px;
+  }
+  &__desc{
+    .row{
+      padding-left: 34px;
+      position: relative;
+    }
+    .row, *{
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 175%;
+      color: #000125;
+      svg{
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+  &__text{
+    width: 50%;
+  }
+  &__map{
+    height: 100%;
+    width: 50%;
+  }
+}

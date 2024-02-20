@@ -1,0 +1,109 @@
+.procedure{
+  background-color: #F9F9FB;
+  margin: 60px auto 60px auto;
+  display: flex;
+  align-items: center;
+  &__image{
+    display: flex;
+    align-items: center;
+    width: 42%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__container{
+    padding-top: 82px;
+    padding-bottom: 106px;
+    width: 65%;
+    &.procedure-move{
+      padding-left: 100px;
+      padding-top: 60px;
+      padding-bottom: 63px;
+      .procedure__list{
+        padding-left: 0;
+        margin-top: 60px;
+      }
+      .procedure__item-header{
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 121%;
+        letter-spacing: 0.02em;
+        color: #000125;
+        display: flex;
+        flex-direction: column;
+        span{
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 121%;
+          letter-spacing: 0.02em;
+          color: #000125;
+        }
+      }
+    }
+  }
+  &__title{
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 124%;
+  }
+  &__subtitle{
+    padding-left: 102px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000125;
+    margin-bottom: 42px;
+  }
+  &__list{
+    padding-left: 102px;
+  }
+  &__item{
+    padding-bottom: 24px;
+    border-bottom: 1px solid #A9B3C0;
+    margin-bottom: 24px;
+    svg{
+      transition: 0.1s;
+    }
+    &.active{
+      svg{
+        transform: rotate(-45deg);
+      }
+      .procedure__item-content{
+        display: block;
+      }
+    }
+    &-header{
+      position: relative;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 190%;
+      color: #000125;
+      svg{
+        position: absolute;
+        cursor: pointer;
+        top: 8px;
+        right: 0;
+      }
+    }
+    &-content{
+      display: none;
+      padding-top: 10px;
+      padding-right: 80px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+      color: #000125;
+    }
+  }
+  &__bottom{
+    margin-top: 53px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: #000125;
+  }
+}

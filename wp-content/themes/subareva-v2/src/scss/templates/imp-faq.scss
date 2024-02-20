@@ -1,0 +1,45 @@
+.imp-faq{
+  margin: 80px auto 60px auto;
+  display: flex;
+  align-items: center;
+  &__img{
+    width: 60%;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__container{
+    background-color: #F9F9FB;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &__title{
+    margin-bottom: 38px;
+  }
+  &__desc{
+    li{
+      margin-bottom: 1em;
+      position: relative;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 123%;
+      color: #000125;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        position: absolute;
+        left: -39px;
+        top: calc(50% - 7px);
+        background-color: #000125;
+      }
+    }
+  }
+}

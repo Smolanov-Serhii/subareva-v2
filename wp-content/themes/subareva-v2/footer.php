@@ -118,7 +118,7 @@
     <div class="popup-zapis__container">
         <div class="popup-zapis__close">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="26" height="26" fill="#AD889F"/>
+                <rect width="26" height="26" fill="#000125"/>
                 <rect x="7.34277" y="17.2426" width="14" height="2" transform="rotate(-45 7.34277 17.2426)" fill="white"/>
                 <rect x="17.2432" y="18.6569" width="14" height="2" transform="rotate(-135 17.2432 18.6569)" fill="white"/>
             </svg>
@@ -132,7 +132,7 @@
     <div class="popup-write__container">
         <div class="popup-write__close">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="26" height="26" fill="#AD889F"/>
+                <rect width="26" height="26" fill="#000125"/>
                 <rect x="7.34277" y="17.2426" width="14" height="2" transform="rotate(-45 7.34277 17.2426)" fill="white"/>
                 <rect x="17.2432" y="18.6569" width="14" height="2" transform="rotate(-135 17.2432 18.6569)" fill="white"/>
             </svg>
@@ -171,9 +171,9 @@
     </div>
     <div class="messengers__button">
         <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M92 46C92 71.4051 71.4051 92 46 92C20.5949 92 0 71.4051 0 46C0 20.5949 20.5949 0 46 0C71.4051 0 92 20.5949 92 46Z" fill="#AD889F" fill-opacity="0.11"/>
-            <path d="M85 46C85 67.5391 67.5391 85 46 85C24.4609 85 7 67.5391 7 46C7 24.4609 24.4609 7 46 7C67.5391 7 85 24.4609 85 46Z" fill="#AD889F" fill-opacity="0.22"/>
-            <path d="M78 46C78 63.6731 63.6731 78 46 78C28.3269 78 14 63.6731 14 46C14 28.3269 28.3269 14 46 14C63.6731 14 78 28.3269 78 46Z" fill="#AD889F"/>
+            <path d="M92 46C92 71.4051 71.4051 92 46 92C20.5949 92 0 71.4051 0 46C0 20.5949 20.5949 0 46 0C71.4051 0 92 20.5949 92 46Z" fill="#000125" fill-opacity="0.11"/>
+            <path d="M85 46C85 67.5391 67.5391 85 46 85C24.4609 85 7 67.5391 7 46C7 24.4609 24.4609 7 46 7C67.5391 7 85 24.4609 85 46Z" fill="#000125" fill-opacity="0.22"/>
+            <path d="M78 46C78 63.6731 63.6731 78 46 78C28.3269 78 14 63.6731 14 46C14 28.3269 28.3269 14 46 14C63.6731 14 78 28.3269 78 46Z" fill="#000125"/>
         </svg>
         <div class="normal">
             <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">

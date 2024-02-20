@@ -60,6 +60,24 @@ main{
     padding-right: 20px;
   }
 }
+.padding-right-part{
+  padding-right: calc(((100vw - 1920px) / 2) + 322px);
+  @media all and (max-width: 1476px){
+    padding-right: 100px;
+  }
+  @media all and (max-width: 1400px){
+    padding-right: 75px;
+  }
+  @media all and (max-width: 1024px){
+    padding-right: 50px;
+  }
+  @media all and (max-width: 768px){
+    padding-right: 35px;
+  }
+  @media all and (max-width: 500px){
+    padding-right: 20px;
+  }
+}
 .padding-left{
   padding-left: 100px;
   @media all and (max-width: 1400px){
@@ -109,9 +127,9 @@ main{
 }
 
 .button{
-  background-color: #845472;
+  background-color: #000125;
   padding: 20px 63px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -131,7 +149,16 @@ main{
     text-transform: uppercase;
   }
   &:hover{
-    background-color: #AD889F;
+    background-color: #000125;
+  }
+  &-white{
+    background-color: #FFFFFF;
+    span{
+      color: #000125;
+    }
+    &:hover{
+      background-color: rgba(255,255,255,0.8);
+    }
   }
 }
 .swiper-button-disabled{
@@ -167,7 +194,7 @@ main{
     width: 68px;
     height: 4px;
     margin-right: 34px;
-    background-color: #845472;
+    background-color: #000125;
     @media all and (max-width: 768px){
       display: none;
     }
@@ -192,6 +219,7 @@ main{
 @import "templates/services";
 @import "templates/services-big";
 @import "templates/appointment";
+@import "templates/appointment-new";
 @import "templates/success-send";
 @import "templates/messengers";
 @import "templates/maps";
@@ -203,5 +231,14 @@ main{
 @import "templates/team";
 @import "templates/services-animate";
 @import "templates/current-team";
+@import "templates/banner-dark";
+@import "templates/total";
+@import "templates/need";
+@import "templates/prich";
+@import "templates/procedure";
+@import "templates/types";
+@import "templates/imp-faq";
+@import "templates/doctor";
+@import "templates/map";
 @import "templates/footer";
 

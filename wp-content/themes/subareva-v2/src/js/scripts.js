@@ -5,6 +5,10 @@ $(document).ready(function () {
         $('.messengers__links').fadeToggle(300);
     } );
 
+    $( ".procedure__item-header" ).on( "click", function() {
+        $('.procedure__item').removeClass('active');
+        $(this).closest('.procedure__item').addClass('active');
+    } );
     function AosStart(){
 
     }

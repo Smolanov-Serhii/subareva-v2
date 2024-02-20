@@ -1,6 +1,6 @@
-.appointment{
-  background-color: #F6F6F6;
-  padding: 69px 0 70px 0;
+.appointment-new{
+  background-color: #000125;
+  padding: 41px 0 69px 0;
   @media all and (max-width: 768px){
     padding: 40px 0 40px 0;
   }
@@ -61,7 +61,7 @@
     }
   }
   &__title{
-    color: #000125;
+    color: #FFFFFF;
     font-size: 40px;
     font-weight: 700;
     line-height: 117.8%;
@@ -88,7 +88,7 @@
     }
   }
   &__desc{
-    color: #15223D;
+    color: #FFFFFF;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
