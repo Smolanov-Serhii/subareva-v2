@@ -3,7 +3,18 @@ $post_id = get_the_ID();
 ?>
 <section class="banner-dark white">
     <div class="banner-dark__img">
-        <img src="<?php echo the_field('kartinka_bannera', $post_id)?>" alt="<?php the_field('zagolovok_banera', $post_id)?>">
+        <?php
+        if ( wp_is_mobile() ) {
+            ?>
+            <img src="<?php echo the_field('kartinka_bannera_mob', $post_id)?>" alt="<?php the_field('zagolovok_banera', $post_id)?>">
+            <?php
+        } else {
+            ?>
+            <img src="<?php echo the_field('kartinka_bannera', $post_id)?>" alt="<?php the_field('zagolovok_banera', $post_id)?>">
+            <?php
+        }
+        ?>
+
     </div>
     <div class="banner-dark__container main-container">
         <h1 class="banner-dark__title white">

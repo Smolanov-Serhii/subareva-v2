@@ -22,6 +22,12 @@ if (is_page(544) || is_page(646)){
             } else if (is_singular( 'dentistry' )){
                 $post_id = 369;
             }
+            $counter = 0;
+            if( have_rows('perechen_otzyvov', $post_id) ):
+            while( have_rows('perechen_otzyvov', $post_id) ) : the_row();
+                $counter ++;
+            endwhile;
+            endif;
             if( have_rows('perechen_otzyvov', $post_id) ):
                 ?>
                 <div class="reviews__wrapper swiper-wrapper">
@@ -70,6 +76,7 @@ if (is_page(544) || is_page(646)){
                 </div>
             <?php
             endif;
+            if ($counter > 1){
             ?>
             <div class="banner__nav">
                 <div class="banner__prev">
@@ -84,6 +91,9 @@ if (is_page(544) || is_page(646)){
                     </svg>
                 </div>
             </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </section>

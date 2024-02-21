@@ -9,6 +9,9 @@
   }
   &.white{
     background-color: #FFFFFF;
+    @media all and (max-width: 768px) {
+      padding-bottom: 230px;
+    }
     .banner-dark__title.white{
       color: #000125;
     }
@@ -19,6 +22,9 @@
       width: 70%;
       @media all and (max-width: 768px){
         width: 100%;
+        height: auto;
+        top: auto;
+        bottom: 0;
       }
     }
   }
@@ -52,6 +58,9 @@
     justify-content: center;
     height: 100%;
     position: relative;
+    @media all and (max-width: 768px){
+      padding-top: 9vh;
+    }
   }
   &__lnk{
     @media all and (max-width: 500px){
