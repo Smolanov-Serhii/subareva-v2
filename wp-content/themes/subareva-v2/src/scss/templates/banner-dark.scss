@@ -1,14 +1,40 @@
 .banner-dark{
   background-color: #000125;
   position: relative;
-  max-height: 1080px;
+  //max-height: 1080px;
   height: calc(100vh - 60px);
+  @media all and (max-width: 1440px){
+    max-height: calc(100vh - 60px);
+    height: 100%;
+  }
+  &.white{
+    background-color: #FFFFFF;
+    .banner-dark__title.white{
+      color: #000125;
+    }
+    .banner-dark__subtitle.white{
+      color: #000125;
+    }
+    .banner-dark__img{
+      width: 70%;
+      @media all and (max-width: 768px){
+        width: 100%;
+      }
+    }
+  }
   &__img{
     position: absolute;
     right: 0;
     top: 0;
     width: 50%;
     height: 100%;
+    pointer-events: none;
+    @media all and (max-width: 1200px){
+      width: 68%;
+    }
+    @media all and (max-width: 768px){
+      width: 80%;
+    }
     img{
       object-fit: cover;
       width: 100%;
@@ -25,6 +51,12 @@
     align-items: flex-start;
     justify-content: center;
     height: 100%;
+    position: relative;
+  }
+  &__lnk{
+    @media all and (max-width: 500px){
+      width: 100%;
+    }
   }
   &__title{
     font-size: 70px;
@@ -34,11 +66,47 @@
     margin-bottom: 37px;
     text-align: left;
     font-weight: 700;
+    @media all and (max-width: 1600px){
+      font-size: 60px;
+    }
+    @media all and (max-width: 1440px){
+      font-size: 50px;
+    }
+    @media all and (max-width: 1200px){
+      font-size: 46px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 40px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 34px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 28px;
+    }
   }
   &__subtitle{
     font-size: 24px;
     color: #FFFFFF;
     line-height: 123.8%;
     margin-bottom: 37px;
+    @media all and (max-width: 1600px){
+      font-size: 23px;
+    }
+    @media all and (max-width: 1440px){
+      font-size: 22px;
+    }
+    @media all and (max-width: 1200px){
+      font-size: 21px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 20px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 19px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 18px;
+    }
   }
 }

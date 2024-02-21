@@ -3,13 +3,20 @@
   margin: 60px auto 60px auto;
   display: flex;
   align-items: center;
+  @media all and (max-width: 1024px){
+    margin: 40px auto 40px auto;
+  }
   &__image{
     display: flex;
     align-items: center;
     width: 42%;
+    @media all and (max-width: 1200px){
+      display: none;
+    }
     img{
       width: 100%;
       height: auto;
+      mix-blend-mode: multiply;
     }
   }
 
@@ -17,13 +24,42 @@
     padding-top: 82px;
     padding-bottom: 106px;
     width: 65%;
+    @media all and (max-width: 1200px){
+      width: 100%;
+    }
+    @media all and (max-width: 500px){
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
     &.procedure-move{
       padding-left: 100px;
       padding-top: 60px;
       padding-bottom: 63px;
+      @media all and (max-width: 1200px){
+        padding-left: 75px;
+      }
+      @media all and (max-width: 1024px){
+        padding-left: 50px;
+      }
+      @media all and (max-width: 768px){
+        padding-left: 35px;
+      }
+      @media all and (max-width: 500px){
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .procedure__title {
+        @media all and (max-width: 768px){
+          padding-left: 0;
+        }
+      }
       .procedure__list{
         padding-left: 0;
         margin-top: 60px;
+        @media all and (max-width: 500px){
+          margin-top: 40px;
+        }
       }
       .procedure__item-header{
         font-weight: 500;
@@ -33,21 +69,48 @@
         color: #000125;
         display: flex;
         flex-direction: column;
+        @media all and (max-width: 1600px){
+          font-size: 30px;
+        }
+        @media all and (max-width: 1440px){
+          font-size: 28px;
+        }
+        @media all and (max-width: 1200px){
+          font-size: 26px;
+        }
+        @media all and (max-width: 1024px){
+          font-size: 24px;
+        }
+        @media all and (max-width: 768px){
+          font-size: 22px;
+        }
+        @media all and (max-width: 500px){
+          font-size: 18px;
+        }
         span{
           font-weight: 300;
           font-size: 20px;
           line-height: 121%;
           letter-spacing: 0.02em;
           color: #000125;
+          @media all and (max-width: 500px){
+            font-size: 16px;
+          }
         }
       }
     }
   }
   &__title{
     margin-bottom: 22px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 124%;
+    //font-weight: 700;
+    //font-size: 48px;
+    //line-height: 124%;
+    @media all and (max-width: 768px){
+      padding-left: 35px;
+    }
+    @media all and (max-width: 500px){
+      padding-left: 0;
+    }
   }
   &__subtitle{
     padding-left: 102px;
@@ -56,9 +119,28 @@
     line-height: 140%;
     color: #000125;
     margin-bottom: 42px;
+    @media all and (max-width: 768px){
+      padding-left: 35px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 16px;
+      padding-left: 20px;
+    }
   }
   &__list{
     padding-left: 102px;
+    @media all and (max-width: 1200px){
+      padding-left: 75px;
+    }
+    @media all and (max-width: 1024px){
+      padding-left: 50px;
+    }
+    @media all and (max-width: 768px){
+      padding-left: 35px;
+    }
+    @media all and (max-width: 500px){
+      padding-left: 20px;
+    }
   }
   &__item{
     padding-bottom: 24px;
@@ -81,11 +163,17 @@
       font-size: 18px;
       line-height: 190%;
       color: #000125;
+      @media all and (max-width: 500px){
+        font-size: 16px;
+      }
       svg{
         position: absolute;
         cursor: pointer;
         top: 8px;
         right: 0;
+        @media all and (max-width: 1024px){
+          top: 0;
+        }
       }
     }
     &-content{
@@ -105,5 +193,14 @@
     line-height: 143%;
     letter-spacing: 0.02em;
     color: #000125;
+    @media all and (max-width: 1024px){
+      margin-top: 40px;
+    }
+    @media all and (max-width: 768px){
+      margin-top: 30px;
+    }
+    @media all and (max-width: 500px){
+      margin-top: 20px;
+    }
   }
 }

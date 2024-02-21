@@ -14,7 +14,7 @@ $post_id = get_the_ID();
         <?php
         if ( wp_is_mobile() ) {
             ?>
-            <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+            <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button button-white">
                 <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
             </a>
             <?php

@@ -4,8 +4,15 @@
     display: flex;
     align-items: center;
     height: 478px;
+    @media all and (max-width: 1024px){
+      flex-wrap: wrap;
+      height: auto;
+    }
   }
   &__desc{
+    @media all and (max-width: 500px){
+      margin-top: 40px;
+    }
     .row{
       padding-left: 34px;
       position: relative;
@@ -15,6 +22,15 @@
       font-size: 24px;
       line-height: 175%;
       color: #000125;
+      @media all and (max-width: 1024px){
+        font-size: 22px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 20px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 18px;
+      }
       svg{
         position: absolute;
         bottom: 14px;
@@ -27,9 +43,21 @@
   }
   &__text{
     width: 50%;
+    @media all and (max-width: 1024px){
+      width: 100%;
+    }
   }
   &__map{
     height: 100%;
     width: 50%;
+    @media all and (max-width: 1024px){
+      width: 100%;
+      height: 600px;
+      margin-top: 40px;
+      max-height: 80vh;
+    }
+    @media all and (max-width: 500px){
+      height: 60vh;
+    }
   }
 }
