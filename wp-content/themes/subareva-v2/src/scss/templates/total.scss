@@ -50,6 +50,12 @@
     }
     &-img{
       height: 160px;
+      text-align:center;
+      img{
+        height: 100%;
+        width: auto;
+        //mix-blend-mode: multiply;
+      }
     }
     &-title{
       font-weight: 700;
