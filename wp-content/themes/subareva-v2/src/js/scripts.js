@@ -6,8 +6,14 @@ $(document).ready(function () {
     } );
 
     $( ".procedure__item-header" ).on( "click", function() {
-        $('.procedure__item').removeClass('active');
-        $(this).closest('.procedure__item').addClass('active');
+        if ($(this).closest('.procedure__item').hasClass('active')){
+            $(this).closest('.procedure__item').removeClass('active');
+        } else {
+            $('.procedure__item').removeClass('active');
+            $(this).closest('.procedure__item').addClass('active');
+        }
+
+
     } );
     function AosStart(){
 

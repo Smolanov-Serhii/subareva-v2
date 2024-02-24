@@ -7,6 +7,8 @@
   }
   @media all and (max-width: 1024px){
     flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 0;
   }
   &__container{
     padding-top: 152px;
@@ -39,11 +41,14 @@
     @media all and (max-width: 1440px){
       padding: 40px;
     }
+    @media all and (max-width: 1440px){
+      padding: 40px 50px;
+    }
     @media all and (max-width: 768px){
-      padding: 35px;
+      padding: 40px 35px;
     }
     @media all and (max-width: 500px){
-      padding: 20px;
+      padding: 40px 20px;
     }
   }
   &__title{
@@ -74,6 +79,9 @@
       }
       &:last-child{
         margin-bottom: 0;
+      }
+      &:hover{
+        font-weight: 500;
       }
     }
   }

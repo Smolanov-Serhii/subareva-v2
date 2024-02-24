@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, rgba(11, 20, 31, 0.60) 0%, rgba(11, 20, 31, 0.60) 100%);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 99;
   @media all and (max-width: 1440px){
 
@@ -40,14 +40,14 @@
       margin-top: 20px;
     }
     &-item{
-      background-color: #AD889F;
+      background-color: rgba(0, 1, 37, 1);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 18px 24px;
       width: calc(33.3333% - 8px);
       text-decoration: none;
-      color: #FFF;
+      color: #FFFFFF;
       transition: 0.3s ease-in-out;
       @media all and (max-width: 1024px){
         width: 300px;
@@ -60,13 +60,13 @@
         width: 100%;
       }
       &:hover{
-        background-color: #FFF;
+        background-color: rgba(0, 1, 37, 0.8);
         span{
-          color: #AD889F;
+          color: #FFF;
         }
         svg{
           path{
-            fill: #AD889F;
+            fill: rgba(0, 1, 37, 1);
           }
         }
       }
@@ -95,7 +95,8 @@
   }
   &__container{
     position: relative;
-    background-color: #845472;
+    background-color: rgba(249, 249, 251, 1);
+    border: 1px solid rgba(39, 80, 161, 1);
     padding: 42px 96px;
     text-align: center;
     @media all and (max-width: 1440px){
@@ -110,7 +111,7 @@
     }
   }
   &__title{
-    color: var(--ffffff, #FFF);
+    color: rgba(0, 1, 37, 1);
     text-align: center;
     font-size: 40px;
     font-weight: 700;
@@ -153,7 +154,7 @@
     }
     .wpcf7-acceptance{
       width: 100%;
-      color: #FFFFFF;
+      color: rgba(0, 1, 37, 1);
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.28px;
@@ -161,7 +162,7 @@
     .wpcf7-list-item{
       margin-left: 0;
       input{
-        background-color: #AD889F;
+        background-color: #FFFFFF;
         margin-right: 18px;
       }
     }
@@ -170,9 +171,9 @@
       margin-bottom: 20px;
       display: block;
       .wpcf7-text, .wpcf7mf-mask, .wpcf7-textarea{
-        background-color: #AD889F;
+        background-color: #FFFFFF;
         padding: 18px 36px;
-        color: #FFFFFF;
+        color: rgba(0, 1, 37, 1);
         font-size: 20px;
         font-weight: 400;
         letter-spacing: 0.4px;
@@ -186,7 +187,7 @@
           padding: 10px 20px;
         }
         &::placeholder{
-          color: #CEB6C5;
+          color: rgba(0, 1, 37, 0.6);
         }
       }
       .wpcf7-textarea{
@@ -196,7 +197,7 @@
 
   }
   &__subtitle{
-    color: #FFF;
+    color: rgba(0, 1, 37, 1);
     text-align: center;
     font-size: 18px;
     font-weight: 400;
