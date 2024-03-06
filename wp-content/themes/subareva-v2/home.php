@@ -45,11 +45,11 @@ get_header();
             <div class="banner-dark__container main-container">
                 <h1 class="banner-dark__title white">
                     <?php
-                    echo $currentLang;
+//                    echo $currentLang;
                         if ($currentLang == "ua"){
                             ?>
                             -25% на план<br>
-                            стомотологічного<br>
+                            стоматологічного<br>
                             лікування
                             <?php
                         } else {
