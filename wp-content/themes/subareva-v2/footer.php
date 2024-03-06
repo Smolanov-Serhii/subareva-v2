@@ -142,7 +142,7 @@
 </div>
 <div class="messengers">
     <div class="messengers__links" style="display: none">
-        <a href="viber://chat?number=%2B380961397093">
+        <a href="viber://chat?number=%2B380987006700">
             <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="46" cy="46" r="46" fill="#C154BD" fill-opacity="0.11"/>
                 <circle cx="46" cy="46" r="39" fill="#C154BD" fill-opacity="0.22"/>
