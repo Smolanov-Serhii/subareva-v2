@@ -2,7 +2,7 @@
   &__service{
     .banner__left{
       @media all and (max-width: 1024px){
-        background-color: rgba(255,255,255, 0.45);
+        background-color: rgba(132,84,114,.4);
       }
       @media all and (max-width: 500px){
         padding-bottom: 20px;
@@ -73,7 +73,7 @@
     }
   }
   &__about{
-    height: 100vh;
+    height: calc(100vh - 60px);
     overflow: hidden;
     .banner__container{
       height: 100%;
@@ -82,12 +82,13 @@
       }
     }
     .banner__logo{
-      bottom: 20vh;
+      bottom: 0;
       display: flex;
       flex-direction: column;
       @media all and (max-width: 1024px){
-        justify-content: flex-start;
-        align-items: flex-end;
+        top: auto;
+        bottom: 0;
+        width: 100%;
       }
       .button{
         margin-top: 40px;
@@ -104,20 +105,40 @@
     }
     .banner__title{
       color: #15223D;
-      font-size: 24px;
-      font-weight: 500;
+      font-size: 70px;
+      font-weight: 700;
       line-height: 123.8%;
       letter-spacing: 0.48px;
       text-transform: none;
       @media all and (max-width: 1440px){
-
+        font-size: 60px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 50px;
       }
       @media all and (max-width: 500px){
-        font-size: 20px;
+        font-size: 40px;
         margin-bottom: 0;
       }
     }
+    .banner__subtitle{
+      color: #000125;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 123.8%;
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+    }
     .banner__right{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: auto;
+      @media all and (max-width: 768px){
+        width: 100%;
+      }
       @media all and (max-width: 768px){
         height: 100%;
       }
@@ -128,15 +149,18 @@
       }
     }
     .banner__left{
-      padding-bottom: 40vh;
+      //padding-bottom: 40vh;
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      width: 80%;
       .banner__button{
-        display: none;
+        //display: none;
         @media all and (max-width: 1024px){
           display: flex;
         }
         @media all and (max-width: 500px){
           margin-top: 20px;
-          width: 100%;
           a{
             padding: 20px 10px;
             width: 100%;
@@ -146,10 +170,12 @@
       @media all and (max-width: 1024px){
         padding-bottom: 40px;
         padding-top: 40px;
+        width: 100%;
+        background-color: transparent;
       }
       @media all and (max-width: 500px){
         padding-bottom: 20px;
-        padding-top: 20px;
+        padding-top: 30vh;
       }
     }
   }
@@ -192,11 +218,11 @@
       align-items: center;
       //padding: 20px 20px 70px 20px;
       padding: 20px 20px 40px 20px;
-      background-color: rgba(255,255,255, 0.45);
+      background-color: rgba(132,84,114, 0.3);
     }
     @media all and (max-width: 500px){
       padding-top: 12px;
-      padding-bottom: 20px;
+      padding-bottom: 0;
       background-color: transparent;
     }
     svg{
@@ -208,7 +234,7 @@
       }
       @media all and (max-width: 1024px){
         path{
-          fill: #15223D;
+          fill: #FFFFFF;
         }
       }
       @media all and (max-width: 500px){
@@ -241,7 +267,6 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 40px;
-      text-decoration: none;
       @media all and (max-width: 1440px){
         margin-bottom: 20px;
       }
@@ -260,7 +285,7 @@
         margin-bottom: 0;
         padding-right: 20px;
         @media all and (max-width: 1024px){
-          color: #15223D;
+          color: #FFFFFF;
         }
         @media all and (max-width: 500px){
           font-size: 16px;
@@ -270,7 +295,7 @@
         }
       }
       span{
-        color: #000125;
+        color: #845472;
         font-size: 24px;
         font-weight: 600;
         line-height: 98.3%;
@@ -278,7 +303,7 @@
         text-align: right;
         white-space: nowrap;
         @media all and (max-width: 1024px){
-          color: #15223D;
+          color: #FFFFFF;
         }
         @media all and (max-width: 500px){
           font-size: 18px;
@@ -346,7 +371,7 @@
         color: #FFFFFF;
         text-transform: uppercase;
         @media all and (max-width: 1024px){
-          color: #000125;
+          color: #845472;
         }
         @media all and (max-width: 500px){
           font-size: 32px;
@@ -358,7 +383,7 @@
         margin-bottom: 10px;
         color: #FFFFFF;
         @media all and (max-width: 1024px){
-          color: #000125;
+          color: #845472;
         }
       }
       &__current{
@@ -368,8 +393,8 @@
         padding: 20px;
         border: 2px solid #FFFFFF;
         @media all and (max-width: 1024px){
-          color: #000125;
-          border: 2px solid #000125;
+          color: #845472;
+          border: 2px solid #845472;
           background-color: #FFFFFF;
         }
         @media all and (max-width: 500px){
@@ -379,7 +404,7 @@
       }
       img{
         object-fit: cover;
-        object-position: top center;
+        object-position: center;
         width: 100%;
         height: 100%;
       }

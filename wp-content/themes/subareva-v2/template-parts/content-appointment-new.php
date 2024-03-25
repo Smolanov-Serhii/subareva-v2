@@ -1,5 +1,10 @@
 <?php
-$post_id = get_the_ID();
+
+if (is_page(102)){
+    $post_id = 646;
+} else {
+    $post_id = get_the_ID();
+}
 ?>
 <section class="appointment-new">
     <div class="appointment-new__container main-container">

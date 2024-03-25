@@ -3,20 +3,43 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30vw * $px;
+    @media all and (max-width: 500px){
+      gap: 10px;
+    }
+  }
+  &__title{
+    margin-bottom: 40px;
   }
   &__item{
+    width: calc(33.333% - calc(20vw * $px));
+    height: auto;
+    @media all and (max-width: 768px){
+      width: calc(50% - 10px);
+    }
+    @media all and (max-width: 500px){
+      width: calc(50% - 5px);
+    }
     &:nth-child(1){
-      height: 434vw * $px;
-      width: 437vw * $px;
+      height: auto;
+      width: 34%;
+      @media all and (max-width: 768px){
+        width: calc(50% - 10px);
+      }
+      @media all and (max-width: 500px){
+        width: calc(50% - 5px);
+      }
     }
     &:nth-child(2){
-      width: 807vw * $px;
-      height: 434vw * $px;
+      width: calc(66% - (30vw * $px));
+      height: auto;
+      @media all and (max-width: 768px){
+        width: 100%;
+        order: -1;
+      }
     }
   }
   .sl-container {
-    //border: 10px solid #BFE2FF;
-    margin: 20px auto;
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
@@ -30,13 +53,30 @@
   }
   .sl-container .view img {
     max-width: none;
+    object-fit: cover;
+    object-position: left center;
+    height: 100%;
+    width: 100%;
   }
   .sl-container .view-before {
     z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: static;
+    img{
+      position: static;
+    }
   }
   .sl-container .view-after {
     width: 100px;
     z-index: 200;
+    height: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left;
   }
   .sl-container .dragme {
     position: absolute;
@@ -65,15 +105,5 @@
     font-size: 20px;
     color: #337AB7;
     font-weight: bold;
-  }
-  @media screen and (max-width: 600px) {
-    .sl-container {
-      width: 320px;
-      height: 210px;
-    }
-    .sl-container .view img {
-      width: 320px;
-      max-width: 320px;
-    }
   }
 }

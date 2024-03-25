@@ -24,6 +24,10 @@
     background-color: #F9F9FB;
     padding-top: 60px;
     padding-bottom: 60px;
+    padding-right: 40px;
+    @media all and (max-width: 1024px){
+      padding-right: 0;
+    }
   }
   &__title{
     margin-bottom: 38px;
@@ -47,6 +51,9 @@
       }
       @media all and (max-width: 1024px){
         font-size: 18px;
+        br{
+          display: none;
+        }
       }
       @media all and (max-width: 768px){
         font-size: 17px;

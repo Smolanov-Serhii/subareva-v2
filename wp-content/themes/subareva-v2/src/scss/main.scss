@@ -5,6 +5,7 @@
 @import "templates/jquery-ui";
 $transition: 0.2s;
 $px: 0.0520833333333333;
+$pxm: 0.2272727272727273;
 $rem: 16;
 .rngst_phone_button{
   display: none!important;
@@ -226,9 +227,13 @@ main{
 @import "templates/maps";
 @import "templates/popup-zapis";
 @import "templates/reviews";
+@import "templates/comfort";
 @import "templates/waranty";
 @import "templates/vstavka";
+@import "templates/premium";
 @import "templates/params";
+@import "templates/vinir-type";
+@import "templates/innovation";
 @import "templates/team";
 @import "templates/compare";
 @import "templates/services-animate";

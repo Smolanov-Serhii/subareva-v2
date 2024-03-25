@@ -16,9 +16,9 @@ get_header();
         <?php get_template_part( 'template-parts/content', 'types' ); ?>
         <?php get_template_part( 'template-parts/content', 'imp-faq' ); ?>
         <?php get_template_part( 'template-parts/content', 'doctor' ); ?>
-<!--        --><?php //get_template_part( 'template-parts/content', 'reviews' ); ?>
         <?php get_template_part( 'template-parts/content', 'compare' ); ?>
-        <?php get_template_part( 'template-parts/content', 'price' ); ?>
+        <?php get_template_part( 'template-parts/content', 'reviews' ); ?>
+<!--        --><?php //get_template_part( 'template-parts/content', 'price' ); ?>
         <?php get_template_part( 'template-parts/content', 'map' ); ?>
         <?php get_template_part( 'template-parts/content', 'appointment-new' ); ?>
     </main>

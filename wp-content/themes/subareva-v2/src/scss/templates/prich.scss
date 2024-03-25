@@ -44,4 +44,110 @@
       }
     }
   }
+  &__new{
+    background-color: #F9F9FB;
+    margin: 0 auto 0 auto;
+    padding: 80px 0 60px 0;
+    position: relative;
+    @media all and (max-width: 500px){
+      padding: 40px 0 20px 0;
+    }
+    .prich{
+      overflow: hidden;
+      &__new-img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 35%;
+        height: auto;
+        @media all and (max-width: 1200px){
+          display: none;
+        }
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+      &__list{
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: stretch;
+        @media all and (max-width: 1024px){
+          gap: 20px;
+        }
+        > div{
+          &.devider{
+            @media all and (max-width: 1024px){
+              display: none;
+            }
+          }
+          &:nth-child(1){
+            width: 27%;
+            @media all and (max-width: 1024px){
+              width: calc(50% - 10px);
+            }
+            @media all and (max-width: 500px){
+              width: 100%;
+            }
+          }
+          &:nth-child(2){
+            width: 41%;
+            @media all and (max-width: 1024px){
+              width: calc(50% - 10px);
+            }
+            @media all and (max-width: 500px){
+              width: 100%;
+            }
+          }
+          &:nth-child(4){
+            width: 27%;
+            @media all and (max-width: 1024px){
+              width: calc(50% - 10px);
+            }
+            @media all and (max-width: 500px){
+              width: 100%;
+            }
+          }
+          &:nth-child(5){
+            width: 43%;
+            @media all and (max-width: 1024px){
+              width: calc(50% - 10px);
+            }
+            @media all and (max-width: 500px){
+              width: 100%;
+            }
+          }
+          &:nth-child(6){
+            width: 84%;
+            @media all and (max-width: 1024px){
+              width: 100%;
+            }
+            @media all and (max-width: 500px){
+              width: 100%;
+            }
+          }
+        }
+        &-item{
+          border-right: none;
+          display: flex;
+          flex-direction: column;
+          padding: 32px;
+          background-color: #FFFFFF;
+          text-align: left;
+          align-items: flex-start;
+          margin-bottom: 0;
+          @media all and (max-width: 768px){
+            padding: 20px;
+          }
+        }
+        &-title{
+          margin-bottom: 32px;
+        }
+        &-desc{
+          margin-bottom: 0;
+
+        }
+      }
+    }
+  }
 }

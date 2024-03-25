@@ -23,9 +23,15 @@ $post_id = get_the_ID();
                             <div class="total__list-img">
                                 <img src="<?php echo $image?>" alt="<?php echo $title?>">
                             </div>
-                            <h3 class="total__list-title">
-                                <?php echo $title?>
-                            </h3>
+                            <?php
+                                if ($title){
+                                    ?>
+                                    <h3 class="total__list-title">
+                                        <?php echo $title?>
+                                    </h3>
+                                    <?php
+                                }
+                            ?>
                             <div class="total__list-desc">
                                 <?php echo $desc?>
                             </div>

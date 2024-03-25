@@ -1,5 +1,10 @@
 <?php
-$post_id = get_the_ID();
+
+if (is_page(102)){
+    $post_id = 646;
+} else {
+    $post_id = get_the_ID();
+}
 ?>
 <section class="map">
     <div class="map__container main-container">
@@ -15,8 +20,21 @@ $post_id = get_the_ID();
                     </svg>
                     <?php the_field('karta_adress', $post_id)?>
                 </div>
-                <div class="row"><a href="tel:<?php the_field('telefon1', $post_id)?>">тел:<?php the_field('telefon1', $post_id)?></a></div>
-                <div class="row"><a href="tel:<?php the_field('telefon2', $post_id)?>">тел:<?php the_field('telefon2', $post_id)?></a></div>
+                <?php
+                if (get_field('telefon1', $post_id)){
+                    ?>
+                    <div class="row"><a href="tel:<?php the_field('telefon1', $post_id)?>">тел:<?php the_field('telefon1', $post_id)?></a></div>
+                    <?php
+                }
+                ?>
+
+                <?php
+                if (get_field('telefon2', $post_id)){
+                    ?>
+                    <div class="row"><a href="tel:<?php the_field('telefon2', $post_id)?>">тел:<?php the_field('telefon2', $post_id)?></a></div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
         <div class="map__map">
