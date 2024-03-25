@@ -2,6 +2,7 @@
 @import "aos";
 @import "preloader";
 @import "default";
+@import "templates/jquery-ui";
 $transition: 0.2s;
 $px: 0.0520833333333333;
 $rem: 16;
@@ -229,6 +230,7 @@ main{
 @import "templates/vstavka";
 @import "templates/params";
 @import "templates/team";
+@import "templates/compare";
 @import "templates/services-animate";
 @import "templates/current-team";
 @import "templates/banner-dark";

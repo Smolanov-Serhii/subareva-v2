@@ -31,6 +31,7 @@ const styleFiles = [
 //Порядок подключения js файлов
 const scriptFiles = [
    './src/js/jquery-3.5.1.js',
+    './src/js/jquery-ui.js',
    // './src/js/sfera.js',
    // './src/js/aos.js',
    // './src/js/jquery.event.move.js',
