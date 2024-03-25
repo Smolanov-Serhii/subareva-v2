@@ -3,9 +3,15 @@ $post_id = get_the_ID();
 ?>
 <section class="premium">
     <div class="premium__container padding-left-part">
-        <div class="premium__title section-title">
-            <?php the_field('zagolovok_premialnoe_obsluzhivanie' , $post_id)?>
-        </div>
+        <?php
+            if (get_field('zagolovok_premialnoe_obsluzhivanie' , $post_id)){
+                ?>
+                    <div class="premium__title section-title">
+                        <?php the_field('zagolovok_premialnoe_obsluzhivanie' , $post_id)?>
+                    </div>
+                <?php
+            }
+        ?>
         <div class="premium__wrapper">
             <div class="premium__text">
                 <?php the_field('opisanie_premialnyh' , $post_id)?>

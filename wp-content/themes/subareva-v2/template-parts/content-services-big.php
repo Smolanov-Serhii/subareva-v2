@@ -17,7 +17,14 @@ $post_id = get_the_ID();
                     <h3 class="services-big__title"><?php echo $title?></h3>
                     <div class="services-big__desc">
                         <div class="services-big__price"><?php echo $price?></div>
-                        <a href="<?php echo $lnk?>" class="services-big__lnk"><?php echo the_field('tekst_detalnej', 'option')?></a>
+                        <?php
+                            if ($lnk){
+                                ?>
+                                <a href="<?php echo $lnk?>" class="services-big__lnk"><?php echo the_field('tekst_detalnej', 'option')?></a>
+                                <?php
+                            }
+                        ?>
+
                     </div>
                 </div>
                 <?php

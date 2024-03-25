@@ -27,10 +27,20 @@ get_header();
     <main id="main" class="main">
         <?php get_template_part( 'template-parts/content', 'banner-main' ); ?>
         <?php get_template_part( 'template-parts/content', 'digits' ); ?>
-        <?php get_template_part( 'template-parts/content', 'services-big' ); ?>
-        <?php get_template_part( 'template-parts/content', 'services-animate' ); ?>
+<!--        --><?php //get_template_part( 'template-parts/content', 'services-big' ); ?>
+        <?php get_template_part( 'template-parts/content', 'our-services' ); ?>
+        <?php get_template_part( 'template-parts/content', 'premium' ); ?>
+        <?php get_template_part( 'template-parts/content', 'appointment-new' ); ?>
+        <?php
+        if (is_page(447)){
+            ?>
+            <?php get_template_part( 'template-parts/content', 'innovation' ); ?>
+            <?php
+        }
+        ?>
         <?php get_template_part( 'template-parts/content', 'cosm' ); ?>
         <?php get_template_part( 'template-parts/content', 'waranty' ); ?>
+        <?php get_template_part( 'template-parts/content', 'comform' ); ?>
         <?php get_template_part( 'template-parts/content', 'reviews' ); ?>
         <?php get_template_part( 'template-parts/content', 'appointment' ); ?>
     </main>

@@ -1,5 +1,9 @@
 <?php
-$post_id = get_the_ID();
+if (is_page(447)){
+    $post_id = 102;
+} else {
+    $post_id = get_the_ID();
+}
 ?>
 <section class="innovation">
     <div class="innovation__container main-container">
