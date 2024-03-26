@@ -8,6 +8,13 @@ $post_id = get_the_ID();
             <h1 class="banner__title">
                 <?php the_field('podzagolovok_v_baner', $post_id)?>
             </h1>
+            <?php
+            if (get_field('melkij_tekst', $post_id)){
+                ?>
+                <p class="banner__small-text"><?php the_field('melkij_tekst', $post_id)?></p>
+                <?php
+            }
+            ?>
             <div class="banner__subtitle">
                 <?php the_field('podzagolovok_desc', $post_id)?>
             </div>

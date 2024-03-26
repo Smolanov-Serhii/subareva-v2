@@ -47,7 +47,7 @@ if (is_page(102)){
                     $MY_QUERY = new WP_Query( $args );
                     if ( $MY_QUERY->have_posts() ) :
                         while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-                            <a href="<?php the_permalink();?>" class="services__group-item"><?php the_title();?></a>
+<!--                            <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
                         <?php endwhile;
                     endif;
                     wp_reset_postdata();
@@ -89,7 +89,7 @@ if (is_page(102)){
                     $MY_QUERY = new WP_Query( $args );
                     if ( $MY_QUERY->have_posts() ) :
                         while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-                            <a href="<?php the_permalink();?>" class="services__group-item"><?php the_title();?></a>
+<!--                            <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
                         <?php endwhile;
                     endif;
                     wp_reset_postdata();

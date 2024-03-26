@@ -1,5 +1,5 @@
 <?php
-if (is_page(447)){
+if (is_page(369)){
     $post_id = 102;
 } else {
     $post_id = get_the_ID();
@@ -20,9 +20,9 @@ if (is_page(447)){
                     $image = get_sub_field('izobrazhenie_innovaczii');
                     ?>
                     <div class="innovation__item">
-                        <h2 class="innovation__item-title">
-                            <?php echo $title; ?>
-                        </h2>
+<!--                        <h2 class="innovation__item-title">-->
+<!--                            --><?php //echo $title; ?>
+<!--                        </h2>-->
                         <div class="innovation__item-image">
                             <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
                         </div>

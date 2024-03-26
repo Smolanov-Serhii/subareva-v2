@@ -25,6 +25,7 @@ get_header();
         /></noscript>
     <!-- End Meta Pixel Code -->
     <main id="main" class="main">
+        <?php get_template_part( 'template-parts/content', 'carusel' ); ?>
         <?php get_template_part( 'template-parts/content', 'banner-main' ); ?>
         <?php get_template_part( 'template-parts/content', 'digits' ); ?>
 <!--        --><?php //get_template_part( 'template-parts/content', 'services-big' ); ?>
@@ -34,7 +35,7 @@ get_header();
         <?php
         if (is_page(447)){
             ?>
-            <?php get_template_part( 'template-parts/content', 'innovation' ); ?>
+<!--            --><?php //get_template_part( 'template-parts/content', 'innovation' ); ?>
             <?php
         }
         ?>

@@ -177,7 +177,27 @@ $(document).ready(function () {
     }
     TabInit();
 
+    function CaruselSlider(){
+            if($('.carusel').length){
+                var CaruselSlider = new Swiper('.carusel .swiper', {
+                    spaceBetween: 30,
+                    loop: true,
+                    slidesPerView: 'auto',
+                    preventInteractionOnTransition: true,
+                    speed: 5000,
+                    autoplay: {
+                        enabled: true,
+                        delay: 1,
+                    },
+                });
+            }
+    }
+    CaruselSlider();
+
     function CompareSliders() {
+        $(".dragme").each(function( index ) {
+
+        });
         var $dragMe = $(".dragme"),
         $container = $dragMe.closest(".sl-container"),
         $viewAfter = $dragMe.closest(".sl-container").find(".view-after");
@@ -205,6 +225,10 @@ $(document).ready(function () {
     }
 
     CompareSliders();
+
+
+
+
 
 });
 

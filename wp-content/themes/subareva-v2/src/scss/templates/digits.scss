@@ -15,8 +15,6 @@
       justify-content: center;
     }
     @media all and (max-width: 500px){
-      flex-wrap: nowrap;
-      overflow: scroll;
     }
   }
   &__item{
@@ -30,14 +28,14 @@
       margin: 10px 20px;
       padding-left: 0;
     }
-    @media all and (max-width: 500px){
-      min-width: 170px;
-      width: auto;
-      margin-right: 12px;
-      padding-top: 0;
-      padding-bottom: 0;
-
-    }
+    //@media all and (max-width: 500px){
+    //  min-width: 170px;
+    //  width: auto;
+    //  margin-right: 12px;
+    //  padding-top: 0;
+    //  padding-bottom: 0;
+    //
+    //}
     &:nth-child(odd){
       //@media all and (max-width: 460px){
       //  padding-left: 9vw;
@@ -47,28 +45,28 @@
       //}
     }
     &:nth-child(even){
-      //@media all and (max-width: 460px){
-      //  padding-right: 9vw;
-      //  .digits__item-iteration{
-      //    text-align: right;
-      //    left: auto;
-      //    right: 0;
-      //  }
-      //  .digits__item-title{
-      //    padding-right: 90px;
-      //    padding-left: 0;
-      //    text-align: right;
-      //  }
-      //}
+      @media all and (max-width: 460px){
+        padding-right: 9vw;
+        .digits__item-iteration{
+          text-align: right;
+          left: auto;
+          right: 0;
+        }
+        .digits__item-title{
+          padding-right: 90px;
+          padding-left: 0;
+          text-align: right;
+        }
+      }
     }
     @media all and (max-width: 768px){
       width: calc(50% - 40px);
       margin: 10px 20px;
     }
-    //@media all and (max-width: 500px){
-    //  width: calc(50% - 20px);
-    //  margin: 10px;
-    //}
+    @media all and (max-width: 500px){
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
     //@media all and (max-width: 460px){
     //  width: 100%;
     //  margin: 10px 0px;
@@ -88,8 +86,7 @@
         text-align: center;
       }
       @media all and (max-width: 500px){
-        font-size: 60px;
-        top: 0;
+        font-size: 100px;
       }
     }
     &-title{
@@ -107,7 +104,7 @@
         text-align: center;
       }
       @media all and (max-width: 500px){
-        font-size: 12px;
+        font-size: 16px;
         text-align: left;
       }
     }

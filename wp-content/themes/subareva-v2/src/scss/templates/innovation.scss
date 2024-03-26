@@ -33,14 +33,20 @@
     width: calc(33.3333% - 15px);
     display: flex;
     flex-direction: column;
-    padding: 24px 24px 0 0;
-    background-color: #F9F9FB;
+    padding: 0;
+    //background-color: #F9F9FB;
     @media all and (max-width: 1024px){
       width: calc(33.3333% - 10px);
     }
     @media all and (max-width: 700px){
       width: 100%;
       margin-bottom: 10px;
+    }
+    &-img{
+      height: 100%;
+    }
+    img{
+      height: 100%;
     }
     &-title{
       padding-left: 24px;

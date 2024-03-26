@@ -13,7 +13,7 @@
 
     &.cosmetology{
       .team__item{
-        height: 290px;
+        height: 400px;
         @media all and (max-width: 1200px){
           height: 300px;
         }
@@ -21,7 +21,7 @@
           height: 200px;
         }
         &:nth-child(1){
-          width: calc(35% - 20px);
+          width: calc(50% - 20px);
           @media all and (max-width: 1200px){
             width: calc(50% - 20px);
           }
@@ -30,7 +30,7 @@
           }
         }
         &:nth-child(2){
-          width: calc(30% - 20px);
+          width: calc(50% - 20px);
           @media all and (max-width: 1200px){
             width: calc(50% - 20px);
           }
@@ -39,7 +39,7 @@
           }
         }
         &:nth-child(3){
-          width: calc(35% - 20px);
+          width: calc(70% - 20px);
           @media all and (max-width: 1200px){
             width: calc(50% - 20px);
           }
@@ -78,7 +78,7 @@
     }
     &.stomatology{
       .team__item{
-        height: 290px;
+        height: 400px;
         @media all and (max-width: 1200px){
           height: 300px;
         }

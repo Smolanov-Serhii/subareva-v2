@@ -32,6 +32,7 @@ const styleFiles = [
 const scriptFiles = [
    './src/js/jquery-3.5.1.js',
     './src/js/jquery-ui.js',
+    './src/js/jquery.ui.touch-punch.min.js',
    // './src/js/sfera.js',
    // './src/js/aos.js',
    // './src/js/jquery.event.move.js',

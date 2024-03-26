@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 399;
   box-shadow: 0 4px 20px rgba(169, 190, 202, 0.3);
   &__mobile{
     position: fixed;
@@ -16,7 +16,7 @@
     background-color: #FFFFFF;
     padding: 30px 20px;
     text-align: center;
-    z-index: 51;
+    z-index: 400;
     display: none;
     box-shadow: -4px 10px 20px rgba(169, 190, 202, 0.3);
     .header__button{
@@ -44,10 +44,11 @@
       font-weight: 500;
       line-height: 98.3%;
       letter-spacing: .4px;
-      margin-bottom: 12px;
+      margin-bottom: 0;
       display: inline-block;
+
     }
-    .services__group-title{
+    .services__group-title, .header__nav li a{
       color: #15223d;
       font-size: 20px;
       font-weight: 700;
@@ -56,6 +57,7 @@
       margin-bottom: 18px;
       display: inline-block;
       margin-top: 20px;
+      text-transform: uppercase;
     }
   }
   &__burger{
@@ -112,6 +114,7 @@
     align-items: center;
     .mobile{
       display: none;
+      z-index: 300;
       @media all and (max-width: 768px){
         display: inline-flex;
         align-items: center;

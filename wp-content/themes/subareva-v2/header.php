@@ -29,8 +29,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>-->
+<!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<!--    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>-->
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>-->
 	<?php wp_head(); ?>
     <?php
     if ( is_home() ) {
@@ -126,7 +128,7 @@
                 $MY_QUERY = new WP_Query( $args );
                 if ( $MY_QUERY->have_posts() ) :
                     while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-                        <a href="<?php the_permalink();?>" class="services__group-item"><?php the_title();?></a>
+<!--                        <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
                     <?php endwhile;
                 endif;
                 wp_reset_postdata();
@@ -145,7 +147,7 @@
                 $MY_QUERY = new WP_Query( $args );
                 if ( $MY_QUERY->have_posts() ) :
                     while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-                        <a href="<?php the_permalink();?>" class="services__group-item"><?php the_title();?></a>
+<!--                        <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
                     <?php endwhile;
                 endif;
                 wp_reset_postdata();
@@ -253,39 +255,39 @@
             </div>
         </div>
     </div>
-    <div class="nav-content main-container">
-        <div class="left">
-            <?php
-            $args = array(
-                'post_type' 	 => 'dentistry'
-            );
-            $MY_QUERY = new WP_Query( $args );
-            if ( $MY_QUERY->have_posts() ) :
-                while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-                    <div class="row">
-                        <a href="<?php the_permalink();?>"><?php the_title();?></a>
-                    </div>
-                <?php endwhile;
-            endif;
-            wp_reset_postdata();
-            ?>
-        </div>
-        <div class="right">
-            <?php
-            $args = array(
-                'post_type' 	 => 'cosmetology'
-            );
-            $MY_QUERY = new WP_Query( $args );
-            if ( $MY_QUERY->have_posts() ) :
-                while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-                    <div class="row">
-                        <a href="<?php the_permalink();?>"><?php the_title();?></a>
-                    </div>
-                <?php endwhile;
-            endif;
-            wp_reset_postdata();
-            ?>
-        </div>
-    </div>
+<!--    <div class="nav-content main-container">-->
+<!--        <div class="left">-->
+<!--            --><?php
+//            $args = array(
+//                'post_type' 	 => 'dentistry'
+//            );
+//            $MY_QUERY = new WP_Query( $args );
+//            if ( $MY_QUERY->have_posts() ) :
+//                while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+<!--                    <div class="row">-->
+<!--                        <a href="--><?php //the_permalink();?><!--">--><?php //the_title();?><!--</a>-->
+<!--                    </div>-->
+<!--                --><?php //endwhile;
+//            endif;
+//            wp_reset_postdata();
+//            ?>
+<!--        </div>-->
+<!--        <div class="right">-->
+<!--            --><?php
+//            $args = array(
+//                'post_type' 	 => 'cosmetology'
+//            );
+//            $MY_QUERY = new WP_Query( $args );
+//            if ( $MY_QUERY->have_posts() ) :
+//                while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+<!--                    <div class="row">-->
+<!--                        <a href="--><?php //the_permalink();?><!--">--><?php //the_title();?><!--</a>-->
+<!--                    </div>-->
+<!--                --><?php //endwhile;
+//            endif;
+//            wp_reset_postdata();
+//            ?>
+<!--        </div>-->
+<!--    </div>-->
 </div>
 
