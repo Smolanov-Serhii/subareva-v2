@@ -1,14 +1,8 @@
 <?php
-if(is_home()){
-    $post_id = get_the_ID();
 
-} if(is_page(544)){
+if(is_page(544) || is_page(646) || is_page(822)){
     $post_id = get_the_ID();
-}if(is_page(646)){
-    $post_id = get_the_ID();
-}if(is_page(822)){
-    $post_id = get_the_ID();
-}else {
+} else {
     $post_id = 2;
 }
 
