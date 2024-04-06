@@ -12,7 +12,7 @@ if (is_page(102)){
             <?php the_field('zagolovok_bloka_uslugi' , $post_id)?>
         </h2>
         <div class="services__list">
-            <div class="services__kosm services__group">
+            <a href="<?php echo get_home_url() . '/kosmetologiya' ?>" class="services__kosm services__group">
                 <?php
                 if ( wp_is_mobile() ) {
 
@@ -29,7 +29,7 @@ if (is_page(102)){
                 ?>
                 <div class="services__group-list">
                     <h3 class="services__group-title">
-                        <a href="<?php echo get_home_url() . '/kosmetologiya' ?>"><?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?></a>
+                        <span href="<?php echo get_home_url() . '/kosmetologiya' ?>"><?php the_field('tekst_bloka_uslug_kosmetologii' , $post_id)?></span>
                     </h3>
                     <?php
                     if ( wp_is_mobile() ) {
@@ -53,8 +53,8 @@ if (is_page(102)){
                     wp_reset_postdata();
                     ?>
                 </div>
-            </div>
-            <div class="services__stom services__group">
+            </a>
+            <a href="<?php echo get_home_url() . '/dentistry' ?>" class="services__stom services__group">
                 <?php
                 if ( wp_is_mobile() ) {
 
@@ -71,7 +71,7 @@ if (is_page(102)){
                 ?>
                 <div class="services__group-list">
                     <h3 class="services__group-title">
-                        <a href="<?php echo get_home_url() . '/dentistry' ?>"><?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?></a>
+                        <span href="<?php echo get_home_url() . '/dentistry' ?>"><?php the_field('tekst_bloka_uslug_stomalogii' , $post_id)?></span>
                     </h3>
                     <?php
                     if ( wp_is_mobile() ) {
@@ -95,7 +95,7 @@ if (is_page(102)){
                     wp_reset_postdata();
                     ?>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>

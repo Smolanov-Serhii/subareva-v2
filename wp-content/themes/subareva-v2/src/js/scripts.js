@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $( ".messengers__button" ).on( "click", function() {
         $('.messengers__button > div').fadeToggle(300);
         $('.messengers__links').fadeToggle(300);
