@@ -20,13 +20,13 @@ $post_id = get_the_ID();
             $counter = 1;
             if( have_rows('galereya_primealnyh' , $post_id )):
                 ?>
-                <div class="premium__images">
-                    <div class="premium__list">
+                <div class="premium__images swiper">
+                    <div class="premium__list swiper-wrapper">
                         <?php
                         while( have_rows('galereya_primealnyh' , $post_id ) ) : the_row();
                             $image = get_sub_field('kartinka_dlya_premialnyh');
                             if ($counter == 1 || $counter == 4 || $counter == 7){
-                                echo '<div class="premium__list-group">';
+                                echo '<div class="premium__list-group swiper-slide">';
                             }
                             ?>
                             <div class="premium__item">

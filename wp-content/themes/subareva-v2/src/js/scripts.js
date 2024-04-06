@@ -194,6 +194,23 @@ $(document).ready(function () {
     }
     CaruselSlider();
 
+    function CaruselSliderBig(){
+                if($('.premium').length){
+                    var CaruselSlider = new Swiper('.premium .swiper', {
+                        spaceBetween: 0,
+                        loop: true,
+                        slidesPerView: 'auto',
+                        preventInteractionOnTransition: true,
+                        speed: 8000,
+                        autoplay: {
+                            enabled: true,
+                            delay: 1,
+                        },
+                    });
+                }
+        }
+        CaruselSliderBig();
+
     function CompareSliders() {
         $(".dragme").each(function( index ) {
 

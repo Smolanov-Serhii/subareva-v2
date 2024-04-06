@@ -14,6 +14,9 @@
   margin: 120px auto;
   padding: 80px 0;
   background-color: #F9F9FB;
+  .swiper-wrapper{
+    transition-timing-function: linear !important;
+  }
   @media all and (max-width: 1400px){
     margin: 80px auto;
   }
@@ -119,6 +122,7 @@
     }
   }
   &__item{
+    height: calc(50% - (20vw * $px));
     img{
       object-fit: cover;
       width: 100%;
@@ -128,10 +132,6 @@
   &__list{
     display: flex;
     gap: 20vw * $px;
-    overflow-x: scroll;
-    overflow-y: visible;
-    flex-wrap: nowrap;
-    padding-bottom: 10px;
     @media all and (max-width: 768px){
       gap: 10vw * $pxm;
     }
@@ -143,71 +143,43 @@
       gap: 20vw * $px;
       @media all and (max-width: 768px){
         gap: 10vw * $pxm;
-        width: 425vw * $pxm;
-        height: 380vw * $pxm;
+        width: 320vw * $pxm;
+        height: 320vw * $pxm;
       }
-      &:nth-child(1){
+      &:nth-child(odd){
         .premium__item{
           &:nth-child(1){
-            width: 470vw * $px;
-            @media all and (max-width: 768px){
-              width: 266vw * $pxm;
-            }
+            width: 100%;
+            height: 50%;
           }
           &:nth-child(2){
-            width: 262vw * $px;
+            width: calc(50% - ((20vw * $px)));
+            height: 50%;
             @media all and (max-width: 768px){
-              width: 148vw * $pxm;
+              width: calc(50% - ((10vw * $pxm)));
             }
           }
           &:nth-child(3){
-            width: 752vw * $px;
-            @media all and (max-width: 768px){
-              width: 425vw * $pxm;
-            }
+            width: 50%;
+            height: 50%;
           }
         }
       }
-      &:nth-child(2){
+      &:nth-child(even){
         .premium__item{
           &:nth-child(1){
-            width: 608vw * $px;
-            @media all and (max-width: 768px){
-              width: 344vw * $pxm;
-            }
+            width: 100%;
+            height: 50%;
           }
           &:nth-child(2){
-            width: 294vw * $px;
-            @media all and (max-width: 768px){
-              width: 167vw * $pxm;
-            }
+            width: 50%;
+            height: 50%;
           }
           &:nth-child(3){
-            width: 294vw * $px;
+            width: calc(50% - ((20vw * $px)));
+            height: 50%;
             @media all and (max-width: 768px){
-              width: 166vw * $pxm;
-            }
-          }
-        }
-      }
-      &:nth-child(3){
-        .premium__item{
-          &:nth-child(1){
-            width: 751vw * $px;
-            @media all and (max-width: 768px){
-              width: 424vw * $pxm;
-            }
-          }
-          &:nth-child(2){
-            width: 469vw * $px;
-            @media all and (max-width: 768px){
-              width: 265vw * $pxm;
-            }
-          }
-          &:nth-child(3){
-            width: 262vw * $px;
-            @media all and (max-width: 768px){
-              width: 148vw * $pxm;
+              width: calc(50% - ((10vw * $pxm)));
             }
           }
         }

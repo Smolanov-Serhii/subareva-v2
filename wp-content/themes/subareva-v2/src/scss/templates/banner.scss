@@ -1,3 +1,13 @@
+.page-template-home, .page-template-cosmetology{
+  .banner-main{
+    .banner__left{
+      @media all and (max-width: 500px){
+        background-color: rgba(255,255,255,0.3);
+        padding: 20px;
+      }
+    }
+  }
+}
 .banner{
   &__service{
     .banner__left{
