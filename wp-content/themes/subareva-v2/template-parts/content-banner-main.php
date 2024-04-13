@@ -9,9 +9,17 @@ $post_id = get_the_ID();
                 <path d="M108.588 88.0934L75.651 3.10876H51.4633L71.534 52.8558L57.6389 89.1298L24.1877 3.10876H0L51.4633 130.586L76.6803 64.2562L102.927 130.586L151.817 3.10876H139.98L108.588 88.0934Z" fill="#15223D"/>
                 <path d="M417.367 88.0934L383.916 3.10876H360.243L380.313 52.8558L366.418 89.1298L332.967 3.10876H308.779L360.243 130.586L384.945 64.2562L411.191 130.586L460.596 3.10876H448.759L417.367 88.0934Z" fill="#15223D"/>
             </svg>
-            <h1 class="banner__title">
-                <?php the_field('zagolovok_bloka_banner', $post_id)?>
-            </h1>
+            <?php
+            if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+                ?>
+                <h1 class="banner__title banner__title-temp"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
+                <?php
+            } else {
+                ?>
+                <h1 class="banner__title"><?php the_field('zagolovok_bloka_banner', $post_id)?></h1>
+                <?php
+            }
+            ?>
             <?php
             if ( wp_is_mobile() ) {
                 ?>

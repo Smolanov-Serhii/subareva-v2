@@ -5,16 +5,23 @@ $post_id = get_the_ID();
     <div class="banner__container">
         <div class="banner__left padding-left-part">
 <!--            <img class="banner__about-title" src="--><?php //the_field('logotip_v_banner', $post_id)?><!--" alt="">-->
-            <h1 class="banner__title">
-                <?php the_field('podzagolovok_v_baner', $post_id)?>
-            </h1>
             <?php
+            if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+                ?>
+                    <h1 class="banner__title"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
+                <?php
+            } else {
+                ?>
+                    <h1 class="banner__title"><?php the_field('podzagolovok_v_baner', $post_id)?></h1>
+                <?php
+            }
             if (get_field('melkij_tekst', $post_id)){
                 ?>
                 <p class="banner__small-text"><?php the_field('melkij_tekst', $post_id)?></p>
                 <?php
             }
             ?>
+
             <div class="banner__subtitle">
                 <?php the_field('podzagolovok_desc', $post_id)?>
             </div>

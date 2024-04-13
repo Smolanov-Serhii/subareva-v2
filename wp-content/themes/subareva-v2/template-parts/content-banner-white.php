@@ -17,9 +17,17 @@ $post_id = get_the_ID();
 
     </div>
     <div class="banner-dark__container main-container">
-        <h1 class="banner-dark__title white">
-            <?php the_field('zagolovok_banera', $post_id)?>
-        </h1>
+        <?php
+        if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+            ?>
+            <h1 class="banner-dark__title white"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
+            <?php
+        } else {
+            ?>
+            <h1 class="banner-dark__title white"><?php the_field('zagolovok_banera', $post_id)?></h1>
+            <?php
+        }
+        ?>
         <div class="banner-dark__subtitle white">
             <?php the_field('podzagolovok_banera', $post_id)?>
         </div>
