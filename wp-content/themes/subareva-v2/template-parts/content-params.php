@@ -1,5 +1,10 @@
 <?php
-$post_id = get_the_ID();
+if (is_page(1136)){
+    $post_id = 102;
+} else {
+    $post_id = get_the_ID();
+}
+
 ?>
 <section class="params">
     <div class="params__container main-container">

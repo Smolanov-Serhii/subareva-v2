@@ -19,6 +19,10 @@ $(document).ready(function () {
     }
     AosStart()
 
+    $( ".vacancies__list-more" ).on( "click", function() {
+            $(this).closest('.vacancies__list-group').toggleClass('show');
+        } );
+
     if ($('.banner').length) {
         let LoopSwiper = '';
         if ($('.banner .swiper').hasClass('swiper-main')){
@@ -167,7 +171,7 @@ $(document).ready(function () {
         if($('.tabs-elements').length){
             $(".tabs-elements .tabs-nav-item").click(function() {
                 $(".tabs-elements .tabs-nav-item").removeClass("active").eq($(this).index()).addClass("active");
-                $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "block")
+                $(".tabs-elements .tabs-content-item").hide().eq($(this).index()) .css("display", "flex")
                     .hide()
                     .fadeIn();
             }).eq(0).addClass("active");

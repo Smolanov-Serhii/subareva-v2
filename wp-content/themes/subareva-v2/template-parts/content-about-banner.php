@@ -6,7 +6,7 @@ $post_id = get_the_ID();
         <div class="banner__left padding-left-part">
 <!--            <img class="banner__about-title" src="--><?php //the_field('logotip_v_banner', $post_id)?><!--" alt="">-->
             <?php
-            if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+            if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true' && !is_page( 1136 )){
                 ?>
                     <h1 class="banner__title"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
                 <?php
