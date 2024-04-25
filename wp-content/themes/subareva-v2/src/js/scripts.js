@@ -11,13 +11,31 @@ $(document).ready(function () {
             $('.procedure__item').removeClass('active');
             $(this).closest('.procedure__item').addClass('active');
         }
-
-
     } );
+
+     $( ".faq__item-header" ).on( "click", function() {
+            if ($(this).closest('.faq__item').hasClass('active')){
+                $(this).closest('.faq__item').removeClass('active');
+            } else {
+                $('.faq__item').removeClass('active');
+                $(this).closest('.faq__item').addClass('active');
+            }
+        } );
     function AosStart(){
 
     }
     AosStart()
+
+
+    if ($('.rev-new').length) {
+            var RevNew = new Swiper(".rev-new .swiper", {
+//                loop: true,
+                slidesPerView: 1,
+//                initialSlide: 2,
+//                centeredSlides: true,
+                spaceBetween: -90,
+            });
+        }
 
     $( ".vacancies__list-more" ).on( "click", function() {
             $(this).closest('.vacancies__list-group').toggleClass('show');
@@ -118,6 +136,7 @@ $(document).ready(function () {
         document.addEventListener( 'wpcf7mailsent', function( event ) {
             $('.popup-zapis').fadeOut(300);
             $('.popup-write').fadeOut(300);
+            $('.popup-vac').fadeOut(300);
             $('#success-send').fadeIn(300);
             $('.wpcf7-response-output').empty();
             setTimeout(function (){
@@ -133,10 +152,18 @@ $(document).ready(function () {
             $('body').addClass('locked');
             $('.popup-write').fadeIn(300);
         });
+        $(".js-vac").click(function () {
+                    $('body').addClass('locked');
+                    $('.popup-vac').fadeIn(300);
+                });
         $(".popup-zapis__close").click(function () {
             $('body').removeClass('locked');
             $(this).closest('.popup-zapis').fadeOut(300);
         });
+        $(".popup-vac__close").click(function () {
+                    $('body').removeClass('locked');
+                    $(this).closest('.popup-vac').fadeOut(300);
+                });
         $(".popup-write__close").click(function () {
             $('body').removeClass('locked');
             $(this).closest('.popup-write').fadeOut(300);
@@ -166,6 +193,12 @@ $(document).ready(function () {
         })
     }
     PopupInit();
+
+    if($('.popup-vac').length){
+        $(".popup-vac select").selectric({
+            maxHeight: 200
+        });
+    }
 
     function TabInit(){
         if($('.tabs-elements').length){

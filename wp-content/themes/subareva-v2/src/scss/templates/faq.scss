@@ -1,0 +1,119 @@
+.faq{
+  position: relative;
+  min-height: 830px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 120px;
+  @media all and (max-width: 1024px){
+    padding-top: 0;
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+  &__img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    @media all and (max-width: 1024px){
+      display: none;
+    }
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+  &__container{
+    margin: 0 auto;
+  }
+  &__text{
+    position: relative;
+    z-index: 1;
+  }
+  &__title{
+    @media all and (min-width: 1400px){
+      margin-bottom: 82px;
+    }
+  }
+  &__list{
+    max-width: 894px;
+    width: 100%;
+
+  }
+  &__item{
+    border-left: 11px solid #273A5E;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #F9F9FB;
+    margin-bottom: 24px;
+    padding: 0;
+    @media all and (max-width: 500px){
+      margin-bottom: 14px;
+    }
+    &.active{
+      .faq__item-header{
+        padding-bottom: 0;
+        svg{
+          transform: rotate(45deg);
+        }
+      }
+      .faq__item-desc{
+        display: block;
+      }
+    }
+    &-header{
+      position: relative;
+      padding: 22px 70px 22px 47px;
+      color: #000125;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: 0.48px;
+      cursor: pointer;
+      @media all and (max-width: 1400px){
+        font-size: 22px;
+      }
+      @media all and (max-width: 1200px){
+        font-size: 20px;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 18px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 16px;
+        padding-left: 20px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 14px;
+      }
+      svg{
+        position: absolute;
+        right: 27px;
+        top: 28px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+        @media all and (max-width: 768px){
+          top: 14px;
+          right: 14px;
+        }
+      }
+    }
+    &-desc{
+      padding: 5px 47px 19px 47px;
+      display: none;
+      @media all and (max-width: 768px){
+        padding-left: 20px;
+        margin-top: 9px;
+      }
+      p{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

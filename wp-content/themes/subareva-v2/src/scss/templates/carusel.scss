@@ -1,0 +1,28 @@
+.carusel{
+  padding: 30px 0;
+  .swiper-wrapper{
+    transition-timing-function: linear !important;
+  }
+  .swiper-slide{
+    color: #15223D;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    width: auto;
+    position: relative;
+    @media all and (max-width: 768px){
+      font-size: 30px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 24px;
+    }
+    &:after{
+      content: "•";
+      margin-left: 30px;
+    }
+  }
+}

@@ -27,18 +27,26 @@ $post_id = get_the_ID();
             </div>
             <div class="banner__button">
                 <?php
-                if ( wp_is_mobile() ) {
+                if (is_page( 1136 )){
                     ?>
-                    <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
-                        <span><?php the_field('tekst_na_knopke', 2)?></span>
-                    </a>
+                        <div class="button js-vac">
+                            <span><?php the_field('tekst_na_knopke', $post_id)?></span>
+                        </div>
                     <?php
                 } else {
-                    ?>
-                    <div class="button js-form">
-                        <span><?php the_field('tekst_na_knopke', 2)?></span>
-                    </div>
-                    <?php
+                    if ( wp_is_mobile() ) {
+                        ?>
+                        <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+                            <span><?php the_field('tekst_na_knopke', 2)?></span>
+                        </a>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="button js-form">
+                            <span><?php the_field('tekst_na_knopke', 2)?></span>
+                        </div>
+                        <?php
+                    }
                 }
                 ?>
 

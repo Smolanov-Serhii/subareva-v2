@@ -1,0 +1,26 @@
+.breadcrumbs{
+
+  &__list{
+
+  }
+  &__item{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: 0.28px;
+    @media all and (max-width: 768px){
+      font-size: 12px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+    &.current{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}

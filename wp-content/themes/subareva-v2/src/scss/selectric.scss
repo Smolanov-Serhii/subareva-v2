@@ -3,7 +3,7 @@ $selectric-secondary-color: rgba(29,143,189,1) !default;                        
 $selectric-text-color:      #000B44 !default;                                              // Color used in label
 $selectric-bg-color:        #FFFFFF !default;                                           // Background color
 $selectric-btn-bg-color:    #FFFFFF !default;                                           // Button background color
-$selectric-height:          57px !default;                                              // Outer height
+$selectric-height:          61px !default;                                              // Outer height
 $selectric-spacing:         31px !default;                                              // Label left padding
 $selectric-border-width:    1px !default;                                               // Outer border width
 $selectric-border-radius:   5px !default;                                               // Border radius
@@ -27,18 +27,29 @@ $selectric-font-size:       16px !default;                                      
   overflow: hidden;
 
   .label {
-    display: block;
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0 $selectric-inner-height 0 $selectric-spacing;
-    font-size: $selectric-font-size;
-    line-height: $selectric-inner-height;
-    color: $selectric-text-color;
     height: $selectric-inner-height;
+    margin-left: 24px;
     user-select: none;
+    color: #A9B3C0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.8%; /* 22.284px */
+    letter-spacing: 0.36px;
     @media all and (max-width: 500px) {
       font-size: 16px;
+    }
+    @media all and (max-width: 768px){
+      height: 48px;
+    }
+    @media all and (max-width: 500px){
+      height: 40px;
     }
   }
 

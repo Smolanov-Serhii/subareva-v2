@@ -140,6 +140,20 @@
         <?php echo do_shortcode( '[contact-form-7 id="af3d117" title="Написать нам"]' ); ?>
     </div>
 </div>
+<div class="popup-vac" style="display: none">
+    <div class="popup-vac__block">
+        <div class="popup-vac__container">
+            <div class="popup-vac__close">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.65777 8.45166L15.9432 2.16626L14.3718 0.594912L8.08642 6.88031L1.80084 0.594727L0.229492 2.16607L6.51508 8.45166L0.229688 14.737L1.80104 16.3084L8.08642 10.023L14.3716 16.3082L15.943 14.7369L9.65777 8.45166Z" fill="#A9B3C0"/>
+                </svg>
+            </div>
+            <div class="popup-vac__wrapper">
+                <?php echo do_shortcode( '[contact-form-7 id="c46c1a7" title="Форма вакансий попап"]' ); ?>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="messengers">
     <div class="messengers__links" style="display: none">
         <a href="viber://chat?number=%2B380987006700">

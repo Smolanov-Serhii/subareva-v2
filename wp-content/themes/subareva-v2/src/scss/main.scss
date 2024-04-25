@@ -3,6 +3,7 @@
 @import "preloader";
 @import "default";
 @import "templates/jquery-ui";
+@import "selectric";
 $transition: 0.2s;
 $px: 0.0520833333333333;
 $pxm: 0.2272727272727273;
@@ -251,5 +252,9 @@ main{
 @import "templates/map";
 @import "templates/vacancies";
 @import "templates/grid-photo";
+@import "templates/rev-new";
+@import "templates/faq";
+@import "templates/single-vacancy";
+@import "templates/breadcrumbs";
 @import "templates/footer";
 

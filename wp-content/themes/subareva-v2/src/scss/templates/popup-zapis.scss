@@ -1,4 +1,4 @@
-.popup-zapis, .popup-write{
+.popup-zapis, .popup-write, .popup-vac{
   position: fixed;
   top: 0;
   left: 0;
@@ -231,6 +231,205 @@
     }
     @media all and (max-width: 500px){
       padding: 40px 20px;
+    }
+  }
+}
+.popup-vac{
+  height: 100vh;
+  &__block{
+    overflow-y: scroll;
+    padding: 40px 0;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    display: flex;
+  }
+  &__container{
+    max-width: 1278px;
+    width: calc(100% - 40px);
+    padding: 50px;
+    background-color: #FFF;
+    margin: auto;
+    @media all and (max-width: 768px){
+      padding: 35px;
+    }
+    @media all and (max-width: 500px){
+      padding: 20px;
+    }
+  }
+  &__close{
+    top: 20px;
+    right: 20px;
+  }
+  .form-title{
+    font-size: 32px;
+    margin-bottom: 40px;
+    @media all and (max-width: 1024px){
+      padding: 28px;
+    }
+    @media all and (max-width: 768px){
+      padding: 24px;
+    }
+    @media all and (max-width: 500px){
+      margin-bottom: 30px;
+      padding: 22px;
+    }
+  }
+  &__wrapper{
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    input, textarea{
+      padding-left: 24px!important;
+      &::placeholder{
+        color: #A9B3C0!important;
+        font-family: "Montserrat";
+        font-size: 18px;
+        @media all and (max-width: 1024px){
+          font-size: 16px;
+        }
+        @media all and (max-width: 768px){
+          font-size: 14px;
+        }
+      }
+    }
+    input.button{
+      padding: 20px 60px!important;
+    }
+    textarea{
+      border-radius: 12px;
+      border: 1px solid #A9B3C0!important;
+      &::placeholder{
+        color: #A9B3C0;
+      }
+    }
+    form{
+      .selectric{
+        border-radius: 12px;
+        border: 1px solid #A9B3C0;
+      }
+      .wpcf7-radio{
+        .last{
+          label{
+            @media all and (max-width: 500px){
+              margin-bottom:-2px;
+
+            }
+          }
+        }
+        label{
+          position: relative;
+          display: flex;
+          align-items: center;
+          @media all and (max-width: 500px){
+            margin-bottom: 20px;
+
+          }
+          &:before{
+            content: "";
+            width: 30px;
+            height: 30px;
+            border: 1px solid #A9B3C0;
+            border-radius: 50%;
+            margin-right: 14px;
+            display: inline-block;
+          }
+          &:after{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 6px;
+            left: 6px;
+            background-color: #A9B3C0;
+            border-radius: 50%;
+            opacity: 0;
+            display: inline-block;
+          }
+          input{
+            display: none;
+          }
+          &:has(input:checked){
+            &:after{
+              opacity: 1;
+            }
+          }
+          > span{
+            position: relative;
+          }
+        }
+      }
+      > p{
+        margin-bottom: 0;
+      }
+      .row{
+        input{
+          border-radius: 12px;
+          border: 1px solid #A9B3C0!important;
+          &::placeholder{
+            color: #A9B3C0;
+          }
+        }
+        > p{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-bottom: 0;
+          .link, .file{
+            span{
+              margin-top: 14px;
+            }
+          }
+          .file{
+            display: flex;
+            flex-direction: column;
+            span{
+              flex: 1;
+              display: flex;
+              align-items: center;
+            }
+            input{
+              border: none!important;
+              border-radius: 0;
+              padding-left: 0!important;
+            }
+          }
+          > span, > label{
+            width: calc(50% - 10px);
+            margin-right: 0!important;
+            color: #15223D;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 123.8%; /* 22.284px */
+            letter-spacing: 0.36px;
+
+            @media all and (max-width: 1200px){
+              font-size: 16px;
+            }
+            @media all and (max-width: 1024px){
+              font-size: 14px;
+            }
+            @media all and (max-width: 768px){
+              width: 100%;
+            }
+            i{
+              width: 100%;
+              display: block;
+              color: #A9B3C0;
+              font-size: 14px;
+              font-style: italic;
+              font-weight: 400;
+              line-height: 123.8%; /* 17.332px */
+              letter-spacing: 0.28px;
+            }
+          }
+          label{
+            margin-right: 40px;
+          }
+        }
+      }
     }
   }
 }
