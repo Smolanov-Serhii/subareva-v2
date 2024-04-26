@@ -211,6 +211,9 @@
     }
     .file{
       margin-top: 26px;
+      input{
+        display: none;
+      }
       @media all and (max-width: 500px){
         margin-top: 15px;
       }

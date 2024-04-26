@@ -25,7 +25,19 @@ $(document).ready(function () {
 
     }
     AosStart()
+    let CustomLabelFile = $(".file-custom").data('title');
+    $(".wpcf7-file").change(function(){
+        var filename = $(".wpcf7-file").val().replace(/.*\\/, "");
 
+        if(!filename){
+            $(".file-custom__filename").text(CustomLabelFile);
+        } else {
+            $(".file-custom__filename").text(filename);
+        }
+    });
+    $( ".file-custom__button" ).on( "click", function() {
+         $(".file-custom__filename").text(CustomLabelFile);
+    });
 
     if ($('.rev-new').length) {
             var RevNew = new Swiper(".rev-new .swiper", {
@@ -248,32 +260,34 @@ $(document).ready(function () {
         CaruselSliderBig();
 
     function CompareSliders() {
-        $(".dragme").each(function( index ) {
+        if($('.dragme').length){
+              $(".dragme").each(function( index ) {
 
-        });
-        var $dragMe = $(".dragme"),
-        $container = $dragMe.closest(".sl-container"),
-        $viewAfter = $dragMe.closest(".sl-container").find(".view-after");
-        $dragMe.draggable({
-            containment: "parent",
-            drag: function() {
-                $(this).closest(".sl-container").find(".view-after").css({
-                    width : parseFloat($(this).css('left')) + 5
-                });
-            }
-        });
-        $container.on("click", function(event) {
-            var eventLeft = event.pageX - $(this).offset().left - 15;
-            animateTo(eventLeft, $(this));
-        });
-        animateTo("50%");
-        function animateTo(_left, e) {
-            e.find('.dragme').animate({
-                left: _left
-            }, 'fast', 'linear');
-            e.find('.view-after').animate({
-                width: _left
-            }, 'fast', 'linear');
+                      });
+                      var $dragMe = $(".dragme"),
+                      $container = $dragMe.closest(".sl-container"),
+                      $viewAfter = $dragMe.closest(".sl-container").find(".view-after");
+                      $dragMe.draggable({
+                          containment: "parent",
+                          drag: function() {
+                              $(this).closest(".sl-container").find(".view-after").css({
+                                  width : parseFloat($(this).css('left')) + 5
+                              });
+                          }
+                      });
+                      $container.on("click", function(event) {
+                          var eventLeft = event.pageX - $(this).offset().left - 15;
+                          animateTo(eventLeft, $(this));
+                      });
+                      animateTo("50%");
+                      function animateTo(_left, e) {
+                          e.find('.dragme').animate({
+                              left: _left
+                          }, 'fast', 'linear');
+                          e.find('.view-after').animate({
+                              width: _left
+                          }, 'fast', 'linear');
+                      }
         }
     }
 

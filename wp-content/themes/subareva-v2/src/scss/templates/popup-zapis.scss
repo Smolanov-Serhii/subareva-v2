@@ -244,6 +244,11 @@
     width: 100%;
     display: flex;
   }
+  .file-custom{
+    padding: 18px 36px;
+    margin-bottom: 20px;
+  }
+
   &__container{
     max-width: 1278px;
     width: calc(100% - 40px);
@@ -378,12 +383,17 @@
           margin-bottom: 0;
           .link, .file{
             span{
-              margin-top: 14px;
+              &:not(.file-custom__filename, .file-custom__button, .file-custom__icon){
+                margin-top: 14px;
+              }
             }
           }
           .file{
             display: flex;
             flex-direction: column;
+            > .wpcf7-form-control-wrap{
+              display: none;
+            }
             span{
               flex: 1;
               display: flex;

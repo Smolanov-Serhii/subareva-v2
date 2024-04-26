@@ -16,7 +16,7 @@ $post_id = get_the_ID();
             <?php
             if( have_rows('perechen_etapov', $post_id) ):
                 while( have_rows('perechen_etapov', $post_id) ) : the_row();
-                    $title = get_sub_field('zagolovok');
+                    $title = get_sub_field(cd wp'zagolovok');
                     $content = get_sub_field('opisanie');
                     ?>
                         <div class="procedure__item">
