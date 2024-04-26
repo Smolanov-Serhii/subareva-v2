@@ -50,7 +50,7 @@ $post_id = get_the_ID();
             <?php
                 if (the_field('video_esli_est', $post_id)){
                 ?>
-                    <video width="100%" height="100%" autoplay>
+                    <video width="100%" height="100%" autoplay preload="metadata" loop  muted playsinline>
                         <source src="<?php echo the_field('video_esli_est', $post_id);?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -70,7 +70,7 @@ $post_id = get_the_ID();
                                         <?php
                                         if ($video){
                                         ?>
-                                        <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo $image?>">
+                                        <video width="100%" height="100%" poster="<?php echo $image?>" autoplay preload="metadata" loop  muted playsinline>
                                             <source src="<?php echo $video?>" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>

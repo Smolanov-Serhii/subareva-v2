@@ -143,6 +143,9 @@ main{
   letter-spacing: 0.28px;
   text-transform: uppercase;
   text-decoration: none;
+  @media all and (max-width: 500px){
+    padding: 20px 20px;
+  }
   span{
     color: #FFF;
     font-size: 14px;

@@ -81,7 +81,7 @@ if (is_page(1136)){
             if (get_field('video_vmesto_slajdera' , $post_id) > '')   {
                 ?>
                 <div class="params__right params video">
-                    <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo the_field('oblozhka_dlya_video' , $post_id)?>">
+                    <video width="100%" height="100%" poster="<?php echo the_field('oblozhka_dlya_video' , $post_id)?>" autoplay preload="metadata" loop  muted playsinline>
                         <source src="<?php echo the_field('video_vmesto_slajdera' , $post_id)?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>

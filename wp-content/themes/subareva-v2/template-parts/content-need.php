@@ -6,7 +6,7 @@ $post_id = get_the_ID();
         <?php
         if (get_field('video_dlya_uslugi', $post_id)){
         ?>
-        <video class="autoplay" width="100%" height="100%" preload="metadata" poster="<?php echo the_field('kartinka_need', $post_id)?>" playsinline autoplay loop muted>
+        <video class="autoplay" width="100%" height="100%" poster="<?php echo the_field('kartinka_need', $post_id)?>" autoplay preload="metadata" loop  muted playsinline>
             <source src="<?php the_field('video_dlya_uslugi', $post_id);?>" type="video/mp4">
             Your browser does not support the video tag.
         </video>

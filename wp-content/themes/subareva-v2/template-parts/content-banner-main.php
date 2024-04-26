@@ -44,7 +44,7 @@ $post_id = get_the_ID();
             <?php
             if (get_field('video_esli_est', $post_id)){
                 ?>
-                <video muted width="100%" height="100%" autoplay preload="metadata" loop poster="<?php echo the_field('pomter_vmesto_video', $post_id);?>">
+                <video width="100%" height="100%" poster="<?php echo the_field('pomter_vmesto_video', $post_id);?>" autoplay preload="metadata" loop  muted playsinline>
                     <source src="<?php the_field('video_esli_est', $post_id);?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
