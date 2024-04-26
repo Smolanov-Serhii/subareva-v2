@@ -53,7 +53,25 @@ $post_id = get_the_ID();
             </div>
         </div>
         <div class="banner__right">
-            <img src="<?php the_field('fotografiya_v_baner', $post_id)?>" alt="">
+            <?php
+                if (is_page( 1136 )){
+                    if ( wp_is_mobile() ) {
+                        ?>
+                        <img src="<?php echo the_field('fotografiya_v_baner_mob', $post_id)?>" alt="">
+                        <?php
+                    } else {
+                        ?>
+                        <img src="<?php the_field('fotografiya_v_baner', $post_id)?>" alt="">
+                        <?php
+                    }
+                } else {
+                    ?>
+                        <img src="<?php the_field('fotografiya_v_baner', $post_id)?>" alt="">
+                    <?php
+                }
+
+            ?>
+
         </div>
         <div class="banner__logo">
             <img src="<?php the_field('nadpis_po_seridine', $post_id)?>" alt="">
