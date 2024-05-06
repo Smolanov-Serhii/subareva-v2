@@ -23,7 +23,7 @@ if (is_page(102)){
                 <?php
                 if (get_field('telefon1', $post_id)){
                     ?>
-                    <div class="row"><a href="tel:<?php the_field('telefon1', $post_id)?>">тел:<?php the_field('telefon1', $post_id)?></a></div>
+                    <div class="row"><a href="tel:<?php the_field('telefon1', $post_id)?>"><?php the_field('telefon1', $post_id)?></a></div>
                     <?php
                 }
                 ?>
@@ -31,7 +31,7 @@ if (is_page(102)){
                 <?php
                 if (get_field('telefon2', $post_id)){
                     ?>
-                    <div class="row"><a href="tel:<?php the_field('telefon2', $post_id)?>">тел:<?php the_field('telefon2', $post_id)?></a></div>
+                    <div class="row"><a href="tel:<?php the_field('telefon2', $post_id)?>"><?php the_field('telefon2', $post_id)?></a></div>
                     <?php
                 }
                 ?>

@@ -5,17 +5,26 @@
   &__list{
     display: flex;
     flex-wrap: wrap;
-    margin-right: -20px;
+    gap: 14px;
+    margin-right: -14px;
+    width: calc(100% + 14px);
   }
   &__title{
     margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    .button{
+      margin-left: auto;
+      @media all and (max-width: 1024px){
+        margin-top: 40px;
+      }
+    }
   }
   &__item{
     position: relative;
     overflow: hidden;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    height: 450px;
+    height: 400px;
     @media all and (max-width: 1200px){
       height: 274px;
     }
@@ -32,90 +41,87 @@
       height: 200px;
     }
     &:nth-child(1){
-      width: calc(25% - 20px);
+      width: calc(25% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(40% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(45% - 20px);
       }
     }
     &:nth-child(2){
-      width: calc(25% - 20px);
+      width: calc(25% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(35% - 20px);
-      }
-      @media all and (max-width: 1024px){
-        width: calc(30% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(55% - 20px);
       }
     }
     &:nth-child(3){
-      width: calc(25% - 20px);
+      width: calc(25% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(25% - 20px);
-      }
-      @media all and (max-width: 1024px){
-        width: calc(30% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(50% - 20px);
       }
     }
     &:nth-child(4){
-      width: calc(25% - 20px);
+      width: calc(25% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(30% - 20px);
-      }
-      @media all and (max-width: 1024px){
-        width: calc(30% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(50% - 20px);
       }
     }
     &:nth-child(5){
-      width: calc(25% - 20px);
+      width: calc(33.333% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(45% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(55% - 20px);
       }
     }
     &:nth-child(6){
-      width: calc(25% - 20px);
+      width: calc(33.333% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(25% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(45% - 20px);
       }
     }
     &:nth-child(7){
-      width: calc(25% - 20px);
+      width: calc(33.333% - 14px);
       @media all and (max-width: 1200px){
-        width: calc(35% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(50% - 20px);
       }
     }
     &:nth-child(8){
-      width: calc(25% - 20px);
+      width: calc(50% - 14px);
+      @media all and (min-width: 1201px){
+        height: 300px;
+      }
       @media all and (max-width: 1200px){
-        width: calc(30% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(50% - 20px);
       }
     }
     &:nth-child(9){
-      width: calc(33.3333% - 20px);
+      width: calc(50% - 14px);
+      @media all and (min-width: 1201px){
+        height: 300px;
+      }
       @media all and (max-width: 1200px){
-        width: calc(33.3333% - 20px);
+        width: calc(33.3333% - 14px);
       }
       @media all and (max-width: 768px){
         width: calc(100% - 20px);

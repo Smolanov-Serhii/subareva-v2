@@ -80,6 +80,28 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.our-services').length) {
+            var ServSlider = new Swiper(".our-services .swiper", {
+                slidesPerView: "auto",
+                spaceBetween: 29,
+                navigation: {
+                    nextEl: ".our-services .next",
+                    prevEl: ".our-services .prev",
+                },
+                breakpoints: {
+                        320: {
+                          spaceBetween: 14,
+                                        },
+                        640: {
+                          spaceBetween: 20,
+                        },
+                        1024: {
+                          spaceBetween: 25,
+                        },
+                      }
+            });
+        }
+
     if ($('.reviews').length) {
         var Reviewes = new Swiper(".reviews .swiper", {
             speed: 500,

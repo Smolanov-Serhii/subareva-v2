@@ -2,6 +2,11 @@
     <div class="current-team__container main-container">
         <h2 class="current-team__title section-title">
             <?php the_field('kosmetologiya_zagolovok' , 'options')?>
+            <div class="current-team__btnt">
+                <div class="button js-vac">
+                    <?php the_field('nadpis_stan_chastyu_komandy', 'option')?>
+                </div>
+            </div>
         </h2>
         <div class="current-team__list cosmetology">
             <?php
