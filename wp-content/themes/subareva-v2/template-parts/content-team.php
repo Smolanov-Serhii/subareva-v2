@@ -5,9 +5,11 @@ $post_id = get_the_ID();
     <div class="team__container main-container">
         <h2 class="team__title section-title">
             <?php the_field('zagolovok_bloka_komanda' , $post_id)?>
-<!--            <div class="button js-vac">-->
-<!--                --><?php //the_field('nadpis_stan_chastyu_komandy', 'option')?>
-<!--            </div>-->
+                        <div class="current-team__btnt">
+                            <div class="button js-vac">
+                                <?php the_field('nadpis_stan_chastyu_komandy', 'option')?>
+                            </div>
+                        </div>
         </h2>
         <div class="team__list">
             <?php

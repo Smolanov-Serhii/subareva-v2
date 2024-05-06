@@ -19,9 +19,9 @@
     }
   }
   &__stom{
-    background: #15223D;
+    background-color: #000125;
     a{
-      color: #8FA3CC;
+      color: #FFFFFF;
     }
   }
   &__group{
@@ -103,7 +103,7 @@
       .services__group-name{
         left: 0;
         bottom: 59px;
-        background-color: #15223D;
+        background-color: #000125;
         @media all and (max-width: 1024px){
           top: 43px;
           bottom: auto;

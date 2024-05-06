@@ -12,7 +12,7 @@ if (is_page(102) || is_page(447) || is_page(369) || is_page(1282)){
             <h2 class="appointment-new__title">
                 <?php the_field('zagolovok_formy' , $post_id)?>
             </h2>
-<!--            <p class="appointment-new__desc">-->
+<!--            <p class=" wp-cappointment-new__desc">-->
 <!--                --><?php //the_field('podzagolovok_formy' , $post_id)?>
 <!--            </p>-->
         </div>
