@@ -18,19 +18,41 @@ $post_id = get_the_ID();
     </div>
     <div class="banner-dark__container main-container">
         <?php
-        if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+        if (is_page(822)){
             ?>
-            <h1 class="banner-dark__title white"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
+            <div class="banner-dark__subtitle white">
+                <?php the_field('podzagolovok_banera', $post_id)?>
+            </div>
             <?php
+            if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+                ?>
+                <h1 class="banner-dark__title white"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
+                <?php
+            } else {
+                ?>
+                <h1 class="banner-dark__title white"><?php the_field('zagolovok_banera', $post_id)?></h1>
+                <?php
+            }
+
         } else {
+            if (get_field('aktivator_pokaza_zagolovka', 'option') == 'true'){
+                ?>
+                <h1 class="banner-dark__title white"><?php the_field('tekst_vremennogo_zagolovka', 'option') ?></h1>
+                <?php
+            } else {
+                ?>
+                <h1 class="banner-dark__title white"><?php the_field('zagolovok_banera', $post_id)?></h1>
+                <?php
+            }
             ?>
-            <h1 class="banner-dark__title white"><?php the_field('zagolovok_banera', $post_id)?></h1>
+                <div class="banner-dark__subtitle white">
+                    <?php the_field('podzagolovok_banera', $post_id)?>
+                </div>
             <?php
         }
+
         ?>
-        <div class="banner-dark__subtitle white">
-            <?php the_field('podzagolovok_banera', $post_id)?>
-        </div>
+
         <div class="banner-dark__lnk button js-form">
             <span><?php the_field('tekst_na_knopke', $post_id)?></span>
         </div>

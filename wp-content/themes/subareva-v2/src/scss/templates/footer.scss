@@ -8,6 +8,7 @@
   }
   &__text{
     margin-top: 33px;
+    display: none;
     *{
       color: #15223D;
       font-size: 14px;
@@ -65,19 +66,24 @@
       order: 2;
       margin-top: 40px;
     }
+    @media all and (max-width: 768px){
+      margin-top: 0;
+    }
     @media all and (max-width: 500px){
       text-align: center;
     }
   }
   &__nav{
     width: calc(60% - 40px);
-    display: flex;
+    //display: flex;
+    display: none;
     @media all and (max-width: 1200px){
       width: 100%;
       order: 1;
     }
     @media all and (max-width: 768px){
       flex-wrap: wrap;
+      display: none;
     }
     &-list{
       width: 33.3333%;

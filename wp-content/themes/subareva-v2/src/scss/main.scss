@@ -214,7 +214,17 @@ main{
 .wpcf7-spinner, .wpcf7-response-output{
   display: none!important;
 }
-
+.page-template-viniri{
+  .banner-dark.white{
+    @media all and (max-width: 500px){
+      height: 80vh;
+      .banner-dark__container{
+        padding-top: 5vh;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
 
 
 @import "templates/header";
