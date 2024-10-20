@@ -124,6 +124,21 @@
       padding-left: 0;
     }
   }
+  &__untitle{
+    padding-left: 88px;
+    @media all and (max-width: 1200px){
+      padding-left: 75px;
+    }
+    @media all and (max-width: 1024px){
+      padding-left: 50px;
+    }
+    @media all and (max-width: 768px){
+      padding-left: 35px;
+    }
+    @media all and (max-width: 500px){
+      padding-left: 11vw;
+    }
+  }
   &__subtitle{
     padding-left: 102px;
     font-weight: 700;
@@ -140,7 +155,7 @@
     }
   }
   &__list{
-    padding-left: 102px;
+    padding-left: 88px;
     @media all and (max-width: 1200px){
       padding-left: 75px;
     }

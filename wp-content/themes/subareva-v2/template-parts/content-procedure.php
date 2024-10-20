@@ -6,17 +6,32 @@ $post_id = get_the_ID();
         <img src="<?php the_field('kartinka_bloka_proczedury', $post_id)?>" alt="<?php the_field('zagolovok_proczedura', $post_id)?>">
     </div>
     <div class="procedure__container padding-right-part">
-        <h2 class="procedure__title section-title">
-            <?php the_field('zagolovok_proczedura', $post_id)?>
-        </h2>
-        <div class="procedure__subtitle">
-            <?php the_field('podzagolovok_proczedury', $post_id)?>
-        </div>
+        <?php
+            if($post_id = 1460){
+              ?>
+                <div class="procedure__untitle">
+                    <?php the_field('podzagolovok_proczedury', $post_id)?>
+                </div>
+                <h2 class="procedure__title section-title">
+                    <?php the_field('zagolovok_proczedura', $post_id)?>
+                </h2>
+              <?php
+            } else {
+                ?>
+                <h2 class="procedure__title section-title">
+                    <?php the_field('zagolovok_proczedura', $post_id)?>
+                </h2>
+                <div class="procedure__subtitle">
+                    <?php the_field('podzagolovok_proczedury', $post_id)?>
+                </div>
+                <?php
+            }
+        ?>
         <div class="procedure__list ">
             <?php
             if( have_rows('perechen_etapov', $post_id) ):
                 while( have_rows('perechen_etapov', $post_id) ) : the_row();
-                    $title = get_sub_field(cd wp'zagolovok');
+                    $title = get_sub_field('zagolovok');
                     $content = get_sub_field('opisanie');
                     ?>
                         <div class="procedure__item">

@@ -4,6 +4,7 @@ if (is_page(102) || is_page(447) || is_page(369) || is_page(1282)){
     $post_id = 646;
 } else {
     $post_id = get_the_ID();
+    $post_id = 646;
 }
 ?>
 <section class="appointment-new">

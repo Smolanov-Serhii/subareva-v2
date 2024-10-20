@@ -70,9 +70,9 @@ $post_id = get_the_ID();
                             <?php
                             if ($akcia){
                                 ?>
-                                <div class="akcia">
-                                    <?php echo $akcia;?>
-                                </div>
+<!--                                <div class="akcia">-->
+<!--                                    --><?php //echo $akcia;?>
+<!--                                </div>-->
                                 <?php
                             }
                             ?>

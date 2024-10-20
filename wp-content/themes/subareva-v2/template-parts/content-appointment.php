@@ -1,7 +1,7 @@
 <?php
 if(is_home()){
     $post_id = get_the_ID();
-
+    $post_id = 2;
 } else {
     $post_id = 2;
 }

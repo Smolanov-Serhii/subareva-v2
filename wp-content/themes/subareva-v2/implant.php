@@ -8,7 +8,7 @@ get_header();
 
 ?>
     <main id="main" class="main">
-        <?php get_template_part( 'template-parts/content', 'banner-dark' ); ?>
+        <?php get_template_part( 'template-parts/content', 'banner-white' ); ?>
         <?php get_template_part( 'template-parts/content', 'total' ); ?>
         <?php get_template_part( 'template-parts/content', 'need' ); ?>
         <?php get_template_part( 'template-parts/content', 'prich' ); ?>

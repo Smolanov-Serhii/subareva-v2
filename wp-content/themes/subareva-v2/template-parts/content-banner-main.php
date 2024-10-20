@@ -79,13 +79,25 @@ $post_id = get_the_ID();
                             <?php
                             while( have_rows('slajder_servisa') ) : the_row();
                                 $image = get_sub_field('slajd_v_banner');
+                                $imagemob = get_sub_field('kartinka_bannera_mob');
                                 $alt = get_sub_field('opisanie_slajda');
                                 $title = get_sub_field('nazvanie_proczedury');
                                 $old = get_sub_field('staraya_czena');
                                 $current = get_sub_field('tekushhaya_czena');
                                 ?>
                                 <div class="swiper-slide">
-                                    <img src="<?php echo $image?>" alt="<?php echo $alt?>">
+                                    <?php
+                                    if ( wp_is_mobile() && $imagemob) {
+                                        ?>
+                                        <img src="<?php echo $imagemob?>" alt="<?php echo $alt?>">
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <img src="<?php echo $image?>" alt="<?php echo $alt?>">
+                                        <?php
+                                    }
+                                    ?>
+
                                     <?php
                                     if ($title){
                                         ?>

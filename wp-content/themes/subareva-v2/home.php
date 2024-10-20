@@ -28,6 +28,7 @@ get_header();
         <?php get_template_part( 'template-parts/content', 'carusel' ); ?>
         <?php get_template_part( 'template-parts/content', 'banner-main' ); ?>
         <?php get_template_part( 'template-parts/content', 'digits' ); ?>
+        <?php get_template_part( 'template-parts/content', 'directions' ); ?>
         <!--        --><?php //get_template_part( 'template-parts/content', 'services-big' ); ?>
         <?php get_template_part( 'template-parts/content', 'our-services' ); ?>
         <?php get_template_part( 'template-parts/content', 'premium' ); ?>

@@ -1,3 +1,11 @@
+.page-template-elaineri{
+  .reviews{
+    padding-top: 0;
+    &:before{
+      display: none;
+    }
+  }
+}
 .reviews{
   padding-top: 60px;
   margin: 60px 0;

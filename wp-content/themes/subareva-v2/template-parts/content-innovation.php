@@ -3,6 +3,7 @@ if (is_page(369)){
     $post_id = 102;
 } else {
     $post_id = get_the_ID();
+    $post_id = 102;
 }
 ?>
 <section class="innovation">

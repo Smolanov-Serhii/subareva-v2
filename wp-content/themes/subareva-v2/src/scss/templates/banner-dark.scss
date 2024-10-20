@@ -19,6 +19,15 @@
     }
   }
 }
+.page-template-implant{
+  .banner-dark.white{
+    @media all and (max-width: 768px){
+      padding-top: 32vh;
+      padding-bottom: 0;
+    }
+  }
+
+}
 .banner-dark{
   background-color: #000125;
   position: relative;
