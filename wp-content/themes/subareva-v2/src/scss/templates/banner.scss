@@ -181,8 +181,11 @@
     }
     .banner__small-text{
       font-size: 24px;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       margin-bottom: 37px;
+      strong{
+        font-weight: bolder;
+      }
       @media all and (max-width: 500px){
         font-size: 16px;
         text-align: left;

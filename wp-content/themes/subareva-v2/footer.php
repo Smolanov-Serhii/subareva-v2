@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="footer__nav">
-                <div class="footer__nav-list">
+                <div class="footer__nav-list" style="display: none;">
                     <h4 class="footer__nav-name">
                         <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
                     </h4>
@@ -68,7 +68,7 @@
                     wp_reset_postdata();
                     ?>
                 </div>
-                <div class="footer__nav-list">
+                <div class="footer__nav-list" style="display: none;">
                     <h4 class="footer__nav-name">
                         <?php the_field('tekst_bloka_uslug_kosmetologii' , 2)?>
                     </h4>
@@ -90,9 +90,9 @@
                         <?php the_field('tekst_kontakty', 'option')?>
                     </h4>
                     <a href="tel:<?php the_field('nomer_v_futer', 'option')?>" class="footer__nav-item"><?php the_field('nomer_v_futer', 'option')?></a>
-                    <div class="footer__nav-item"><?php the_field('adress_v_futer_1', 'option')?></div>
+                    <div class="footer__nav-item" style="display: none;"><?php the_field('adress_v_futer_1', 'option')?></div>
                     <div class="footer__nav-item"><?php the_field('adress_v_futer_2', 'option')?></div>
-                    <div class="footer__nav-item"><?php the_field('adress_v_futer_3', 'option')?></div>
+                    <div class="footer__nav-item" style="display: none;"><?php the_field('adress_v_futer_3', 'option')?></div>
                 </div>
             </div>
             <div class="footer__copyright">

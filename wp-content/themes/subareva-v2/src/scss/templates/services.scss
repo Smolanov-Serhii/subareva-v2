@@ -13,13 +13,23 @@
     flex-wrap: wrap;
   }
   &__kosm{
-    background-color: #000125;
+    @media all and (max-width: 1024px){
+      background-color: #000125;
+    }
+    &:hover{
+      background-color: #000125;
+    }
     a{
       color: #FFFFFF;
     }
   }
   &__stom{
-    background-color: #000125;
+    @media all and (max-width: 1024px){
+      background-color: #000125;
+    }
+    &:hover{
+      background-color: #000125;
+    }
     a{
       color: #FFFFFF;
     }
@@ -120,6 +130,7 @@
       letter-spacing: 0.72px;
     }
     &:hover{
+
       .services__group-image{
         @media all and (min-width: 501px){
           opacity: 0;

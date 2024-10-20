@@ -74,6 +74,16 @@
                        src="https://www.facebook.com/tr?id=1529161304296364&ev=PageView&noscript=1"
             /></noscript>
         <!-- End Meta Pixel Code -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10965270143">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-10965270143');
+        </script>
         <?php
     } else if (is_page(1136)){
         ?>
@@ -114,6 +124,16 @@
                        src="https://www.facebook.com/tr?id=7361673277287154&ev=PageView&noscript=1"
             /></noscript>
         <!-- End Meta Pixel Code -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10965270143">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-10965270143');
+        </script>
         <?php
     } else if (is_page(544)){
         ?>
@@ -134,6 +154,16 @@
                        src="https://www.facebook.com/tr?id=1857355611353656&ev=PageView&noscript=1"
             /></noscript>
         <!-- End Meta Pixel Code -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10965270143">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-10965270143');
+        </script>
         <?php
     } else if (is_page(447)){
         ?>
@@ -174,6 +204,16 @@
                        src="https://www.facebook.com/tr?id=1469401497311831&ev=PageView&noscript=1"
             /></noscript>
         <!-- End Meta Pixel Code -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10965270143">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-10965270143');
+        </script>
         <?php
     }
     ?>

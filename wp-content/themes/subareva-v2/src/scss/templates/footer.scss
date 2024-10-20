@@ -8,7 +8,7 @@
   }
   &__text{
     margin-top: 33px;
-    display: none;
+    //display: none;
     *{
       color: #15223D;
       font-size: 14px;
@@ -75,8 +75,8 @@
   }
   &__nav{
     width: calc(60% - 40px);
-    //display: flex;
-    display: none;
+    display: flex;
+    //display: none;
     @media all and (max-width: 1200px){
       width: 100%;
       order: 1;
