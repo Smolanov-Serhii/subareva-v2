@@ -6,41 +6,53 @@ if (is_page(1136)){
 }
 
 ?>
-<section class="params">
+<section class="params <?php if (get_field('kak_otobrazit_blok' , $post_id) == "text"){echo 'params-text-only';}; ?>">
     <div class="params__container main-container">
         <div class="params__left">
-            <h2 class="params__title section-title">
-                <?php the_field('zagolovok_bloka_czifry' , $post_id)?>
-            </h2>
             <?php
-                if (get_field('podzagolovok_bloka_cifri', $post_id)){
-                    the_field('podzagolovok_bloka_cifri', $post_id);
+                if (get_field('kak_otobrazit_blok' , $post_id) == "text"){
+                    ?>
+                    <div class="params__text">
+                        <?php the_field('otobrazhaemyj_tekst' , $post_id)?>
+                    </div>
+                    <?php
+                } else {
+                    ?>
+                    <h2 class="params__title section-title">
+                        <?php the_field('zagolovok_bloka_czifry' , $post_id)?>
+                    </h2>
+                    <?php
+                    if (get_field('podzagolovok_bloka_cifri', $post_id)){
+                        the_field('podzagolovok_bloka_cifri', $post_id);
+                    }
+                    ?>
+                    <div class="params__content">
+                        <?php
+                        if( have_rows('perechen_czifrovyh_pokazatelej', $post_id) ):
+                            ?>
+                            <?php
+                            while( have_rows('perechen_czifrovyh_pokazatelej', $post_id) ) : the_row();
+                                $big = get_sub_field('pole_so_znachenium');
+                                $desc = get_sub_field('pole_s_opisaniem');
+                                ?>
+                                <div class="params__row">
+                                    <div class="big">
+                                        <?php echo $big?>
+                                    </div>
+                                    <div class="small">
+                                        <?php echo $desc?>
+                                    </div>
+                                </div>
+                            <?php
+                            endwhile;
+                            ?>
+                        <?php
+                        endif;
+                        ?>
+                    </div>
+                    <?php
                 }
             ?>
-            <div class="params__content">
-                <?php
-                if( have_rows('perechen_czifrovyh_pokazatelej', $post_id) ):
-                    ?>
-                    <?php
-                    while( have_rows('perechen_czifrovyh_pokazatelej', $post_id) ) : the_row();
-                        $big = get_sub_field('pole_so_znachenium');
-                        $desc = get_sub_field('pole_s_opisaniem');
-                        ?>
-                        <div class="params__row">
-                            <div class="big">
-                                <?php echo $big?>
-                            </div>
-                            <div class="small">
-                                <?php echo $desc?>
-                            </div>
-                        </div>
-                    <?php
-                    endwhile;
-                    ?>
-                <?php
-                endif;
-                ?>
-            </div>
         </div>
 
             <?php

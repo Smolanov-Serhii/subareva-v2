@@ -14,6 +14,45 @@
 }
 .params{
   margin-bottom: 40px;
+  &.params-text-only{
+    .params__left{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      @media all and (max-width: 768px){
+        width: 100%;
+      }
+    }
+    .params__right{
+      width: 50%;
+      @media all and (max-width: 768px){
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
+  &__text{
+    padding: 156px 40px 156px 150px;
+    color: #15223D;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    @media all and (max-width: 1440px){
+      padding: 0 40px 0 0;
+    }
+    @media all and (max-width: 1260px){
+      font-size: 36px;
+    }
+    @media all and (max-width: 1120px){
+      font-size: 30px;
+    }
+    @media all and (max-width: 450px){
+      font-size: 18px;
+    }
+  }
   &__container{
     display: flex;
     justify-content: space-between;
