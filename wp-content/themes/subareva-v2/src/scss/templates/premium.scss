@@ -147,68 +147,76 @@
     }
   }
   &__item{
-    height: calc(50% - (20vw * $px));
-    img{
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
+    //height: calc(50% - (20vw * $px));
+    //height: 100%;
+    //width: auto;
+    //img{
+    //  width: auto;
+    //  height: 100%;
+    //}
   }
   &__list{
     display: flex;
-    gap: 20vw * $px;
+    //gap: 20vw * $px;
     @media all and (max-width: 768px){
-      gap: 10vw * $pxm;
+      //gap: 10vw * $pxm;
     }
     &-group{
-      display: flex;
-      flex-wrap: wrap;
-      width: 752vw * $px;
-      height: 580vw * $px;
-      gap: 20vw * $px;
-      @media all and (max-width: 768px){
-        gap: 10vw * $pxm;
-        width: 320vw * $pxm;
-        height: 320vw * $pxm;
+      height: 40vh;
+      max-height: 400px;
+      width: auto;
+      img{
+        height: 100%;
+        width: auto;
       }
-      &:nth-child(odd){
-        .premium__item{
-          &:nth-child(1){
-            width: 100%;
-            height: 50%;
-          }
-          &:nth-child(2){
-            width: calc(50% - ((20vw * $px)));
-            height: 50%;
-            @media all and (max-width: 768px){
-              width: calc(50% - ((10vw * $pxm)));
-            }
-          }
-          &:nth-child(3){
-            width: 50%;
-            height: 50%;
-          }
-        }
-      }
-      &:nth-child(even){
-        .premium__item{
-          &:nth-child(1){
-            width: 100%;
-            height: 50%;
-          }
-          &:nth-child(2){
-            width: 50%;
-            height: 50%;
-          }
-          &:nth-child(3){
-            width: calc(50% - ((20vw * $px)));
-            height: 50%;
-            @media all and (max-width: 768px){
-              width: calc(50% - ((10vw * $pxm)));
-            }
-          }
-        }
-      }
+      //display: flex;
+      //flex-wrap: wrap;
+      //width: 752vw * $px;
+      //height: 580vw * $px;
+      //gap: 20vw * $px;
+      //@media all and (max-width: 768px){
+      //  gap: 10vw * $pxm;
+      //  width: 320vw * $pxm;
+      //  height: 320vw * $pxm;
+      //}
+      //&:nth-child(odd){
+      //  .premium__item{
+      //    &:nth-child(1){
+      //      width: 100%;
+      //      height: 50%;
+      //    }
+      //    &:nth-child(2){
+      //      width: calc(50% - ((20vw * $px)));
+      //      height: 50%;
+      //      @media all and (max-width: 768px){
+      //        width: calc(50% - ((10vw * $pxm)));
+      //      }
+      //    }
+      //    &:nth-child(3){
+      //      width: 50%;
+      //      height: 50%;
+      //    }
+      //  }
+      //}
+      //&:nth-child(even){
+      //  .premium__item{
+      //    &:nth-child(1){
+      //      width: 100%;
+      //      height: 50%;
+      //    }
+      //    &:nth-child(2){
+      //      width: 50%;
+      //      height: 50%;
+      //    }
+      //    &:nth-child(3){
+      //      width: calc(50% - ((20vw * $px)));
+      //      height: 50%;
+      //      @media all and (max-width: 768px){
+      //        width: calc(50% - ((10vw * $pxm)));
+      //      }
+      //    }
+      //  }
+      //}
     }
   }
 }

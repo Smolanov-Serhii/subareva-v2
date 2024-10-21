@@ -1,5 +1,8 @@
 <?php
 $post_id = get_the_ID();
+if ($post_id == 646 || $post_id == 544){
+    $post_id = 822;
+}
 ?>
 <section class="imp-faq">
     <div class="imp-faq__container padding-left-part">

@@ -267,11 +267,11 @@ $(document).ready(function () {
     function CaruselSliderBig(){
                 if($('.premium').length){
                     var CaruselSlider = new Swiper('.premium .swiper', {
-                        spaceBetween: 0,
+                        spaceBetween: 20,
                         loop: true,
                         slidesPerView: 'auto',
                         preventInteractionOnTransition: true,
-                        speed: 8000,
+                        speed: 10000,
                         autoplay: {
                             enabled: true,
                             delay: 1,

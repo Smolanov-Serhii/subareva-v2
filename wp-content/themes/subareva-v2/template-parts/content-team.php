@@ -1,5 +1,8 @@
 <?php
 $post_id = get_the_ID();
+if ($post_id == 369 || $post_id == 447){
+    $post_id = 102;
+}
 ?>
 <section class="team">
     <div class="team__container main-container">
@@ -13,7 +16,7 @@ $post_id = get_the_ID();
         </h2>
         <div class="team__list">
             <?php
-            if( have_rows('nashi_sotrudniki') ):
+            if( have_rows('nashi_sotrudniki', $post_id) ):
                 ?>
                     <?php
                     $counter =1;
