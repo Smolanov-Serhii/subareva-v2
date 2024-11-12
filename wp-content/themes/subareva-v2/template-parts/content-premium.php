@@ -30,7 +30,6 @@ $post_id = 102;
                 <?php the_field('opisanie_premialnyh' , $post_id)?>
             </div>
             <?php
-            $counter = 1;
             if( have_rows('galereya_primealnyh' , $post_id )):
                 ?>
                 <div class="premium__images swiper">

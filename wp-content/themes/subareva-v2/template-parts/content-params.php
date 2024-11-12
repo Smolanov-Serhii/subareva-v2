@@ -13,7 +13,7 @@ if (is_page(1136)){
                 if (get_field('kak_otobrazit_blok' , $post_id) == "text"){
                     ?>
                     <div class="params__text">
-                        <?php the_field('otobrazhaemyj_tekst' , $post_id)?>
+                        <?php the_field('otobrazhaemyj_tekst_new' , $post_id)?>
                     </div>
                     <?php
                 } else {

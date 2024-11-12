@@ -7,7 +7,7 @@ $post_id = get_the_ID();
     </div>
     <div class="procedure__container padding-right-part">
         <?php
-            if($post_id = 1460){
+            if($post_id == 1460){
               ?>
                 <div class="procedure__untitle">
                     <?php the_field('podzagolovok_proczedury', $post_id)?>

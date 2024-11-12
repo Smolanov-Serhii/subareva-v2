@@ -47,22 +47,20 @@ $post_id = get_the_ID();
                             <div class="our-services__item-desc">
                                 <?php echo $desc;?>
                                 <div class="price">
-                                    <div class="old">
-                                        <?php echo $old;?>
-                                    </div>
-                                    <div class="current">
-                                        <?php echo $current;?>
-                                    </div>
+<!--                                    <div class="old">-->
+<!--                                        --><?php //echo $old;?>
+<!--                                    </div>-->
+<!--                                    <div class="current">-->
+<!--                                        --><?php //echo $current;?>
+<!--                                    </div>-->
                                 </div>
                             </div>
                             <?php
                             if ($lnk){
                                 ?>
-                                <a href="<?php echo $lnk; ?>">
-                                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="32" cy="32" r="32" fill="#15223D"/>
-                                        <path d="M25.0215 38.9785L38.9785 25.0215M38.9785 25.0215H25.0215M38.9785 25.0215V38.9785" stroke="white" stroke-width="3" stroke-linejoin="bevel"/>
-                                    </svg>
+                                <a href="<?php echo $lnk; ?>" class="button button-round">
+                                    <span><?php the_field('nadpis_podrobnee' , $post_id)?></span>
+                                    →
                                 </a>
                                 <?php
                             }
