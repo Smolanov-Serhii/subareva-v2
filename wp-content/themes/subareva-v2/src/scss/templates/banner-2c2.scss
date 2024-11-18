@@ -1,6 +1,10 @@
 .banner-2c2{
   margin-top: 84px;
   margin-bottom: 82px;
+  @media all and (max-width: 1920px){
+    margin-top: 84vw * $px;
+    margin-bottom: 82vw * $px;
+  }
   &__container{
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +12,10 @@
   &__content{
     width: 610px;
     margin-right: 83px;
+    @media all and (max-width: 1920px){
+      width: 610vw * $px;
+      margin-right: 83vw * $px;
+    }
   }
   &__title{
     color: #000225;
@@ -15,6 +23,10 @@
     font-weight: 400;
     line-height: normal;
     margin-bottom: 72px;
+    @media all and (max-width: 1920px){
+      font-size: 96vw * $px;
+      margin-bottom: 72vw * $px;
+    }
   }
   &__subtitle{
     color: #15223D;
@@ -22,11 +34,20 @@
     font-weight: 400;
     line-height: 135%;
     letter-spacing: 0.48px;
+    @media all and (max-width: 1920px){
+      font-size: 24vw * $px;
+    }
   }
   &__img{
     width: calc(((100% - 693px) / 2) - 21px);
+    @media all and (max-width: 1920px){
+      width: calc(((100% - (693vw * $px)) / 2) - (21vw * $px));
+    }
     &:last-child{
       margin-left: 42px;
+      @media all and (max-width: 1920px){
+        margin-left: 42vw * $px;
+      }
     }
   }
 }

@@ -1,0 +1,18 @@
+.happy{
+  margin-bottom: 82px;
+  @media all and (max-width: 1920px){
+    margin-bottom: 82vw * $px;
+  }
+  &__container{
+
+  }
+  &__title{
+
+  }
+  &__item{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

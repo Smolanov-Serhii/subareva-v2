@@ -24,6 +24,16 @@
     }
   }
 }
+body.home .banner__left{
+  @media all and (max-width: 500px){
+    padding-top: 20px;
+    padding-bottom: 16vh;
+    .banner__small-text{
+      margin-bottom: auto;
+    }
+  }
+
+}
 .banner{
   &.new-banner{
     .banner__right .swiper-wrapper{
