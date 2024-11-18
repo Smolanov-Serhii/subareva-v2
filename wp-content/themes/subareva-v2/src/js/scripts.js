@@ -315,9 +315,27 @@ $(document).ready(function () {
 
     CompareSliders();
 
+    function acservice(){
+        if($('.acservice').length){
+            $(".acservice__item").click(function() {
+                $('.acservice__item').removeClass('active');
+                $(this).addClass("active");
+            })
+        }
+    }
+    acservice();
 
-
-
+    function HappySlider(){
+        if($('.happy').length){
+            var HappySlider = new Swiper('.happy__list', {
+                spaceBetween: 30,
+                loop: false,
+                slidesPerView: 2.6,
+                preventInteractionOnTransition: true
+            });
+        }
+    }
+    HappySlider();
 
 });
 

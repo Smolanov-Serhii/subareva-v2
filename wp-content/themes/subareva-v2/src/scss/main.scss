@@ -128,7 +128,13 @@ main{
   @extend .padding-left;
   @extend .padding-right;
 }
-
+.medium-container{
+  max-width: 1880px;
+  margin: auto;
+  width: 100%;
+  @extend .padding-left;
+  @extend .padding-right;
+}
 .button{
   background-color: #000125;
   padding: 20px 63px;
@@ -284,5 +290,10 @@ main{
 @import "templates/why-elainers";
 @import "templates/technology";
 @import "templates/elainers";
+@import "templates/banner-2c1";
+@import "templates/banner-2c2";
+@import "templates/acservice";
+@import "templates/history";
+@import "templates/happy";
 @import "templates/footer";
 
