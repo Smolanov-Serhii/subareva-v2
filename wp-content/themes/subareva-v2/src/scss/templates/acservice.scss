@@ -32,6 +32,12 @@
       }
       svg{
         margin-left: auto;
+        width: 26px;
+        height: 26px;
+        @media all and (max-width: 1920px){
+          width: 26vw * $px;
+          height: 26vw * $px;
+        }
       }
     }
     &.active{
