@@ -13,6 +13,9 @@
       padding: 32vw * $px 0;
       margin-bottom: 23vw * $px;
     }
+    @media all and (max-width: 500px){
+      padding: 20px 0;
+    }
     &:last-child{
       margin-bottom: 82px;
       @media all and (max-width: 1920px){
@@ -30,6 +33,9 @@
       @media all and (max-width: 1920px){
         font-size: 48vw * $px;
       }
+      @media all and (max-width: 500px){
+        font-size: 26px;
+      }
       svg{
         margin-left: auto;
         width: 26px;
@@ -38,6 +44,13 @@
           width: 26vw * $px;
           height: 26vw * $px;
         }
+        @media all and (max-width: 500px){
+          width: 16px;
+          height: 16px;
+        }
+      }
+      @media all and (max-width: 500px){
+        font-size: 18px;
       }
     }
     &.active{
@@ -63,6 +76,11 @@
         width: 35vw * $px;
         font-size: 24vw * $px;
       }
+      @media all and (max-width: 500px){
+        font-size: 16px;
+        width: 30px;
+        margin-right: 10px;
+      }
     }
     &-content{
       display: none;
@@ -81,6 +99,9 @@
           font-size: 32vw * $px;
           margin-bottom: 24vw * $px;
         }
+        @media all and (max-width: 500px){
+          font-size: 18px;
+        }
       }
       P{
         color: #15223D;
@@ -90,6 +111,9 @@
         letter-spacing: 0.48px;
         @media all and (max-width: 1920px){
           font-size: 24vw * $px;
+        }
+        @media all and (max-width: 500px){
+          font-size: 14px;
         }
       }
       &-grid{

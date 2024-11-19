@@ -23,7 +23,7 @@ $post_id = get_the_ID();
                         <div class="history__item-video">
                             <?php if ($video){
                                 ?>
-                                    <video src="<?php echo $video; ?>" poster="<?php echo $image; ?>"></video>
+                                    <video src="<?php echo $video; ?>" poster="<?php echo $image; ?>" controls></video>
                                 <?php
                             } else {
                                 ?>

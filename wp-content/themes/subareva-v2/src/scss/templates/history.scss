@@ -16,6 +16,10 @@
       font-size: 96vw * $px;
       margin-bottom: 82vw * $px;
     }
+    @media all and (max-width: 500px){
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
   }
   &__list{
     display: flex;
@@ -34,15 +38,26 @@
       width: calc(50% - (24vw * $px));
       margin-bottom: 100vw * $px;
     }
+    @media all and (max-width: 500px){
+      width: 100%;
+      flex-direction: column-reverse;
+      margin-bottom: 40px;
+    }
     &:nth-child(even){
       flex-direction: column-reverse;
       justify-content: flex-end;
       margin-bottom: 0;
+      @media all and (max-width: 500px){
+        margin-bottom: 40px;
+      }
       .history__item-text{
         margin-top: 0;
         margin-bottom: 149px;
         @media all and (max-width: 1920px){
           margin-bottom: 148vw * $px;
+        }
+        @media all and (max-width: 500px){
+          margin-bottom: 0;
         }
       }
     }
@@ -53,16 +68,25 @@
       @media all and (max-width: 1920px){
         gap: 48vw * $px;
       }
+      @media all and (max-width: 500px){
+        flex-direction: column-reverse;
+      }
       .history__item-video{
         width: calc(50% - 24px);
         @media all and (max-width: 1920px){
           width: calc(50% - (24vw * $px));
+        }
+        @media all and (max-width: 500px){
+          width: 100%;
         }
       }
       .history__item-text{
         width: calc(50% - 24px);
         @media all and (max-width: 1920px){
           width: calc(50% - (24vw * $px));
+        }
+        @media all and (max-width: 500px){
+          width: 100%;
         }
       }
     }
@@ -81,6 +105,10 @@
       @media all and (max-width: 1920px){
         font-size: 96vw * $px;
       }
+      @media all and (max-width: 500px){
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
     }
     &-title{
       color: #000225;
@@ -92,6 +120,9 @@
         font-size: 48vw * $px;
         margin-bottom: 24vw * $px;
       }
+      @media all and (max-width: 500px){
+        font-size: 24px;
+      }
     }
     &-desc{
       color: #15223D;
@@ -102,6 +133,10 @@
       margin-bottom: 0;
       @media all and (max-width: 1920px){
         font-size: 24vw * $px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 16px;
+        margin-bottom: 20px;
       }
     }
   }

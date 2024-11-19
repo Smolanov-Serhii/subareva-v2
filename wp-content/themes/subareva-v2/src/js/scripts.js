@@ -318,8 +318,13 @@ $(document).ready(function () {
     function acservice(){
         if($('.acservice').length){
             $(".acservice__item").click(function() {
-                $('.acservice__item').removeClass('active');
-                $(this).addClass("active");
+                if ($(this).hasClass('active')){
+                    $(this).removeClass("active");
+                } else {
+                    $('.acservice__item').removeClass('active');
+                    $(this).addClass("active");
+                }
+
             })
         }
     }
@@ -329,9 +334,29 @@ $(document).ready(function () {
         if($('.happy').length){
             var HappySlider = new Swiper('.happy__list', {
                 spaceBetween: 30,
-                loop: false,
+                loop: true,
                 slidesPerView: 2.6,
-                preventInteractionOnTransition: true
+                centeredSlides: true,
+                preventInteractionOnTransition: true,
+                speed: 20000,
+                autoplay: {
+                    enabled: true,
+                    delay: 1,
+                },
+                breakpoints: {
+                    320: {
+                        spaceBetween: 10,
+                        slidesPerView: 1.2,
+                    },
+                    640: {
+                        spaceBetween: 20,
+                        slidesPerView: 2.2,
+                    },
+                    1024: {
+                        spaceBetween: 25,
+                        slidesPerView: 2.6,
+                    },
+                }
             });
         }
     }

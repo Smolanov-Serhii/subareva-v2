@@ -3,18 +3,26 @@
   &__container{
     column-count: 2;
     column-gap: 0;
+    @media all and (max-width: 500px){
+      column-count: 1;
+    }
   }
   &__title{
     color: #000125;
-    font-size: 132px;
+    font-size: 100px;
     font-weight: 300;
     line-height: 100%;
     text-align: left;
     margin-bottom: 49px;
     padding-top: 80px;
     @media all and (max-width: 1920px){
-      font-size: 132vw * $px;
+      font-size: 100vw * $px;
       margin-bottom: 49vw * $px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 38px;
+      padding-top: 0;
+      margin-bottom: 20px;
     }
   }
   &__subtitle{
@@ -28,12 +36,19 @@
       font-size: 32vw * $px;
       margin-bottom: 130vw * $px;
     }
+    @media all and (max-width: 500px){
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
     strong{
       font-weight: 600;
     }
   }
   &__img{
     position: relative;
+    @media all and (max-width: 500px){
+      margin-bottom: 20px;
+    }
     &:nth-child(4){
       margin-bottom: 44px;
       margin-left: 50px;
@@ -41,11 +56,18 @@
         margin-bottom: 44vw * $px;
         margin-left: 50vw * $px;
       }
+      @media all and (max-width: 500px){
+        margin-left: 0;
+      }
     }
     &:nth-child(5){
       margin-left: 50px;
       @media all and (max-width: 1920px){
         margin-left: 50vw * $px;
+      }
+      @media all and (max-width: 500px){
+        margin-bottom: 20px;
+        margin-left: 0;
       }
     }
     &-desc{
@@ -71,6 +93,10 @@
         bottom: 52vw * $px;
         font-size: 24vw * $px;
       }
+      @media all and (max-width: 500px){
+        font-size: 12px;
+        padding: 10px;
+      }
       strong{
         font-weight: 600;
       }
@@ -81,6 +107,9 @@
         @media all and (max-width: 1920px){
           margin-right: 41vw * $px;
           width: 36vw * $px;
+        }
+        @media all and (max-width: 500px){
+          width: 24px;
         }
       }
     }

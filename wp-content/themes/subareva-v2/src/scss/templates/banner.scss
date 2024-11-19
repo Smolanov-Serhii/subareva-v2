@@ -24,12 +24,37 @@
     }
   }
 }
+body.home{
+  .banner{
+    .banner__logo{
+      display: none!important;
+    }
+  }
+}
 body.home .banner__left{
+  padding: 10vh 2vw 0 2vw;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  .banner__title{
+    text-align: center;
+  }
+  .banner__small-text{
+    text-align: center;
+  }
   @media all and (max-width: 500px){
-    padding-top: 20px;
+    padding-top: 10vh;
     padding-bottom: 16vh;
+    padding-left: 20px;
+    padding-right: 20px;
     .banner__small-text{
-      margin-bottom: auto;
+
+    }
+    .banner__button{
+      .button{
+        width: 100%;
+      }
     }
   }
 
