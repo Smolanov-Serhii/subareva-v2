@@ -24,41 +24,75 @@
     }
   }
 }
+//слева новый
 body.home{
   .banner{
     .banner__logo{
-      display: none!important;
+      display: none;
     }
   }
-}
-body.home .banner__left{
-  padding: 10vh 2vw 0 2vw;
-  justify-content: flex-start;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-  .banner__title{
-    text-align: center;
-  }
-  .banner__small-text{
-    text-align: center;
-  }
-  @media all and (max-width: 500px){
-    padding-top: 10vh;
-    padding-bottom: 16vh;
-    padding-left: 20px;
-    padding-right: 20px;
-    .banner__small-text{
-
-    }
-    .banner__button{
-      .button{
-        width: 100%;
+  @media all and (max-width: 768px){
+    .banner__right{
+      img{
+        object-fit: contain;
+        object-position: top;
       }
     }
   }
 
 }
+body.home .banner__left{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  justify-content: flex-start;
+  @media all and (max-width: 500px){
+    padding-top: 20px;
+    padding-bottom: 10vh;
+    justify-content: flex-end;
+    .banner__small-text{
+      margin-bottom: 43px;
+      text-align: center;
+    }
+    .banner__title{
+      text-align: center;
+    }
+    .banner__button{
+      margin-top: 0;
+      .button{
+        width: 100%;
+      }
+    }
+  }
+}
+//Широкий по центру
+//body.home .banner__left{
+//  padding: 10vh 2vw 0 2vw;
+//  justify-content: flex-start;
+//  width: 100%;
+//  align-items: center;
+//  text-align: center;
+//  .banner__title{
+//    text-align: center;
+//  }
+//  .banner__small-text{
+//    text-align: center;
+//  }
+//  @media all and (max-width: 500px){
+//    padding-top: 10vh;
+//    padding-bottom: 16vh;
+//    padding-left: 20px;
+//    padding-right: 20px;
+//    .banner__small-text{
+//
+//    }
+//    .banner__button{
+//      .button{
+//        width: 100%;
+//      }
+//    }
+//  }
+//
+//}
 .banner{
   &.new-banner{
     .banner__right .swiper-wrapper{

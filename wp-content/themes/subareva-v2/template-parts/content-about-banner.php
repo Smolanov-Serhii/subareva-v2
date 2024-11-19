@@ -27,7 +27,21 @@ $post_id = get_the_ID();
             </div>
             <div class="banner__button">
                 <?php
-                if (is_page( 1136 )){
+                if (is_page( 102 )){
+                    if ( wp_is_mobile() ) {
+                        ?>
+                        <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="button">
+                            <span><?php the_field('nadpis_na_knopke', 102)?></span>
+                        </a>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="button js-form">
+                            <span><?php the_field('nadpis_na_knopke', 102)?></span>
+                        </div>
+                        <?php
+                    }
+                } else if (is_page( 1136 )){
                     ?>
                         <div class="button js-vac">
                             <span><?php the_field('tekst_na_knopke', $post_id)?></span>
@@ -54,7 +68,7 @@ $post_id = get_the_ID();
         </div>
         <div class="banner__right">
             <?php
-                if (is_page( 1136 )){
+                if (is_page( 1136 ) || is_page( 102 )){
                     if ( wp_is_mobile() ) {
                         ?>
                         <img src="<?php echo the_field('fotografiya_v_baner_mob', $post_id)?>" alt="">
