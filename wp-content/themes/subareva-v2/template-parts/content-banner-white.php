@@ -6,11 +6,11 @@ $post_id = get_the_ID();
         <?php
         if ( wp_is_mobile() ) {
             ?>
-            <img src="<?php echo the_field('kartinka_bannera_mob', $post_id)?>" alt="<?php the_field('zagolovok_banera', $post_id)?>">
+            <img src="<?php echo the_field('kartinka_bannera_mob', $post_id)?>">
             <?php
         } else {
             ?>
-            <img src="<?php echo the_field('kartinka_bannera', $post_id)?>" alt="<?php the_field('zagolovok_banera', $post_id)?>">
+            <img src="<?php echo the_field('kartinka_bannera', $post_id)?>">
             <?php
         }
         ?>

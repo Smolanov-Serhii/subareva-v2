@@ -50,6 +50,7 @@ function subareva_v2_setup() {
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Primary', 'subareva-v2' ),
+			'mobile-menu' => esc_html__( 'Mobile menu', 'subareva-v2' ),
 		)
 	);
 

@@ -263,54 +263,73 @@
 <header class="header">
     <div class="header__container">
         <div class="header__mobile">
-            <nav class="header__nav">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'main-menu',
-                        'menu_id'        => 'primary-menu',
-                    )
-                );
+            <?php
+            if ( wp_is_mobile() ) {
                 ?>
-            </nav>
-            <div class="services__group-list">
-                <a href="<?php echo get_permalink(369); ?>">
-                    <h3 class="services__group-title">
-                        <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
-                    </h3>
-                </a>
+                <nav class="header__nav">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'mobile-menu',
+                            'menu_id'        => 'primary-menu',
+                        )
+                    );
+                    ?>
+                </nav>
                 <?php
-                $args = array(
-                    'post_type' 	 => 'dentistry'
-                );
-                $MY_QUERY = new WP_Query( $args );
-                if ( $MY_QUERY->have_posts() ) :
-                    while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-<!--                        <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
-                    <?php endwhile;
-                endif;
-                wp_reset_postdata();
+            } else {
                 ?>
-            </div>
-            <div class="services__group-list">
-                <a href="<?php echo get_permalink(447); ?>">
-                    <h3 class="services__group-title">
-                        <?php the_field('tekst_bloka_uslug_kosmetologii' , 2)?>
-                    </h3>
-                </a>
+                <nav class="header__nav">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'main-menu',
+                            'menu_id'        => 'primary-menu',
+                        )
+                    );
+                    ?>
+                </nav>
+                <div class="services__group-list">
+                    <a href="<?php echo get_permalink(369); ?>">
+                        <h3 class="services__group-title">
+                            <?php the_field('tekst_bloka_uslug_stomalogii' , 2)?>
+                        </h3>
+                    </a>
+                    <?php
+                    $args = array(
+                        'post_type' 	 => 'dentistry'
+                    );
+                    $MY_QUERY = new WP_Query( $args );
+                    if ( $MY_QUERY->have_posts() ) :
+                        while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+                            <!--                        <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
+                        <?php endwhile;
+                    endif;
+                    wp_reset_postdata();
+                    ?>
+                </div>
+                <div class="services__group-list">
+                    <a href="<?php echo get_permalink(447); ?>">
+                        <h3 class="services__group-title">
+                            <?php the_field('tekst_bloka_uslug_kosmetologii' , 2)?>
+                        </h3>
+                    </a>
+                    <?php
+                    $args = array(
+                        'post_type' 	 => 'cosmetology'
+                    );
+                    $MY_QUERY = new WP_Query( $args );
+                    if ( $MY_QUERY->have_posts() ) :
+                        while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
+                            <!--                        <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
+                        <?php endwhile;
+                    endif;
+                    wp_reset_postdata();
+                    ?>
+                </div>
                 <?php
-                $args = array(
-                    'post_type' 	 => 'cosmetology'
-                );
-                $MY_QUERY = new WP_Query( $args );
-                if ( $MY_QUERY->have_posts() ) :
-                    while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post(); ?>
-<!--                        <a href="--><?php //the_permalink();?><!--" class="services__group-item">--><?php //the_title();?><!--</a>-->
-                    <?php endwhile;
-                endif;
-                wp_reset_postdata();
-                ?>
-            </div>
+            }
+            ?>
             <a href="tel:<?php the_field('nomer_telefona', 'option')?>" class="header__button button">
                 <span><?php the_field('tekst_zapisatsya_na_priem', 'option')?></span>
             </a>
