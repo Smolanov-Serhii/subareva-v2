@@ -10,7 +10,10 @@ get_header();
         <?php get_template_part( 'template-parts/content', 'about-banner' ); ?>
         <?php get_template_part( 'template-parts/content', 'services' ); ?>
         <?php get_template_part( 'template-parts/content', 'params' ); ?>
-        <?php get_template_part( 'template-parts/content', 'team' ); ?>
+        <?php
+        $params = [ 'type' => ''];
+        get_template_part( 'template-parts/content', 'team-new',  $params);
+        ?>
         <?php get_template_part( 'template-parts/content', 'innovation' ); ?>
         <?php get_template_part( 'template-parts/content', 'premium' ); ?>
 <!--        --><?php //get_template_part( 'template-parts/content', 'digits' ); ?>

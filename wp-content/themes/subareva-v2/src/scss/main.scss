@@ -223,7 +223,6 @@ main{
     @media all and (max-width: 500px){
       display: block;
       width: 50px;
-
     }
   }
 }
@@ -295,5 +294,6 @@ main{
 @import "templates/acservice";
 @import "templates/history";
 @import "templates/happy";
+@import "templates/team-new";
 @import "templates/footer";
 

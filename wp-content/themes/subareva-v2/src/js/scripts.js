@@ -362,5 +362,26 @@ $(document).ready(function () {
     }
     HappySlider();
 
+    function NewTeam(){
+        if($('.team-new').length){
+            var NewTeam = new Swiper('.team-new .swiper-container', {
+                spaceBetween: 25,
+                slidesPerView: 'auto',
+                breakpoints: {
+                    240: {
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        spaceBetween: 25,
+                    },
+                }
+            });
+        }
+    }
+    NewTeam();
+
 });
 

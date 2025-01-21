@@ -38,8 +38,9 @@ get_header();
 <!--            --><?php //get_template_part( 'template-parts/content', 'innovation' ); ?>
             <?php
         }
+        $params = [ 'type' => 'kosmetologiya'];
+        get_template_part( 'template-parts/content', 'team-new', $params );
         ?>
-        <?php get_template_part( 'template-parts/content', 'team' ); ?>
 <!--        --><?php //get_template_part( 'template-parts/content', 'cosm' ); ?>
         <?php get_template_part( 'template-parts/content', 'waranty' ); ?>
 <!--        --><?php //get_template_part( 'template-parts/content', 'comform' ); ?>

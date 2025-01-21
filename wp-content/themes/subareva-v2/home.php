@@ -40,8 +40,8 @@ get_header();
             <?php
         }
         ?>
-<!--        --><?php //get_template_part( 'template-parts/content', 'dent' ); ?>
-        <?php get_template_part( 'template-parts/content', 'team' ); ?>
+        <?php $params = [ 'type' => 'stomatologiya'];
+        get_template_part( 'template-parts/content', 'team-new', $params ); ?>
         <?php get_template_part( 'template-parts/content', 'waranty' ); ?>
 <!--        --><?php //get_template_part( 'template-parts/content', 'comform' ); ?>
         <section class="grid-photo">
