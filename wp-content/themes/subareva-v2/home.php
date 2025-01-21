@@ -33,6 +33,8 @@ get_header();
         <?php get_template_part( 'template-parts/content', 'our-services' ); ?>
         <?php get_template_part( 'template-parts/content', 'premium' ); ?>
         <?php get_template_part( 'template-parts/content', 'appointment-new' ); ?>
+        <?php $params = [ 'type' => 'stomatologiya'];
+        get_template_part( 'template-parts/content', 'team-new', $params ); ?>
         <?php
         if (is_page(369)){
             ?>
@@ -40,8 +42,6 @@ get_header();
             <?php
         }
         ?>
-        <?php $params = [ 'type' => 'stomatologiya'];
-        get_template_part( 'template-parts/content', 'team-new', $params ); ?>
         <?php get_template_part( 'template-parts/content', 'waranty' ); ?>
 <!--        --><?php //get_template_part( 'template-parts/content', 'comform' ); ?>
         <section class="grid-photo">
