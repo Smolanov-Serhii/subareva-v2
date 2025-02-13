@@ -102,6 +102,32 @@ $(document).ready(function () {
             });
         }
 
+    if ($('.vstavka2').length) {
+        var Vstavka2Slider = new Swiper(".vstavka2 .swiper", {
+            slidesPerView: 2.5,
+            spaceBetween: 64,
+            loop: 'true',
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                240: {
+                    spaceBetween: 20,
+                    slidesPerView: 1.3,
+                },
+                640: {
+                    spaceBetween: 35,
+                    slidesPerView: 2.1,
+                },
+                1024: {
+                    spaceBetween: 40,
+                    slidesPerView: 2.5,
+                },
+            }
+        });
+    }
+
     if ($('.reviews').length) {
         var Reviewes = new Swiper(".reviews .swiper", {
             speed: 500,
