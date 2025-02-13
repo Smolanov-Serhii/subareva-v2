@@ -107,9 +107,10 @@ $(document).ready(function () {
             slidesPerView: 2.5,
             spaceBetween: 64,
             loop: 'true',
+            speed: 10000,
             autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
+                delay: 1,
+                disableOnInteraction: true
             },
             breakpoints: {
                 240: {
